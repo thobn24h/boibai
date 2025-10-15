@@ -2035,6 +2035,9 @@
     "labelBoiNgay": {
       "__id__": 10
     },
+    "btnTraoBai": {
+      "__id__": 12
+    },
     "lblDem": {
       "__id__": 31
     },

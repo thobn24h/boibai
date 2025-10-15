@@ -1,4 +1,4 @@
-import { _decorator, Component, director, Label, Node, Sprite } from 'cc';
+import { _decorator, Component, director, Label, Node, Sprite, tween, UITransform, Vec3 } from 'cc';
 import dayjs from 'dayjs';
 
 const { ccclass, property } = _decorator;
@@ -8,6 +8,9 @@ export class BoiNgayScene extends Component {
 
     @property(Label)
     labelBoiNgay: Label = null;
+
+    @property(Node)
+    btnTraoBai: Node = null;
 
     @property(Label)
     lblDem: Label = null;
@@ -56,11 +59,24 @@ export class BoiNgayScene extends Component {
       // hide menu back / next 
       this.controlButtonLayoutNode.active = false;
 
+      const centerPos = this.btnTraoBai.getPosition();
+      const cardSize = this.btnTraoBai.getComponent(UITransform).contentSize;
+
       // active card1/card2 for effect
       this.card1.active = true;
+      this.card1.setPosition(centerPos)
       this.card2.active = true;
+      this.card2.setPosition(centerPos)
 
-      
+      // show label dem
+      this.lblDem.string = "0";
+      this.lblDem.node.active = true;
+
+      // play effect
+      tween(this.card1).by(0.3, new Vec3(0, -cardSize.height / 2 - 5, 0)).call(() => {
+        
+      }).start();
+
 
     }
 

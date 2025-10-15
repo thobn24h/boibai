@@ -997,7 +997,7 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 9439172.357542,
+      "mTimestamp": 12055079.823834,
       "chunkId": "6d8fd2b0177941b032ddc0733af48a561fb60657",
       "imports": [
         {
@@ -1796,7 +1796,7 @@
     },
     "file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts": {
       "mTimestamp": {
-        "mtime": 1760539391712.6863,
+        "mtime": 1760542003231.386,
         "uuid": "7029a305-6f43-48e0-bfea-8c67c05f6e3d"
       },
       "chunkId": "ff5a7b8e9543a65e5591fa6f3e94004352f0ae7d",
@@ -1816,11 +1816,11 @@
           "loc": {
             "start": {
               "line": 1,
-              "column": 69
+              "column": 95
             },
             "end": {
               "line": 1,
-              "column": 73
+              "column": 99
             }
           }
         },
