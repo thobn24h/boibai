@@ -1,0 +1,57 @@
+# Cocos Creator Build Files
+/build/
+/jsb/
+/web-mobile/
+/web-desktop/
+
+# Temporary Files
+/temp/
+/local/
+/library/
+
+# Native Build Files
+/native/
+/frameworks/
+/simulator/
+
+# Generated Files
+*.jsc
+*.bak
+*.tmp
+*.cache
+
+# Log Files
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependencies
+node_modules/
+/packages/
+package-lock.json
+yarn.lock
+
+# IDE Files
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+.classpath
+
+# OS Files
+Thumbs.db
+Desktop.ini
+
+# Build Settings
+/settings/builder.json
+
+# Profile Data
+/profiles/
+
+# Asset Database
+.asset-db/

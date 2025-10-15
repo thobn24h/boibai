@@ -1,16 +1,133 @@
-10-14-2025 21:17:55 - log: Load engine in /Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine
-10-14-2025 21:17:55 - log: Register native engine in /Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/native
-10-14-2025 21:17:56 - log: Request namespace: device-list
-10-14-2025 21:18:01 - log: [Scene] meshopt wasm decoder initialized
-10-14-2025 21:18:01 - log: [Scene] [box2d]:box2d wasm lib loaded.
-10-14-2025 21:18:01 - log: [Scene] [bullet]:bullet wasm lib loaded.
-10-14-2025 21:18:01 - log: [Scene] [PHYSICS]: using builtin.
-10-14-2025 21:18:01 - log: [Scene] Cocos Creator v3.8.7
-10-14-2025 21:18:01 - log: [Scene] Using custom pipeline: Builtin
-10-14-2025 21:18:01 - log: [Scene] [PHYSICS2D]: switch from builtin to box2d.
-10-14-2025 22:51:53 - warn: [Assets] Please set the application in {preferences} -> {program} -> {scriptEditor} to better open the scriptWarn: [Assets] Please set the application in {preferences} -> {program} -> {scriptEditor} to better open the script
+10-15-2025 19:05:53 - log: Load engine in /Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine
+10-15-2025 19:05:53 - log: Register native engine in /Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/native
+10-15-2025 19:05:54 - log: Request namespace: device-list
+10-15-2025 19:05:59 - log: [Scene] meshopt wasm decoder initialized
+10-15-2025 19:05:59 - log: [Scene] [bullet]:bullet wasm lib loaded.
+10-15-2025 19:05:59 - log: [Scene] [box2d]:box2d wasm lib loaded.
+10-15-2025 19:05:59 - log: [Scene] [PHYSICS]: using builtin.
+10-15-2025 19:05:59 - log: [Scene] Cocos Creator v3.8.7
+10-15-2025 19:05:59 - log: [Scene] Using custom pipeline: Builtin
+10-15-2025 19:05:59 - log: [Scene] [PHYSICS2D]: switch from builtin to box2d.
+10-15-2025 19:08:53 - info: [Window] Download the Vue Devtools extension for a better development experience:
+https://github.com/vuejs/vue-devtools
+10-15-2025 19:08:53 - info: [Window] You are running Vue in development mode.
+Make sure to turn on production mode when deploying for production.
+See more tips at https://vuejs.org/guide/deployment.html
+10-15-2025 20:55:42 - warn: [Scene] Did you forget the extension? Please note that you can not omit extension in module specifier.Error: [Scene] Did you forget the extension? Please note that you can not omit extension in module specifier.
     at console.warn (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@sentry/core/src/utils-hoist/instrument/console.ts:40:14)
-    at NewConsole.warn (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/builtin/asset-db/dist/worker/console.ccc:1:1637)
-    at findVsCode (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/modules/engine-extensions/extensions/engine-extends/dist/handler/utils.ccc:1:3691)
-    at Object.openCode [as open] (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/modules/engine-extensions/extensions/engine-extends/dist/handler/utils.ccc:1:3427)
-    at Ipc.<anonymous> (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/builtin/asset-db/dist/worker/ipc.ccc:1:555)
+    at logger (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/static/executor/systemjs-bridge/out/index.js:755:13)
+    at ExecutorSystem.resolve [as _detailResolve] (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/static/executor/systemjs-bridge/out/index.js:772:17)
+    at ExecutorSystem._resolve (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/src/editor-systemjs/index.ts:137:14)
+    at SystemJS.resolve (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/src/editor-systemjs/index.ts:36:23)
+    at /Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/static/executor/systemjs-bridge/out/index.js:355:37
+    at Array.map (<anonymous>)
+    at /Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/static/executor/systemjs-bridge/out/index.js:353:41
+    at file:///Users/thobn/DEVELOP/Game/BoiBai/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:8:13
+    at Object.execute (file:///Users/thobn/DEVELOP/Game/BoiBai/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:4:1)
+    at Executor._importPrerequisiteModules (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/src/executor/index.ts:358:13)
+    at Executor.reload (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/src/executor/index.ts:235:13)
+    at /Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/builtin/scene/dist/script/3d/manager/scripts.ccc:1:1893
+    at GlobalEnv.processQueue (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/builtin/scene/dist/script/3d/manager/scripts.ccc:1:2290)
+    at GlobalEnv.record (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/builtin/scene/dist/script/3d/manager/scripts.ccc:1:2061)
+10-15-2025 20:55:42 - error: [Scene] {hidden(::SceneExecutorImportExceptionHandler::)} Error: Error: Module "dayjs/locale/vi" not found for file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts
+    at rejector (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/static/executor/systemjs-bridge/out/index.js:759:15)
+    at ExecutorSystem.resolve [as _detailResolve] (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/static/executor/systemjs-bridge/out/index.js:777:13)
+    at ExecutorSystem._resolve (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/src/editor-systemjs/index.ts:137:14)
+    at SystemJS.resolve (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/src/editor-systemjs/index.ts:36:23)
+    at /Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/static/executor/systemjs-bridge/out/index.js:355:37
+    at Array.map (<anonymous>)
+    at /Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/static/executor/systemjs-bridge/out/index.js:353:41
+    at file:///Users/thobn/DEVELOP/Game/BoiBai/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:8:13
+    at Object.execute (file:///Users/thobn/DEVELOP/Game/BoiBai/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:4:1)
+    at Executor._importPrerequisiteModules (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/src/executor/index.ts:358:13)
+    at Executor.reload (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/src/executor/index.ts:235:13)
+    at /Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/builtin/scene/dist/script/3d/manager/scripts.ccc:1:1893
+    at GlobalEnv.processQueue (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/builtin/scene/dist/script/3d/manager/scripts.ccc:1:2290)
+    at GlobalEnv.record (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/builtin/scene/dist/script/3d/manager/scripts.ccc:1:2061)Error: [Scene] {hidden(::SceneExecutorImportExceptionHandler::)} Error: Error: Module "dayjs/locale/vi" not found for file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts
+    at SystemJS.resolve (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/src/editor-systemjs/index.ts:36:23)
+    at /Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/static/executor/systemjs-bridge/out/index.js:355:37
+    at Array.map (<anonymous>)
+    at /Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/static/executor/systemjs-bridge/out/index.js:353:41
+    at file:///Users/thobn/DEVELOP/Game/BoiBai/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:8:13
+    at Object.execute (file:///Users/thobn/DEVELOP/Game/BoiBai/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:4:1)
+    at Executor._importPrerequisiteModules (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/src/executor/index.ts:358:13)
+    at Executor.reload (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/src/executor/index.ts:235:13)
+    at /Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/builtin/scene/dist/script/3d/manager/scripts.ccc:1:1893
+    at GlobalEnv.processQueue (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/builtin/scene/dist/script/3d/manager/scripts.ccc:1:2290)
+    at GlobalEnv.record (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/builtin/scene/dist/script/3d/manager/scripts.ccc:1:2061)
+    at Logger._logHandler (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/builtin/scene/dist/script/3d/manager/startup/log.ccc:1:487)
+    at Logger.record (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@base/electron-logger/lib/renderer.ccc:1:458)
+    at console.<anonymous> (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@base/electron-logger/lib/renderer.ccc:1:1414)
+    at console.error (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@sentry/core/src/utils-hoist/instrument/console.ts:40:14)
+    at ScriptManager._handleImportException (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/builtin/scene/dist/script/3d/manager/scripts.ccc:1:5678)
+    at Executor.importExceptionHandler [as _importExceptionHandler] (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/builtin/scene/dist/script/3d/manager/scripts.ccc:1:3834)
+    at Executor._onModuleLoaded (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/src/executor/index.ts:401:22)
+    at SystemJS.onload (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/src/executor/index.ts:99:18)
+    at triggerOnload (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/static/executor/systemjs-bridge/out/index.js:270:10)
+    at /Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/static/executor/systemjs-bridge/out/index.js:431:7
+    at file:///Users/thobn/DEVELOP/Game/BoiBai/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:8:13
+    at Object.execute (file:///Users/thobn/DEVELOP/Game/BoiBai/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:4:1)
+    at Executor._importPrerequisiteModules (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/src/executor/index.ts:358:13)
+    at Executor.reload (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/src/executor/index.ts:235:13)
+    at /Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/builtin/scene/dist/script/3d/manager/scripts.ccc:1:1893
+    at GlobalEnv.processQueue (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/builtin/scene/dist/script/3d/manager/scripts.ccc:1:2290)
+    at GlobalEnv.record (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/builtin/scene/dist/script/3d/manager/scripts.ccc:1:2061)
+10-15-2025 20:56:12 - warn: [Scene] Did you forget the extension? Please note that you can not omit extension in module specifier.Error: [Scene] Did you forget the extension? Please note that you can not omit extension in module specifier.
+    at console.warn (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@sentry/core/src/utils-hoist/instrument/console.ts:40:14)
+    at logger (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/static/executor/systemjs-bridge/out/index.js:755:13)
+    at ExecutorSystem.resolve [as _detailResolve] (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/static/executor/systemjs-bridge/out/index.js:772:17)
+    at ExecutorSystem._resolve (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/src/editor-systemjs/index.ts:137:14)
+    at SystemJS.resolve (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/src/editor-systemjs/index.ts:36:23)
+    at /Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/static/executor/systemjs-bridge/out/index.js:355:37
+    at Array.map (<anonymous>)
+    at /Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/static/executor/systemjs-bridge/out/index.js:353:41
+    at file:///Users/thobn/DEVELOP/Game/BoiBai/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:8:13
+    at Object.execute (file:///Users/thobn/DEVELOP/Game/BoiBai/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:4:1)
+    at Executor._importPrerequisiteModules (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/src/executor/index.ts:358:13)
+    at Executor.reload (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/src/executor/index.ts:235:13)
+    at /Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/builtin/scene/dist/script/3d/manager/scripts.ccc:1:1893
+    at GlobalEnv.processQueue (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/builtin/scene/dist/script/3d/manager/scripts.ccc:1:2290)
+    at GlobalEnv.record (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/builtin/scene/dist/script/3d/manager/scripts.ccc:1:2061)
+10-15-2025 20:56:12 - error: [Scene] {hidden(::SceneExecutorImportExceptionHandler::)} Error: Error: Module "dayjs/locale/vi" not found for file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts
+    at rejector (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/static/executor/systemjs-bridge/out/index.js:759:15)
+    at ExecutorSystem.resolve [as _detailResolve] (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/static/executor/systemjs-bridge/out/index.js:777:13)
+    at ExecutorSystem._resolve (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/src/editor-systemjs/index.ts:137:14)
+    at SystemJS.resolve (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/src/editor-systemjs/index.ts:36:23)
+    at /Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/static/executor/systemjs-bridge/out/index.js:355:37
+    at Array.map (<anonymous>)
+    at /Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/static/executor/systemjs-bridge/out/index.js:353:41
+    at file:///Users/thobn/DEVELOP/Game/BoiBai/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:8:13
+    at Object.execute (file:///Users/thobn/DEVELOP/Game/BoiBai/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:4:1)
+    at Executor._importPrerequisiteModules (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/src/executor/index.ts:358:13)
+    at Executor.reload (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/src/executor/index.ts:235:13)
+    at /Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/builtin/scene/dist/script/3d/manager/scripts.ccc:1:1893
+    at GlobalEnv.processQueue (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/builtin/scene/dist/script/3d/manager/scripts.ccc:1:2290)
+    at GlobalEnv.record (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/builtin/scene/dist/script/3d/manager/scripts.ccc:1:2061)Error: [Scene] {hidden(::SceneExecutorImportExceptionHandler::)} Error: Error: Module "dayjs/locale/vi" not found for file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts
+    at SystemJS.resolve (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/src/editor-systemjs/index.ts:36:23)
+    at /Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/static/executor/systemjs-bridge/out/index.js:355:37
+    at Array.map (<anonymous>)
+    at /Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/static/executor/systemjs-bridge/out/index.js:353:41
+    at file:///Users/thobn/DEVELOP/Game/BoiBai/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:8:13
+    at Object.execute (file:///Users/thobn/DEVELOP/Game/BoiBai/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:4:1)
+    at Executor._importPrerequisiteModules (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/src/executor/index.ts:358:13)
+    at Executor.reload (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/src/executor/index.ts:235:13)
+    at /Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/builtin/scene/dist/script/3d/manager/scripts.ccc:1:1893
+    at GlobalEnv.processQueue (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/builtin/scene/dist/script/3d/manager/scripts.ccc:1:2290)
+    at GlobalEnv.record (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/builtin/scene/dist/script/3d/manager/scripts.ccc:1:2061)
+    at Logger._logHandler (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/builtin/scene/dist/script/3d/manager/startup/log.ccc:1:487)
+    at Logger.record (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@base/electron-logger/lib/renderer.ccc:1:458)
+    at console.<anonymous> (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@base/electron-logger/lib/renderer.ccc:1:1414)
+    at console.error (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@sentry/core/src/utils-hoist/instrument/console.ts:40:14)
+    at ScriptManager._handleImportException (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/builtin/scene/dist/script/3d/manager/scripts.ccc:1:5678)
+    at Executor.importExceptionHandler [as _importExceptionHandler] (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/builtin/scene/dist/script/3d/manager/scripts.ccc:1:3834)
+    at Executor._onModuleLoaded (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/src/executor/index.ts:401:22)
+    at SystemJS.onload (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/src/executor/index.ts:99:18)
+    at triggerOnload (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/static/executor/systemjs-bridge/out/index.js:270:10)
+    at /Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/static/executor/systemjs-bridge/out/index.js:431:7
+    at file:///Users/thobn/DEVELOP/Game/BoiBai/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:8:13
+    at Object.execute (file:///Users/thobn/DEVELOP/Game/BoiBai/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:4:1)
+    at Executor._importPrerequisiteModules (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/src/executor/index.ts:358:13)
+    at Executor.reload (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/node_modules/@editor/lib-programming/src/executor/index.ts:235:13)
+    at /Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/builtin/scene/dist/script/3d/manager/scripts.ccc:1:1893
+    at GlobalEnv.processQueue (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/builtin/scene/dist/script/3d/manager/scripts.ccc:1:2290)
+    at GlobalEnv.record (/Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/app.asar/builtin/scene/dist/script/3d/manager/scripts.ccc:1:2061)

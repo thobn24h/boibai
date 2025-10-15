@@ -8,6 +8,7 @@
     "file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts": "./chunks/33/33b14116158fcb1e038e9d77314001491583281e.js",
     "file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts": "./chunks/96/9672576e8f949619f21c4260dfbc1483286b6784.js",
     "file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts": "./chunks/57/571e28c784e84d34bbc59c4ef618cdb62e8c2e07.js",
+    "file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts": "./chunks/ff/ff5a7b8e9543a65e5591fa6f3e94004352f0ae7d.js",
     "file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/MenuScene.ts": "./chunks/54/54c9b43a8379c6900832aa69f1cd7bde8f770d5b.js"
   },
   "scopes": {
@@ -39,6 +40,20 @@
       "__unresolved_7": "cce:/internal/x/cc-fu/dragon-bones",
       "__unresolved_8": "cce:/internal/x/cc-fu/gfx-webgl",
       "__unresolved_9": "cce:/internal/x/cc-fu/gfx-webgl2"
+    },
+    "./chunks/ff/ff5a7b8e9543a65e5591fa6f3e94004352f0ae7d.js": {
+      "__unresolved_0": "./chunks/6a/6a5019a719a9014c047e67aa1cf34453ab8392ce.js",
+      "cc": "./chunks/93/93ba276ea7b26ffcdc433fab14afc1ed6f05647b.js",
+      "dayjs": "./chunks/9d/9d6399286a3811393794316f5061d0512b17bbdf.js"
+    },
+    "./chunks/9d/9d6399286a3811393794316f5061d0512b17bbdf.js": {
+      "__unresolved_0": "./chunks/82/827b9ef9cb4823d1c94f82b989aef272ff91064d.js",
+      "__unresolved_1": "./chunks/a0/a0d063530de23ddade53e1a935bf64c81277c061.js",
+      "__unresolved_2": "./chunks/82/827b9ef9cb4823d1c94f82b989aef272ff91064d.js",
+      "__unresolved_3": "./chunks/82/827b9ef9cb4823d1c94f82b989aef272ff91064d.js"
+    },
+    "./chunks/82/827b9ef9cb4823d1c94f82b989aef272ff91064d.js": {
+      "__unresolved_0": "./chunks/a0/a0d063530de23ddade53e1a935bf64c81277c061.js"
     },
     "./chunks/57/571e28c784e84d34bbc59c4ef618cdb62e8c2e07.js": {
       "cc": "./chunks/93/93ba276ea7b26ffcdc433fab14afc1ed6f05647b.js"
@@ -75,7 +90,8 @@
       "__unresolved_3": "./chunks/33/33b14116158fcb1e038e9d77314001491583281e.js",
       "__unresolved_4": "./chunks/96/9672576e8f949619f21c4260dfbc1483286b6784.js",
       "__unresolved_5": "./chunks/57/571e28c784e84d34bbc59c4ef618cdb62e8c2e07.js",
-      "__unresolved_6": "./chunks/54/54c9b43a8379c6900832aa69f1cd7bde8f770d5b.js"
+      "__unresolved_6": "./chunks/ff/ff5a7b8e9543a65e5591fa6f3e94004352f0ae7d.js",
+      "__unresolved_7": "./chunks/54/54c9b43a8379c6900832aa69f1cd7bde8f770d5b.js"
     }
   }
 }

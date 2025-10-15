@@ -5,7 +5,8 @@
         "version": "Darwin Kernel Version 24.6.0: Mon Jul 14 11:30:51 PDT 2025; root:xnu-11417.140.69~1/RELEASE_ARM64_T8112"
     },
     "sceneListMap": {
-        "f2faf5b8-6f8d-40c7-8449-afbd15358cc4": "/Users/thobn/DEVELOP/Game/BoiBai/assets/scenes/menuScene.scene"
+        "f2faf5b8-6f8d-40c7-8449-afbd15358cc4": "/Users/thobn/DEVELOP/Game/BoiBai/assets/scenes/menuScene.scene",
+        "29c45874-aa1b-4400-9e8b-e661fbf8871a": "/Users/thobn/DEVELOP/Game/BoiBai/assets/scenes/BoiNgayScene.scene"
     },
     "deviceMd5": "6b5254f667d3da51c45d2f86c0ceaac2"
 }

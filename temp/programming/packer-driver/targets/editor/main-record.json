@@ -1,7 +1,7 @@
 {
   "modules": {
     "cce:/internal/x/cc": {
-      "mTimestamp": 4457.262208,
+      "mTimestamp": 4596.06675,
       "chunkId": "93ba276ea7b26ffcdc433fab14afc1ed6f05647b",
       "imports": [
         {
@@ -997,7 +997,7 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 5631260.030375,
+      "mTimestamp": 6725304.533709,
       "chunkId": "6d8fd2b0177941b032ddc0733af48a561fb60657",
       "imports": [
         {
@@ -1085,7 +1085,7 @@
           }
         },
         {
-          "value": "file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/MenuScene.ts",
+          "value": "file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts",
           "resolved": "__unresolved_6",
           "loc": {
             "start": {
@@ -1094,7 +1094,21 @@
             },
             "end": {
               "line": 5,
-              "column": 1143
+              "column": 1146
+            }
+          }
+        },
+        {
+          "value": "file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/MenuScene.ts",
+          "resolved": "__unresolved_7",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 1162
+            },
+            "end": {
+              "line": 5,
+              "column": 1231
             }
           }
         }
@@ -1140,6 +1154,13 @@
           "resolved": {
             "type": "module",
             "url": "file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts"
           },
           "messages": []
         },
@@ -1715,7 +1736,7 @@
       ]
     },
     "cce:/internal/code-quality/cr.mjs": {
-      "mTimestamp": 1760451476010,
+      "mTimestamp": 1760529953977,
       "chunkId": "6a5019a719a9014c047e67aa1cf34453ab8392ce",
       "imports": [],
       "type": "esm",
@@ -1772,6 +1793,219 @@
           "messages": []
         }
       ]
+    },
+    "file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts": {
+      "mTimestamp": {
+        "mtime": 1760536679218.8467,
+        "uuid": "7029a305-6f43-48e0-bfea-8c67c05f6e3d"
+      },
+      "chunkId": "ff5a7b8e9543a65e5591fa6f3e94004352f0ae7d",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 51
+            },
+            "end": {
+              "line": 1,
+              "column": 55
+            }
+          }
+        },
+        {
+          "value": "dayjs",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 18
+            },
+            "end": {
+              "line": 2,
+              "column": 25
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/thobn/DEVELOP/Game/BoiBai/node_modules/dayjs/dayjs.min.mjs?cjs=&original=.js"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///Users/thobn/DEVELOP/Game/BoiBai/node_modules/dayjs/dayjs.min.mjs?cjs=&original=.js": {
+      "mTimestamp": 1760535235603.0261,
+      "chunkId": "9d6399286a3811393794316f5061d0512b17bbdf",
+      "imports": [
+        {
+          "value": "./dayjs.min.js",
+          "resolved": "__unresolved_0",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 36
+            },
+            "end": {
+              "line": 2,
+              "column": 52
+            }
+          }
+        },
+        {
+          "value": "cce:/internal/ml/cjs-loader.mjs",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 19
+            },
+            "end": {
+              "line": 3,
+              "column": 52
+            }
+          }
+        },
+        {
+          "value": "./dayjs.min.js",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 8,
+              "column": 14
+            },
+            "end": {
+              "line": 8,
+              "column": 30
+            }
+          }
+        },
+        {
+          "value": "./dayjs.min.js",
+          "resolved": "__unresolved_3",
+          "loc": {
+            "start": {
+              "line": 9,
+              "column": 29
+            },
+            "end": {
+              "line": 9,
+              "column": 45
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/thobn/DEVELOP/Game/BoiBai/node_modules/dayjs/dayjs.min.js"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/ml/cjs-loader.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/thobn/DEVELOP/Game/BoiBai/node_modules/dayjs/dayjs.min.js"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/thobn/DEVELOP/Game/BoiBai/node_modules/dayjs/dayjs.min.js"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///Users/thobn/DEVELOP/Game/BoiBai/node_modules/dayjs/dayjs.min.js": {
+      "mTimestamp": 1760535235603.0261,
+      "chunkId": "827b9ef9cb4823d1c94f82b989aef272ff91064d",
+      "imports": [
+        {
+          "value": "cce:/internal/ml/cjs-loader.mjs",
+          "resolved": "__unresolved_0",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 23
+            },
+            "end": {
+              "line": 1,
+              "column": 56
+            }
+          }
+        }
+      ],
+      "type": "commonjs",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/ml/cjs-loader.mjs"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "cce:/internal/ml/cjs-loader.mjs": {
+      "mTimestamp": 1760529953977,
+      "chunkId": "a0d063530de23ddade53e1a935bf64c81277c061",
+      "imports": [],
+      "type": "esm",
+      "resolutions": []
     }
   }
 }

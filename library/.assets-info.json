@@ -19,27 +19,27 @@
       "time": 1760451543455.0974
     },
     "scripts": {
-      "time": 1760457107358.6514,
+      "time": 1760536665801.285,
       "uuid": "7b623585-f38e-428b-8180-691e5b7ca17b"
     },
     "scenes.meta": {
       "time": 1760451558835.637
     },
     "scenes": {
-      "time": 1760456000303.9814,
+      "time": 1760530434797.709,
       "uuid": "fcfe07d0-a58b-4ea4-aff6-25682e991584"
     },
     "images/BNHelp.png.meta": {
       "time": 1760455502790.225
     },
     "images/BackGround1.png.meta": {
-      "time": 1760455502790.7432
+      "time": 1760530461351.8694
     },
     "images/BgBoingay.png.meta": {
-      "time": 1760455502772.0942
+      "time": 1760530461337.6252
     },
     "images/BgContentBN.png.meta": {
-      "time": 1760455502791.062
+      "time": 1760530461351.3855
     },
     "images/bong.png.meta": {
       "time": 1760455502772.607
@@ -672,6 +672,20 @@
     "scripts/MenuScene.ts": {
       "time": 1760457107358.022,
       "uuid": "fb0833da-03b5-46d9-83b3-2a1e76045a69"
+    },
+    "scenes/BoiNgayScene.scene.meta": {
+      "time": 1760530434801.6309
+    },
+    "scenes/BoiNgayScene.scene": {
+      "time": 1760536744403.9038,
+      "uuid": "29c45874-aa1b-4400-9e8b-e661fbf8871a"
+    },
+    "scripts/BoiNgayScene.ts.meta": {
+      "time": 1760535278241.6125
+    },
+    "scripts/BoiNgayScene.ts": {
+      "time": 1760536679218.8467,
+      "uuid": "7029a305-6f43-48e0-bfea-8c67c05f6e3d"
     }
   },
   "missing": {}

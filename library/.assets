@@ -4,20 +4,22 @@
         "paths": [
             "images",
             "prefabs",
-            "scripts",
             "scenes",
+            "scripts",
+            "images/cards",
+            "images/chtt",
+            "images/menu",
             "images/BNHelp.png",
             "images/BackGround1.png",
             "images/BgBoingay.png",
             "images/BgContentBN.png",
             "images/bong.png",
-            "images/cards",
-            "images/chtt",
             "images/help.png",
             "images/helpscreen.png",
-            "images/menu",
             "images/xapbai.png",
             "images/xapbaibosung.png",
+            "scenes/menuScene.scene",
+            "scripts/MenuScene.ts",
             "images/cards/10.png",
             "images/cards/11.png",
             "images/cards/12.png",
@@ -96,8 +98,8 @@
             "images/menu/btn_facebook.png",
             "images/menu/btn_share.png",
             "images/menu/btn_twitter.png",
-            "scenes/menuScene.scene",
-            "scripts/MenuScene.ts"
+            "scenes/BoiNgayScene.scene",
+            "scripts/BoiNgayScene.ts"
         ]
     }
 }
