@@ -63,7 +63,7 @@
       "time": 1760455502812.6306
     },
     "images/xapbaibosung.png.meta": {
-      "time": 1760455502817.0112
+      "time": 1760537109725.0093
     },
     "images/cards/10.png.meta": {
       "time": 1760455502805.5337
@@ -225,10 +225,10 @@
       "time": 1760455502973.1106
     },
     "images/chtt/BackBtn.png.meta": {
-      "time": 1760455502966.0095
+      "time": 1760537503605.1501
     },
     "images/chtt/BackBtnActive.png.meta": {
-      "time": 1760455502966.9011
+      "time": 1760537503604.5007
     },
     "images/chtt/BgContentCHTT.png.meta": {
       "time": 1760455502966.3198
@@ -252,10 +252,10 @@
       "time": 1760455502977.5464
     },
     "images/chtt/VaoBoiBtn.png.meta": {
-      "time": 1760455502981.831
+      "time": 1760537522962.9885
     },
     "images/chtt/VaoBoiBtnActive.png.meta": {
-      "time": 1760455502982.1802
+      "time": 1760537522962.23
     },
     "images/menu/BackGround.png.meta": {
       "time": 1760456245437.2314
@@ -677,14 +677,14 @@
       "time": 1760530434801.6309
     },
     "scenes/BoiNgayScene.scene": {
-      "time": 1760536744403.9038,
+      "time": 1760539405386.2,
       "uuid": "29c45874-aa1b-4400-9e8b-e661fbf8871a"
     },
     "scripts/BoiNgayScene.ts.meta": {
       "time": 1760535278241.6125
     },
     "scripts/BoiNgayScene.ts": {
-      "time": 1760536679218.8467,
+      "time": 1760539391712.6863,
       "uuid": "7029a305-6f43-48e0-bfea-8c67c05f6e3d"
     }
   },

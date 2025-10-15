@@ -424,3 +424,387 @@ Feature changed: false
 20:58:01.448 debug: Create cjs interop url for 'file:///Users/thobn/DEVELOP/Game/BoiBai/node_modules/dayjs/dayjs.min.js'
 20:58:01.448 debug: Resolve dayjs from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as file:///Users/thobn/DEVELOP/Game/BoiBai/node_modules/dayjs/dayjs.min.mjs?cjs=&original=.js.
 20:58:01.450 debug: Target(preview) ends with cost 20.798125000670552ms.
+21:01:21.741 debug: Dispatch build request for time accumulated 1 asset changes.
+21:01:21.742 debug: Build iteration starts.
+Number of accumulated asset changes: 1
+Feature changed: false
+21:01:21.742 debug: Target(editor) build started.
+21:01:21.742 debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 09:52:05 GMT+0800 (Indochina Time), Current mtime: Thu Jan 01 1970 09:55:25 GMT+0800 (Indochina Time)
+21:01:21.743 debug: Inspect cce:/internal/x/prerequisite-imports
+21:01:21.746 debug: transform url: 'cce:/internal/x/prerequisite-imports' costs: 3.70 ms
+21:01:21.747 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts.
+21:01:21.747 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts.
+21:01:21.747 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+21:01:21.747 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+21:01:21.748 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
+21:01:21.748 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
+21:01:21.748 debug: Resolve file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts from cce:/internal/x/prerequisite-imports as file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts.
+21:01:21.748 debug: Detected change: file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts. Last mtime: Wed Oct 15 2025 20:57:59 GMT+0700 (Indochina Time)@7029a305-6f43-48e0-bfea-8c67c05f6e3d, Current mtime: Wed Oct 15 2025 20:59:29 GMT+0700 (Indochina Time)@7029a305-6f43-48e0-bfea-8c67c05f6e3d
+21:01:21.748 debug: Inspect file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts
+21:01:21.758 debug: transform url: 'file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts' costs: 10.40 ms
+21:01:21.759 debug: Resolve file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/MenuScene.ts from cce:/internal/x/prerequisite-imports as file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/MenuScene.ts.
+21:01:21.759 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/code-quality/cr.mjs.
+21:01:21.759 debug: Resolve cc from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/x/cc.
+21:01:21.759 debug: Resolve cc from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/x/cc.
+21:01:21.759 debug: Resolve cc from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/x/cc.
+21:01:21.759 debug: Create cjs interop url for 'file:///Users/thobn/DEVELOP/Game/BoiBai/node_modules/dayjs/dayjs.min.js'
+21:01:21.759 debug: Resolve dayjs from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as file:///Users/thobn/DEVELOP/Game/BoiBai/node_modules/dayjs/dayjs.min.mjs?cjs=&original=.js.
+21:01:21.762 debug: Target(editor) ends with cost 20.630334000103176ms.
+21:01:21.763 debug: Target(preview) build started.
+21:01:21.763 debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 09:52:05 GMT+0800 (Indochina Time), Current mtime: Thu Jan 01 1970 09:55:25 GMT+0800 (Indochina Time)
+21:01:21.763 debug: Inspect cce:/internal/x/prerequisite-imports
+21:01:21.767 debug: transform url: 'cce:/internal/x/prerequisite-imports' costs: 3.90 ms
+21:01:21.768 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts.
+21:01:21.768 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts.
+21:01:21.768 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+21:01:21.768 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+21:01:21.768 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
+21:01:21.768 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
+21:01:21.768 debug: Resolve file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts from cce:/internal/x/prerequisite-imports as file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts.
+21:01:21.768 debug: Detected change: file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts. Last mtime: Wed Oct 15 2025 20:57:59 GMT+0700 (Indochina Time)@7029a305-6f43-48e0-bfea-8c67c05f6e3d, Current mtime: Wed Oct 15 2025 20:59:29 GMT+0700 (Indochina Time)@7029a305-6f43-48e0-bfea-8c67c05f6e3d
+21:01:21.768 debug: Inspect file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts
+21:01:21.778 debug: transform url: 'file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts' costs: 10.30 ms
+21:01:21.779 debug: Resolve file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/MenuScene.ts from cce:/internal/x/prerequisite-imports as file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/MenuScene.ts.
+21:01:21.780 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/code-quality/cr.mjs.
+21:01:21.780 debug: Resolve cc from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/x/cc.
+21:01:21.780 debug: Resolve cc from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/x/cc.
+21:01:21.780 debug: Resolve cc from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/x/cc.
+21:01:21.780 debug: Create cjs interop url for 'file:///Users/thobn/DEVELOP/Game/BoiBai/node_modules/dayjs/dayjs.min.js'
+21:01:21.780 debug: Resolve dayjs from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as file:///Users/thobn/DEVELOP/Game/BoiBai/node_modules/dayjs/dayjs.min.mjs?cjs=&original=.js.
+21:01:21.784 debug: Target(preview) ends with cost 20.958959000185132ms.
+21:17:30.811 debug: Dispatch build request for time accumulated 1 asset changes.
+21:17:30.813 debug: Build iteration starts.
+Number of accumulated asset changes: 1
+Feature changed: false
+21:17:30.814 debug: Target(editor) build started.
+21:17:30.815 debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 09:55:25 GMT+0800 (Indochina Time), Current mtime: Thu Jan 01 1970 10:11:34 GMT+0800 (Indochina Time)
+21:17:30.815 debug: Inspect cce:/internal/x/prerequisite-imports
+21:17:30.823 debug: transform url: 'cce:/internal/x/prerequisite-imports' costs: 8.30 ms
+21:17:30.824 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts.
+21:17:30.824 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts.
+21:17:30.824 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+21:17:30.824 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+21:17:30.824 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
+21:17:30.824 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
+21:17:30.824 debug: Resolve file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts from cce:/internal/x/prerequisite-imports as file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts.
+21:17:30.824 debug: Detected change: file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts. Last mtime: Wed Oct 15 2025 20:59:29 GMT+0700 (Indochina Time)@7029a305-6f43-48e0-bfea-8c67c05f6e3d, Current mtime: Wed Oct 15 2025 21:17:25 GMT+0700 (Indochina Time)@7029a305-6f43-48e0-bfea-8c67c05f6e3d
+21:17:30.824 debug: Inspect file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts
+21:17:30.835 debug: transform url: 'file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts' costs: 10.80 ms
+21:17:30.836 debug: Resolve file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/MenuScene.ts from cce:/internal/x/prerequisite-imports as file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/MenuScene.ts.
+21:17:30.836 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/code-quality/cr.mjs.
+21:17:30.836 debug: Resolve cc from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/x/cc.
+21:17:30.836 debug: Resolve cc from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/x/cc.
+21:17:30.836 debug: Resolve cc from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/x/cc.
+21:17:30.836 debug: Create cjs interop url for 'file:///Users/thobn/DEVELOP/Game/BoiBai/node_modules/dayjs/dayjs.min.js'
+21:17:30.836 debug: Resolve dayjs from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as file:///Users/thobn/DEVELOP/Game/BoiBai/node_modules/dayjs/dayjs.min.mjs?cjs=&original=.js.
+21:17:30.839 debug: Target(editor) ends with cost 24.773209000006318ms.
+21:17:30.839 debug: Target(preview) build started.
+21:17:30.839 debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 09:55:25 GMT+0800 (Indochina Time), Current mtime: Thu Jan 01 1970 10:11:34 GMT+0800 (Indochina Time)
+21:17:30.839 debug: Inspect cce:/internal/x/prerequisite-imports
+21:17:30.843 debug: transform url: 'cce:/internal/x/prerequisite-imports' costs: 4.10 ms
+21:17:30.844 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts.
+21:17:30.844 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts.
+21:17:30.844 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+21:17:30.844 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+21:17:30.844 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
+21:17:30.844 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
+21:17:30.844 debug: Resolve file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts from cce:/internal/x/prerequisite-imports as file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts.
+21:17:30.844 debug: Detected change: file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts. Last mtime: Wed Oct 15 2025 20:59:29 GMT+0700 (Indochina Time)@7029a305-6f43-48e0-bfea-8c67c05f6e3d, Current mtime: Wed Oct 15 2025 21:17:25 GMT+0700 (Indochina Time)@7029a305-6f43-48e0-bfea-8c67c05f6e3d
+21:17:30.844 debug: Inspect file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts
+21:17:30.855 debug: transform url: 'file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts' costs: 11.20 ms
+21:17:30.856 debug: Resolve file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/MenuScene.ts from cce:/internal/x/prerequisite-imports as file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/MenuScene.ts.
+21:17:30.856 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/code-quality/cr.mjs.
+21:17:30.856 debug: Resolve cc from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/x/cc.
+21:17:30.856 debug: Resolve cc from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/x/cc.
+21:17:30.856 debug: Resolve cc from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/x/cc.
+21:17:30.856 debug: Create cjs interop url for 'file:///Users/thobn/DEVELOP/Game/BoiBai/node_modules/dayjs/dayjs.min.js'
+21:17:30.856 debug: Resolve dayjs from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as file:///Users/thobn/DEVELOP/Game/BoiBai/node_modules/dayjs/dayjs.min.mjs?cjs=&original=.js.
+21:17:30.859 debug: Target(preview) ends with cost 20.847916000522673ms.
+21:19:43.937 debug: Dispatch build request for time accumulated 1 asset changes.
+21:19:43.939 debug: Build iteration starts.
+Number of accumulated asset changes: 1
+Feature changed: false
+21:19:43.939 debug: Target(editor) build started.
+21:19:43.941 debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 10:11:34 GMT+0800 (Indochina Time), Current mtime: Thu Jan 01 1970 10:13:47 GMT+0800 (Indochina Time)
+21:19:43.941 debug: Inspect cce:/internal/x/prerequisite-imports
+21:19:43.949 debug: transform url: 'cce:/internal/x/prerequisite-imports' costs: 8.90 ms
+21:19:43.950 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts.
+21:19:43.950 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts.
+21:19:43.950 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+21:19:43.950 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+21:19:43.950 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
+21:19:43.950 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
+21:19:43.950 debug: Resolve file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts from cce:/internal/x/prerequisite-imports as file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts.
+21:19:43.950 debug: Detected change: file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts. Last mtime: Wed Oct 15 2025 21:17:25 GMT+0700 (Indochina Time)@7029a305-6f43-48e0-bfea-8c67c05f6e3d, Current mtime: Wed Oct 15 2025 21:18:26 GMT+0700 (Indochina Time)@7029a305-6f43-48e0-bfea-8c67c05f6e3d
+21:19:43.950 debug: Inspect file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts
+21:19:43.960 debug: transform url: 'file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts' costs: 9.30 ms
+21:19:43.960 debug: Resolve file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/MenuScene.ts from cce:/internal/x/prerequisite-imports as file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/MenuScene.ts.
+21:19:43.960 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/code-quality/cr.mjs.
+21:19:43.960 debug: Resolve cc from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/x/cc.
+21:19:43.960 debug: Resolve cc from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/x/cc.
+21:19:43.960 debug: Resolve cc from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/x/cc.
+21:19:43.961 debug: Create cjs interop url for 'file:///Users/thobn/DEVELOP/Game/BoiBai/node_modules/dayjs/dayjs.min.js'
+21:19:43.961 debug: Resolve dayjs from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as file:///Users/thobn/DEVELOP/Game/BoiBai/node_modules/dayjs/dayjs.min.mjs?cjs=&original=.js.
+21:19:43.963 debug: Target(editor) ends with cost 23.773541999980807ms.
+21:19:43.963 debug: Target(preview) build started.
+21:19:43.964 debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 10:11:34 GMT+0800 (Indochina Time), Current mtime: Thu Jan 01 1970 10:13:47 GMT+0800 (Indochina Time)
+21:19:43.964 debug: Inspect cce:/internal/x/prerequisite-imports
+21:19:43.967 debug: transform url: 'cce:/internal/x/prerequisite-imports' costs: 3.60 ms
+21:19:43.968 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts.
+21:19:43.968 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts.
+21:19:43.968 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+21:19:43.968 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+21:19:43.968 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
+21:19:43.968 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
+21:19:43.968 debug: Resolve file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts from cce:/internal/x/prerequisite-imports as file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts.
+21:19:43.968 debug: Detected change: file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts. Last mtime: Wed Oct 15 2025 21:17:25 GMT+0700 (Indochina Time)@7029a305-6f43-48e0-bfea-8c67c05f6e3d, Current mtime: Wed Oct 15 2025 21:18:26 GMT+0700 (Indochina Time)@7029a305-6f43-48e0-bfea-8c67c05f6e3d
+21:19:43.968 debug: Inspect file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts
+21:19:43.979 debug: transform url: 'file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts' costs: 10.80 ms
+21:19:43.980 debug: Resolve file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/MenuScene.ts from cce:/internal/x/prerequisite-imports as file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/MenuScene.ts.
+21:19:43.980 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/code-quality/cr.mjs.
+21:19:43.980 debug: Resolve cc from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/x/cc.
+21:19:43.980 debug: Resolve cc from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/x/cc.
+21:19:43.980 debug: Resolve cc from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/x/cc.
+21:19:43.980 debug: Create cjs interop url for 'file:///Users/thobn/DEVELOP/Game/BoiBai/node_modules/dayjs/dayjs.min.js'
+21:19:43.980 debug: Resolve dayjs from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as file:///Users/thobn/DEVELOP/Game/BoiBai/node_modules/dayjs/dayjs.min.mjs?cjs=&original=.js.
+21:19:43.983 debug: Target(preview) ends with cost 19.91499999910593ms.
+21:25:33.911 debug: Dispatch build request for time accumulated 1 asset changes.
+21:25:33.912 debug: Build iteration starts.
+Number of accumulated asset changes: 1
+Feature changed: false
+21:25:33.912 debug: Target(editor) build started.
+21:25:33.913 debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 10:13:47 GMT+0800 (Indochina Time), Current mtime: Thu Jan 01 1970 10:19:37 GMT+0800 (Indochina Time)
+21:25:33.913 debug: Inspect cce:/internal/x/prerequisite-imports
+21:25:33.917 debug: transform url: 'cce:/internal/x/prerequisite-imports' costs: 4.00 ms
+21:25:33.917 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts.
+21:25:33.917 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts.
+21:25:33.917 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+21:25:33.917 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+21:25:33.918 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
+21:25:33.918 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
+21:25:33.918 debug: Resolve file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts from cce:/internal/x/prerequisite-imports as file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts.
+21:25:33.918 debug: Detected change: file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts. Last mtime: Wed Oct 15 2025 21:18:26 GMT+0700 (Indochina Time)@7029a305-6f43-48e0-bfea-8c67c05f6e3d, Current mtime: Wed Oct 15 2025 21:25:19 GMT+0700 (Indochina Time)@7029a305-6f43-48e0-bfea-8c67c05f6e3d
+21:25:33.918 debug: Inspect file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts
+21:25:33.929 debug: transform url: 'file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts' costs: 10.70 ms
+21:25:33.929 debug: Resolve file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/MenuScene.ts from cce:/internal/x/prerequisite-imports as file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/MenuScene.ts.
+21:25:33.929 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/code-quality/cr.mjs.
+21:25:33.929 debug: Resolve cc from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/x/cc.
+21:25:33.929 debug: Resolve cc from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/x/cc.
+21:25:33.929 debug: Resolve cc from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/x/cc.
+21:25:33.930 debug: Create cjs interop url for 'file:///Users/thobn/DEVELOP/Game/BoiBai/node_modules/dayjs/dayjs.min.js'
+21:25:33.930 debug: Resolve dayjs from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as file:///Users/thobn/DEVELOP/Game/BoiBai/node_modules/dayjs/dayjs.min.mjs?cjs=&original=.js.
+21:25:33.932 debug: Target(editor) ends with cost 20.029915999621153ms.
+21:25:33.932 debug: Target(preview) build started.
+21:25:33.933 debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 10:13:47 GMT+0800 (Indochina Time), Current mtime: Thu Jan 01 1970 10:19:37 GMT+0800 (Indochina Time)
+21:25:33.933 debug: Inspect cce:/internal/x/prerequisite-imports
+21:25:33.937 debug: transform url: 'cce:/internal/x/prerequisite-imports' costs: 4.00 ms
+21:25:33.937 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts.
+21:25:33.937 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts.
+21:25:33.938 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+21:25:33.938 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+21:25:33.938 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
+21:25:33.938 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
+21:25:33.938 debug: Resolve file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts from cce:/internal/x/prerequisite-imports as file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts.
+21:25:33.938 debug: Detected change: file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts. Last mtime: Wed Oct 15 2025 21:18:26 GMT+0700 (Indochina Time)@7029a305-6f43-48e0-bfea-8c67c05f6e3d, Current mtime: Wed Oct 15 2025 21:25:19 GMT+0700 (Indochina Time)@7029a305-6f43-48e0-bfea-8c67c05f6e3d
+21:25:33.938 debug: Inspect file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts
+21:25:33.949 debug: transform url: 'file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts' costs: 10.80 ms
+21:25:33.950 debug: Resolve file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/MenuScene.ts from cce:/internal/x/prerequisite-imports as file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/MenuScene.ts.
+21:25:33.950 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/code-quality/cr.mjs.
+21:25:33.950 debug: Resolve cc from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/x/cc.
+21:25:33.950 debug: Resolve cc from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/x/cc.
+21:25:33.950 debug: Resolve cc from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/x/cc.
+21:25:33.950 debug: Create cjs interop url for 'file:///Users/thobn/DEVELOP/Game/BoiBai/node_modules/dayjs/dayjs.min.js'
+21:25:33.950 debug: Resolve dayjs from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as file:///Users/thobn/DEVELOP/Game/BoiBai/node_modules/dayjs/dayjs.min.mjs?cjs=&original=.js.
+21:25:33.954 debug: Target(preview) ends with cost 21.967333000153303ms.
+21:27:05.804 debug: Dispatch build request for time accumulated 1 asset changes.
+21:27:05.805 debug: Build iteration starts.
+Number of accumulated asset changes: 1
+Feature changed: false
+21:27:05.805 debug: Target(editor) build started.
+21:27:05.806 debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 10:19:37 GMT+0800 (Indochina Time), Current mtime: Thu Jan 01 1970 10:21:09 GMT+0800 (Indochina Time)
+21:27:05.806 debug: Inspect cce:/internal/x/prerequisite-imports
+21:27:05.810 debug: transform url: 'cce:/internal/x/prerequisite-imports' costs: 4.10 ms
+21:27:05.811 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts.
+21:27:05.811 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts.
+21:27:05.811 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+21:27:05.811 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+21:27:05.811 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
+21:27:05.811 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
+21:27:05.811 debug: Resolve file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts from cce:/internal/x/prerequisite-imports as file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts.
+21:27:05.811 debug: Detected change: file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts. Last mtime: Wed Oct 15 2025 21:25:19 GMT+0700 (Indochina Time)@7029a305-6f43-48e0-bfea-8c67c05f6e3d, Current mtime: Wed Oct 15 2025 21:27:00 GMT+0700 (Indochina Time)@7029a305-6f43-48e0-bfea-8c67c05f6e3d
+21:27:05.811 debug: Inspect file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts
+21:27:05.824 debug: transform url: 'file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts' costs: 12.60 ms
+21:27:05.824 debug: Resolve file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/MenuScene.ts from cce:/internal/x/prerequisite-imports as file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/MenuScene.ts.
+21:27:05.824 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/code-quality/cr.mjs.
+21:27:05.824 debug: Resolve cc from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/x/cc.
+21:27:05.824 debug: Resolve cc from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/x/cc.
+21:27:05.824 debug: Resolve cc from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/x/cc.
+21:27:05.825 debug: Create cjs interop url for 'file:///Users/thobn/DEVELOP/Game/BoiBai/node_modules/dayjs/dayjs.min.js'
+21:27:05.825 debug: Resolve dayjs from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as file:///Users/thobn/DEVELOP/Game/BoiBai/node_modules/dayjs/dayjs.min.mjs?cjs=&original=.js.
+21:27:05.827 debug: Target(editor) ends with cost 21.569459000602365ms.
+21:27:05.827 debug: Target(preview) build started.
+21:27:05.828 debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 10:19:37 GMT+0800 (Indochina Time), Current mtime: Thu Jan 01 1970 10:21:09 GMT+0800 (Indochina Time)
+21:27:05.828 debug: Inspect cce:/internal/x/prerequisite-imports
+21:27:05.832 debug: transform url: 'cce:/internal/x/prerequisite-imports' costs: 4.40 ms
+21:27:05.833 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts.
+21:27:05.833 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts.
+21:27:05.833 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+21:27:05.833 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+21:27:05.833 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
+21:27:05.833 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
+21:27:05.833 debug: Resolve file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts from cce:/internal/x/prerequisite-imports as file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts.
+21:27:05.833 debug: Detected change: file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts. Last mtime: Wed Oct 15 2025 21:25:19 GMT+0700 (Indochina Time)@7029a305-6f43-48e0-bfea-8c67c05f6e3d, Current mtime: Wed Oct 15 2025 21:27:00 GMT+0700 (Indochina Time)@7029a305-6f43-48e0-bfea-8c67c05f6e3d
+21:27:05.833 debug: Inspect file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts
+21:27:05.846 debug: transform url: 'file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts' costs: 12.50 ms
+21:27:05.846 debug: Resolve file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/MenuScene.ts from cce:/internal/x/prerequisite-imports as file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/MenuScene.ts.
+21:27:05.846 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/code-quality/cr.mjs.
+21:27:05.846 debug: Resolve cc from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/x/cc.
+21:27:05.846 debug: Resolve cc from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/x/cc.
+21:27:05.847 debug: Resolve cc from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/x/cc.
+21:27:05.847 debug: Create cjs interop url for 'file:///Users/thobn/DEVELOP/Game/BoiBai/node_modules/dayjs/dayjs.min.js'
+21:27:05.847 debug: Resolve dayjs from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as file:///Users/thobn/DEVELOP/Game/BoiBai/node_modules/dayjs/dayjs.min.mjs?cjs=&original=.js.
+21:27:05.849 debug: Target(preview) ends with cost 21.8099159989506ms.
+21:32:11.497 debug: Dispatch build request for time accumulated 1 asset changes.
+21:32:11.500 debug: Build iteration starts.
+Number of accumulated asset changes: 1
+Feature changed: false
+21:32:11.500 debug: Target(editor) build started.
+21:32:11.501 debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 10:21:09 GMT+0800 (Indochina Time), Current mtime: Thu Jan 01 1970 10:26:15 GMT+0800 (Indochina Time)
+21:32:11.501 debug: Inspect cce:/internal/x/prerequisite-imports
+21:32:11.514 debug: transform url: 'cce:/internal/x/prerequisite-imports' costs: 12.40 ms
+21:32:11.514 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts.
+21:32:11.515 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts.
+21:32:11.515 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+21:32:11.515 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+21:32:11.515 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
+21:32:11.515 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
+21:32:11.515 debug: Resolve file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts from cce:/internal/x/prerequisite-imports as file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts.
+21:32:11.515 debug: Detected change: file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts. Last mtime: Wed Oct 15 2025 21:27:00 GMT+0700 (Indochina Time)@7029a305-6f43-48e0-bfea-8c67c05f6e3d, Current mtime: Wed Oct 15 2025 21:30:55 GMT+0700 (Indochina Time)@7029a305-6f43-48e0-bfea-8c67c05f6e3d
+21:32:11.515 debug: Inspect file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts
+21:32:11.533 debug: transform url: 'file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts' costs: 17.60 ms
+21:32:11.534 debug: Resolve file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/MenuScene.ts from cce:/internal/x/prerequisite-imports as file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/MenuScene.ts.
+21:32:11.534 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/code-quality/cr.mjs.
+21:32:11.534 debug: Resolve cc from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/x/cc.
+21:32:11.534 debug: Resolve cc from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/x/cc.
+21:32:11.534 debug: Resolve cc from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/x/cc.
+21:32:11.535 debug: Create cjs interop url for 'file:///Users/thobn/DEVELOP/Game/BoiBai/node_modules/dayjs/dayjs.min.js'
+21:32:11.535 debug: Resolve dayjs from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as file:///Users/thobn/DEVELOP/Game/BoiBai/node_modules/dayjs/dayjs.min.mjs?cjs=&original=.js.
+21:32:11.550 debug: Target(editor) ends with cost 49.54508399963379ms.
+21:32:11.550 debug: Target(preview) build started.
+21:32:11.550 debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 10:21:09 GMT+0800 (Indochina Time), Current mtime: Thu Jan 01 1970 10:26:15 GMT+0800 (Indochina Time)
+21:32:11.550 debug: Inspect cce:/internal/x/prerequisite-imports
+21:32:11.556 debug: transform url: 'cce:/internal/x/prerequisite-imports' costs: 5.10 ms
+21:32:11.558 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts.
+21:32:11.558 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts.
+21:32:11.558 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+21:32:11.558 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+21:32:11.558 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
+21:32:11.558 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
+21:32:11.558 debug: Resolve file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts from cce:/internal/x/prerequisite-imports as file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts.
+21:32:11.558 debug: Detected change: file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts. Last mtime: Wed Oct 15 2025 21:27:00 GMT+0700 (Indochina Time)@7029a305-6f43-48e0-bfea-8c67c05f6e3d, Current mtime: Wed Oct 15 2025 21:30:55 GMT+0700 (Indochina Time)@7029a305-6f43-48e0-bfea-8c67c05f6e3d
+21:32:11.558 debug: Inspect file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts
+21:32:11.570 debug: transform url: 'file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts' costs: 12.30 ms
+21:32:11.572 debug: Resolve file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/MenuScene.ts from cce:/internal/x/prerequisite-imports as file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/MenuScene.ts.
+21:32:11.572 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/code-quality/cr.mjs.
+21:32:11.572 debug: Resolve cc from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/x/cc.
+21:32:11.572 debug: Resolve cc from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/x/cc.
+21:32:11.572 debug: Resolve cc from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/x/cc.
+21:32:11.573 debug: Create cjs interop url for 'file:///Users/thobn/DEVELOP/Game/BoiBai/node_modules/dayjs/dayjs.min.js'
+21:32:11.573 debug: Resolve dayjs from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as file:///Users/thobn/DEVELOP/Game/BoiBai/node_modules/dayjs/dayjs.min.mjs?cjs=&original=.js.
+21:32:11.576 debug: Target(preview) ends with cost 25.76058300025761ms.
+21:38:16.382 debug: Dispatch build request for time accumulated 1 asset changes.
+21:38:16.387 debug: Build iteration starts.
+Number of accumulated asset changes: 1
+Feature changed: false
+21:38:16.387 debug: Target(editor) build started.
+21:38:16.391 debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 10:26:15 GMT+0800 (Indochina Time), Current mtime: Thu Jan 01 1970 10:32:20 GMT+0800 (Indochina Time)
+21:38:16.391 debug: Inspect cce:/internal/x/prerequisite-imports
+21:38:16.407 debug: transform url: 'cce:/internal/x/prerequisite-imports' costs: 16.30 ms
+21:38:16.408 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts.
+21:38:16.408 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts.
+21:38:16.408 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+21:38:16.408 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+21:38:16.408 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
+21:38:16.408 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
+21:38:16.408 debug: Resolve file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts from cce:/internal/x/prerequisite-imports as file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts.
+21:38:16.408 debug: Detected change: file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts. Last mtime: Wed Oct 15 2025 21:30:55 GMT+0700 (Indochina Time)@7029a305-6f43-48e0-bfea-8c67c05f6e3d, Current mtime: Wed Oct 15 2025 21:36:59 GMT+0700 (Indochina Time)@7029a305-6f43-48e0-bfea-8c67c05f6e3d
+21:38:16.408 debug: Inspect file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts
+21:38:16.422 debug: transform url: 'file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts' costs: 13.90 ms
+21:38:16.422 debug: Resolve file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/MenuScene.ts from cce:/internal/x/prerequisite-imports as file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/MenuScene.ts.
+21:38:16.423 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/code-quality/cr.mjs.
+21:38:16.423 debug: Resolve cc from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/x/cc.
+21:38:16.423 debug: Resolve cc from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/x/cc.
+21:38:16.423 debug: Resolve cc from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/x/cc.
+21:38:16.423 debug: Create cjs interop url for 'file:///Users/thobn/DEVELOP/Game/BoiBai/node_modules/dayjs/dayjs.min.js'
+21:38:16.423 debug: Resolve dayjs from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as file:///Users/thobn/DEVELOP/Game/BoiBai/node_modules/dayjs/dayjs.min.mjs?cjs=&original=.js.
+21:38:16.425 debug: Target(editor) ends with cost 38.198750000447035ms.
+21:38:16.425 debug: Target(preview) build started.
+21:38:16.426 debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 10:26:15 GMT+0800 (Indochina Time), Current mtime: Thu Jan 01 1970 10:32:20 GMT+0800 (Indochina Time)
+21:38:16.426 debug: Inspect cce:/internal/x/prerequisite-imports
+21:38:16.430 debug: transform url: 'cce:/internal/x/prerequisite-imports' costs: 3.60 ms
+21:38:16.430 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts.
+21:38:16.430 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts.
+21:38:16.430 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+21:38:16.430 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+21:38:16.430 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
+21:38:16.430 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
+21:38:16.430 debug: Resolve file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts from cce:/internal/x/prerequisite-imports as file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts.
+21:38:16.430 debug: Detected change: file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts. Last mtime: Wed Oct 15 2025 21:30:55 GMT+0700 (Indochina Time)@7029a305-6f43-48e0-bfea-8c67c05f6e3d, Current mtime: Wed Oct 15 2025 21:36:59 GMT+0700 (Indochina Time)@7029a305-6f43-48e0-bfea-8c67c05f6e3d
+21:38:16.430 debug: Inspect file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts
+21:38:16.443 debug: transform url: 'file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts' costs: 12.60 ms
+21:38:16.443 debug: Resolve file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/MenuScene.ts from cce:/internal/x/prerequisite-imports as file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/MenuScene.ts.
+21:38:16.444 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/code-quality/cr.mjs.
+21:38:16.444 debug: Resolve cc from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/x/cc.
+21:38:16.444 debug: Resolve cc from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/x/cc.
+21:38:16.444 debug: Resolve cc from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/x/cc.
+21:38:16.444 debug: Create cjs interop url for 'file:///Users/thobn/DEVELOP/Game/BoiBai/node_modules/dayjs/dayjs.min.js'
+21:38:16.444 debug: Resolve dayjs from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as file:///Users/thobn/DEVELOP/Game/BoiBai/node_modules/dayjs/dayjs.min.mjs?cjs=&original=.js.
+21:38:16.447 debug: Target(preview) ends with cost 21.73595800064504ms.
+21:43:15.174 debug: Dispatch build request for time accumulated 1 asset changes.
+21:43:15.175 debug: Build iteration starts.
+Number of accumulated asset changes: 1
+Feature changed: false
+21:43:15.175 debug: Target(editor) build started.
+21:43:15.176 debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 10:32:20 GMT+0800 (Indochina Time), Current mtime: Thu Jan 01 1970 10:37:19 GMT+0800 (Indochina Time)
+21:43:15.176 debug: Inspect cce:/internal/x/prerequisite-imports
+21:43:15.179 debug: transform url: 'cce:/internal/x/prerequisite-imports' costs: 3.80 ms
+21:43:15.180 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts.
+21:43:15.180 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts.
+21:43:15.180 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+21:43:15.180 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+21:43:15.180 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
+21:43:15.180 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
+21:43:15.180 debug: Resolve file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts from cce:/internal/x/prerequisite-imports as file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts.
+21:43:15.180 debug: Detected change: file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts. Last mtime: Wed Oct 15 2025 21:36:59 GMT+0700 (Indochina Time)@7029a305-6f43-48e0-bfea-8c67c05f6e3d, Current mtime: Wed Oct 15 2025 21:43:11 GMT+0700 (Indochina Time)@7029a305-6f43-48e0-bfea-8c67c05f6e3d
+21:43:15.180 debug: Inspect file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts
+21:43:15.195 debug: transform url: 'file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts' costs: 14.70 ms
+21:43:15.196 debug: Resolve file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/MenuScene.ts from cce:/internal/x/prerequisite-imports as file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/MenuScene.ts.
+21:43:15.196 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/code-quality/cr.mjs.
+21:43:15.196 debug: Resolve cc from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/x/cc.
+21:43:15.196 debug: Resolve cc from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/x/cc.
+21:43:15.196 debug: Resolve cc from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/x/cc.
+21:43:15.197 debug: Create cjs interop url for 'file:///Users/thobn/DEVELOP/Game/BoiBai/node_modules/dayjs/dayjs.min.js'
+21:43:15.197 debug: Resolve dayjs from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as file:///Users/thobn/DEVELOP/Game/BoiBai/node_modules/dayjs/dayjs.min.mjs?cjs=&original=.js.
+21:43:15.202 debug: Target(editor) ends with cost 27.126375000923872ms.
+21:43:15.202 debug: Target(preview) build started.
+21:43:15.230 debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 10:32:20 GMT+0800 (Indochina Time), Current mtime: Thu Jan 01 1970 10:37:19 GMT+0800 (Indochina Time)
+21:43:15.230 debug: Inspect cce:/internal/x/prerequisite-imports
+21:43:15.234 debug: transform url: 'cce:/internal/x/prerequisite-imports' costs: 4.10 ms
+21:43:15.235 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts.
+21:43:15.235 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts.
+21:43:15.235 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+21:43:15.235 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+21:43:15.235 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
+21:43:15.235 debug: Resolve file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///Applications/Cocos/Creator/3.8.7/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
+21:43:15.235 debug: Resolve file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts from cce:/internal/x/prerequisite-imports as file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts.
+21:43:15.235 debug: Detected change: file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts. Last mtime: Wed Oct 15 2025 21:36:59 GMT+0700 (Indochina Time)@7029a305-6f43-48e0-bfea-8c67c05f6e3d, Current mtime: Wed Oct 15 2025 21:43:11 GMT+0700 (Indochina Time)@7029a305-6f43-48e0-bfea-8c67c05f6e3d
+21:43:15.235 debug: Inspect file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts
+21:43:15.251 debug: transform url: 'file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts' costs: 16.20 ms
+21:43:15.252 debug: Resolve file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/MenuScene.ts from cce:/internal/x/prerequisite-imports as file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/MenuScene.ts.
+21:43:15.252 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/code-quality/cr.mjs.
+21:43:15.252 debug: Resolve cc from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/x/cc.
+21:43:15.252 debug: Resolve cc from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/x/cc.
+21:43:15.252 debug: Resolve cc from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as cce:/internal/x/cc.
+21:43:15.253 debug: Create cjs interop url for 'file:///Users/thobn/DEVELOP/Game/BoiBai/node_modules/dayjs/dayjs.min.js'
+21:43:15.253 debug: Resolve dayjs from file:///Users/thobn/DEVELOP/Game/BoiBai/assets/scripts/BoiNgayScene.ts as file:///Users/thobn/DEVELOP/Game/BoiBai/node_modules/dayjs/dayjs.min.mjs?cjs=&original=.js.
+21:43:15.256 debug: Target(preview) ends with cost 54.05008300021291ms.

@@ -1497,7 +1497,15 @@
     "value": {
       "depends": [
         "29c45874-aa1b-4400-9e8b-e661fbf8871a",
-        "96e8eec3-9a60-4c83-9c51-04c3a209e22a@f9941"
+        "96e8eec3-9a60-4c83-9c51-04c3a209e22a@f9941",
+        "0c6ab561-5e2d-4817-a5c0-d130e40ecedf@f9941",
+        "20835ba4-6145-4fbc-a58a-051ce700aa3e@f9941",
+        "544e49d6-3f05-4fa8-9a9e-091f98fc2ce8@f9941",
+        "951249e0-9f16-456d-8b85-a6ca954da16b@f9941",
+        "d27f1c21-415f-4af5-b524-b94896d4c1db@f9941",
+        "e4f8d3bf-cad0-4efb-b024-0f13280441cc@f9941",
+        "578c062b-9260-4ab6-8c07-5153546326a5@f9941",
+        "4416a156-aafb-4edb-a5cf-5a28a9b36c5a@f9941"
       ],
       "dependScripts": [
         "7029a305-6f43-48e0-bfea-8c67c05f6e3d"
@@ -1535,6 +1543,51 @@
   "7029a305-6f43-48e0-bfea-8c67c05f6e3d": {
     "url": "db://assets/scripts/BoiNgayScene.ts",
     "value": {},
+    "versionCode": 1
+  },
+  "0c6ab561-5e2d-4817-a5c0-d130e40ecedf@f9941": {
+    "url": "db://assets/images/xapbaibosung.png@f9941",
+    "value": {
+      "depends": [
+        "0c6ab561-5e2d-4817-a5c0-d130e40ecedf@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "e4f8d3bf-cad0-4efb-b024-0f13280441cc@f9941": {
+    "url": "db://assets/images/chtt/BackBtnActive.png@f9941",
+    "value": {
+      "depends": [
+        "e4f8d3bf-cad0-4efb-b024-0f13280441cc@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "d27f1c21-415f-4af5-b524-b94896d4c1db@f9941": {
+    "url": "db://assets/images/chtt/BackBtn.png@f9941",
+    "value": {
+      "depends": [
+        "d27f1c21-415f-4af5-b524-b94896d4c1db@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "4416a156-aafb-4edb-a5cf-5a28a9b36c5a@f9941": {
+    "url": "db://assets/images/chtt/VaoBoiBtnActive.png@f9941",
+    "value": {
+      "depends": [
+        "4416a156-aafb-4edb-a5cf-5a28a9b36c5a@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "578c062b-9260-4ab6-8c07-5153546326a5@f9941": {
+    "url": "db://assets/images/chtt/VaoBoiBtn.png@f9941",
+    "value": {
+      "depends": [
+        "578c062b-9260-4ab6-8c07-5153546326a5@6c48a"
+      ]
+    },
     "versionCode": 1
   }
 }
