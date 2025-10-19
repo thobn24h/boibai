@@ -1,10 +1,13 @@
-import { _decorator, Component, director, Label, Node, Sprite, tween, UITransform, Vec3 } from 'cc';
+import { _decorator, Component, director, Label, Node, Sprite, Tween, tween, UITransform, Vec3 } from 'cc';
 import dayjs from 'dayjs';
 
 const { ccclass, property } = _decorator;
 
 @ccclass('BoiNgayScene')
 export class BoiNgayScene extends Component {
+
+    @property(Node)
+    canvasNode: Node = null;
 
     @property(Label)
     labelBoiNgay: Label = null;
@@ -36,6 +39,9 @@ export class BoiNgayScene extends Component {
     protected onLoad(): void {
         const now = dayjs();
 
+        // Lấy ngày hiện tại trong tháng (1-31)
+        this.ngay = now.date();
+
         // Mảng tên thứ tiếng Việt
         const daysOfWeek = ['Chủ nhật', 'Thứ hai', 'Thứ ba', 'Thứ tư', 'Thứ năm', 'Thứ sáu', 'Thứ bảy'];
         const dayOfWeek = daysOfWeek[now.day()];
@@ -54,10 +60,12 @@ export class BoiNgayScene extends Component {
     }
 
     beginEffectTraobai() {
+      console.log(`beginEffectTraobai`)
+
       // hide message
       this.lblThongbaoTraobai.active = false;
       // hide menu back / next 
-      this.controlButtonLayoutNode.active = false;
+      // this.controlButtonLayoutNode.active = false;
 
       const centerPos = this.btnTraoBai.getPosition();
       const cardSize = this.btnTraoBai.getComponent(UITransform).contentSize;
@@ -72,16 +80,47 @@ export class BoiNgayScene extends Component {
       this.lblDem.string = "0";
       this.lblDem.node.active = true;
 
-      // play effect
-      tween(this.card1).by(0.3, new Vec3(0, -cardSize.height / 2 - 5, 0)).call(() => {
-        
-      }).start();
+      // play effect card 1
+      const card1Sequence = tween(this.card1)
+        .by(0.3, new Vec3(0, -cardSize.height / 2 - 5, 0))
+        .call(() => {
+          this.changeZCard();
+        })
+        .to(0.3, centerPos)
+        .delay(0.1)
+        .by(0.3, new Vec3(0, cardSize.height / 2 + 5, 0))
+        .call(() => {
+          this.changeZCard();
+        })
+        .to(0.3, centerPos)
+        .delay(0.1);
 
+      tween(this.card1).repeatForever(card1Sequence).start()
 
+      // play effect card 2
+      const card2Sequence = tween(this.card2)
+        .by(0.3, new Vec3(0, cardSize.height / 2 + 5, 0))
+        .to(0.3, centerPos)
+        .delay(0.1)
+        .by(0.3, new Vec3(0, -cardSize.height / 2 - 5, 0))
+        .to(0.3, centerPos)
+        .delay(0.1);
+
+      tween(this.card2).repeatForever(card2Sequence).start();
+
+      this.scheduleOnce(this.stopEffectTraobai, 0.7 * this.ngay);
     }
 
     stopEffectTraobai() {
+      Tween.stopAllByTarget(this.card1);
+      Tween.stopAllByTarget(this.card2);
 
+      const centerPos = this.btnTraoBai.getPosition();
+      this.card1.setPosition(centerPos)
+      this.card2.setPosition(centerPos)
+
+      this.flag = true;
+      this.lblDem.string = 'Xin mời bạn vào bói!'
     }
 
     clickBack() {
@@ -94,6 +133,18 @@ export class BoiNgayScene extends Component {
       }
       else if (!this.flagDangtraobai) {
         this.lblThongbaoTraobai.active = true;
+      }
+    }
+
+    changeZCard() {
+      this.temp++;
+      this.lblDem.string = `Tráo lần ${this.temp}`;
+      if (this.temp % 2 != 0) {
+        this.card2.setSiblingIndex(100);
+        this.card1.setSiblingIndex(101);
+      } else {
+        this.card1.setSiblingIndex(100);
+        this.card2.setSiblingIndex(101);
       }
     }
     

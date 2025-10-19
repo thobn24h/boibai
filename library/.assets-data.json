@@ -1438,7 +1438,9 @@
         "260517d5-1942-4041-9a19-c6ae60b8990f@f9941",
         "c70d7db0-ba7e-4ecd-9154-a20152ac78a2@f9941"
       ],
-      "dependScripts": []
+      "dependScripts": [
+        "fb0833da-03b5-46d9-83b3-2a1e76045a69"
+      ]
     },
     "versionCode": 1
   },

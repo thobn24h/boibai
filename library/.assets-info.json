@@ -19,7 +19,7 @@
       "time": 1760451543455.0974
     },
     "scripts": {
-      "time": 1760536665801.285,
+      "time": 1760841249160.2952,
       "uuid": "7b623585-f38e-428b-8180-691e5b7ca17b"
     },
     "scenes.meta": {
@@ -663,28 +663,28 @@
       "time": 1760456000306.749
     },
     "scenes/menuScene.scene": {
-      "time": 1760457052638.3677,
+      "time": 1760844967463.3135,
       "uuid": "f2faf5b8-6f8d-40c7-8449-afbd15358cc4"
     },
     "scripts/MenuScene.ts.meta": {
       "time": 1760457107359.8777
     },
     "scripts/MenuScene.ts": {
-      "time": 1760457107358.022,
+      "time": 1760844931107.1575,
       "uuid": "fb0833da-03b5-46d9-83b3-2a1e76045a69"
     },
     "scenes/BoiNgayScene.scene.meta": {
       "time": 1760530434801.6309
     },
     "scenes/BoiNgayScene.scene": {
-      "time": 1760541158781.736,
+      "time": 1760845002309.5513,
       "uuid": "29c45874-aa1b-4400-9e8b-e661fbf8871a"
     },
     "scripts/BoiNgayScene.ts.meta": {
       "time": 1760535278241.6125
     },
     "scripts/BoiNgayScene.ts": {
-      "time": 1760542003231.386,
+      "time": 1760844576498.9277,
       "uuid": "7029a305-6f43-48e0-bfea-8c67c05f6e3d"
     }
   },
