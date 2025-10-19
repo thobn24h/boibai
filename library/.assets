@@ -99,7 +99,11 @@
             "images/menu/TellFriendsActive.png",
             "images/menu/btn_facebook.png",
             "images/menu/btn_share.png",
-            "images/menu/btn_twitter.png"
+            "images/menu/btn_twitter.png",
+            "scenes/BoiNgayPlayScene.scene",
+            "scripts/BoiNgayPlayScene.ts",
+            "images/chtt/XemQueBtn.png",
+            "images/chtt/XemQueBtnActive.png"
         ]
     }
 }

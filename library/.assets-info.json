@@ -19,14 +19,14 @@
       "time": 1760451543455.0974
     },
     "scripts": {
-      "time": 1760841249160.2952,
+      "time": 1760847271309.6023,
       "uuid": "7b623585-f38e-428b-8180-691e5b7ca17b"
     },
     "scenes.meta": {
       "time": 1760451558835.637
     },
     "scenes": {
-      "time": 1760530434797.709,
+      "time": 1760847045107.9292,
       "uuid": "fcfe07d0-a58b-4ea4-aff6-25682e991584"
     },
     "images/BNHelp.png.meta": {
@@ -51,7 +51,7 @@
       "time": 1760455502773.4385
     },
     "images/help.png.meta": {
-      "time": 1760455502791.424
+      "time": 1760847548150.2126
     },
     "images/helpscreen.png.meta": {
       "time": 1760455502813.9583
@@ -312,7 +312,7 @@
       "uuid": "105d6732-8cd0-4e9f-a0ff-c451c1bd160d"
     },
     "images/chtt": {
-      "time": 1760455502744.5225,
+      "time": 1760848765242.9453,
       "uuid": "d72128b0-f0f9-4ade-9d9a-1c174e87557b"
     },
     "images/BNHelp.png": {
@@ -686,6 +686,34 @@
     "scripts/BoiNgayScene.ts": {
       "time": 1760844576498.9277,
       "uuid": "7029a305-6f43-48e0-bfea-8c67c05f6e3d"
+    },
+    "scenes/BoiNgayPlayScene.scene.meta": {
+      "time": 1760847045110.578
+    },
+    "scenes/BoiNgayPlayScene.scene": {
+      "time": 1760851616735.257,
+      "uuid": "98f8b0c0-7366-4315-9796-ccca3009b64f"
+    },
+    "scripts/BoiNgayPlayScene.ts.meta": {
+      "time": 1760847271310.694
+    },
+    "scripts/BoiNgayPlayScene.ts": {
+      "time": 1760847271308.7903,
+      "uuid": "e4124935-1468-46b2-ac88-60497db03281"
+    },
+    "images/chtt/XemQueBtn.png.meta": {
+      "time": 1760848931708.1704
+    },
+    "images/chtt/XemQueBtnActive.png.meta": {
+      "time": 1760848931707.84
+    },
+    "images/chtt/XemQueBtnActive.png": {
+      "time": 1507136324000,
+      "uuid": "e42bee98-18f2-4cbe-b8e7-c3fc97243f37"
+    },
+    "images/chtt/XemQueBtn.png": {
+      "time": 1507136324000,
+      "uuid": "6a660aeb-380e-4429-9c00-5d8f028f6636"
     }
   },
   "missing": {}

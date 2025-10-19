@@ -1591,5 +1591,154 @@
       ]
     },
     "versionCode": 1
+  },
+  "98f8b0c0-7366-4315-9796-ccca3009b64f": {
+    "url": "db://assets/scenes/BoiNgayPlayScene.scene",
+    "value": {
+      "depends": [
+        "98f8b0c0-7366-4315-9796-ccca3009b64f",
+        "96e8eec3-9a60-4c83-9c51-04c3a209e22a@f9941",
+        "0c6ab561-5e2d-4817-a5c0-d130e40ecedf@f9941",
+        "d27f1c21-415f-4af5-b524-b94896d4c1db@f9941",
+        "e4f8d3bf-cad0-4efb-b024-0f13280441cc@f9941",
+        "6a660aeb-380e-4429-9c00-5d8f028f6636@f9941",
+        "e42bee98-18f2-4cbe-b8e7-c3fc97243f37@f9941",
+        "187d5fb0-cb49-4b09-9cd5-900c8a2a97e0@f9941"
+      ],
+      "dependScripts": [
+        "e4124935-1468-46b2-ac88-60497db03281"
+      ]
+    },
+    "versionCode": 1
+  },
+  "e4124935-1468-46b2-ac88-60497db03281": {
+    "url": "db://assets/scripts/BoiNgayPlayScene.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "187d5fb0-cb49-4b09-9cd5-900c8a2a97e0@f9941": {
+    "url": "db://assets/images/help.png@f9941",
+    "value": {
+      "depends": [
+        "187d5fb0-cb49-4b09-9cd5-900c8a2a97e0@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "7f45feca-0b9a-4df0-b836-12a995a8688b": {
+    "url": "db://assets/images/chtt/XemQueBtn.png",
+    "value": {},
+    "versionCode": 1
+  },
+  "1dea0a28-1ac9-49f3-ac7b-543ae8027a75": {
+    "url": "db://assets/images/chtt/XemQueBtnActive.png",
+    "value": {},
+    "versionCode": 1
+  },
+  "1de0e051-2e40-4478-99d5-922b16f8744b": {
+    "url": "db://assets/images/chtt/XemQueBtn-hd.png",
+    "value": {},
+    "versionCode": 1
+  },
+  "c5f1f19e-128a-4fc2-92a1-b32bf99af646": {
+    "url": "db://assets/images/chtt/XemQueBtn.png",
+    "value": {},
+    "versionCode": 1
+  },
+  "1de0e051-2e40-4478-99d5-922b16f8744b@6c48a": {
+    "url": "db://assets/images/chtt/XemQueBtn-hd.png@6c48a",
+    "value": {
+      "depends": [
+        "1de0e051-2e40-4478-99d5-922b16f8744b"
+      ]
+    },
+    "versionCode": 1
+  },
+  "c5f1f19e-128a-4fc2-92a1-b32bf99af646@6c48a": {
+    "url": "db://assets/images/chtt/XemQueBtn.png@6c48a",
+    "value": {
+      "depends": [
+        "c5f1f19e-128a-4fc2-92a1-b32bf99af646"
+      ]
+    },
+    "versionCode": 1
+  },
+  "892b6a3a-c612-4f51-915c-4a7e743fa7e9": {
+    "url": "db://assets/images/chtt/XemQueBtnActive-hd.png",
+    "value": {},
+    "versionCode": 1
+  },
+  "f3380905-daa9-4743-a7a3-11461c765d39": {
+    "url": "db://assets/images/chtt/XemQueBtnActive.png",
+    "value": {},
+    "versionCode": 1
+  },
+  "892b6a3a-c612-4f51-915c-4a7e743fa7e9@6c48a": {
+    "url": "db://assets/images/chtt/XemQueBtnActive-hd.png@6c48a",
+    "value": {
+      "depends": [
+        "892b6a3a-c612-4f51-915c-4a7e743fa7e9"
+      ]
+    },
+    "versionCode": 1
+  },
+  "f3380905-daa9-4743-a7a3-11461c765d39@6c48a": {
+    "url": "db://assets/images/chtt/XemQueBtnActive.png@6c48a",
+    "value": {
+      "depends": [
+        "f3380905-daa9-4743-a7a3-11461c765d39"
+      ]
+    },
+    "versionCode": 1
+  },
+  "6a660aeb-380e-4429-9c00-5d8f028f6636": {
+    "url": "db://assets/images/chtt/XemQueBtn.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "e42bee98-18f2-4cbe-b8e7-c3fc97243f37": {
+    "url": "db://assets/images/chtt/XemQueBtnActive.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "e42bee98-18f2-4cbe-b8e7-c3fc97243f37@6c48a": {
+    "url": "db://assets/images/chtt/XemQueBtnActive.png@6c48a",
+    "value": {
+      "depends": [
+        "e42bee98-18f2-4cbe-b8e7-c3fc97243f37"
+      ]
+    },
+    "versionCode": 1
+  },
+  "6a660aeb-380e-4429-9c00-5d8f028f6636@6c48a": {
+    "url": "db://assets/images/chtt/XemQueBtn.png@6c48a",
+    "value": {
+      "depends": [
+        "6a660aeb-380e-4429-9c00-5d8f028f6636"
+      ]
+    },
+    "versionCode": 1
+  },
+  "e42bee98-18f2-4cbe-b8e7-c3fc97243f37@f9941": {
+    "url": "db://assets/images/chtt/XemQueBtnActive.png@f9941",
+    "value": {
+      "depends": [
+        "e42bee98-18f2-4cbe-b8e7-c3fc97243f37@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "6a660aeb-380e-4429-9c00-5d8f028f6636@f9941": {
+    "url": "db://assets/images/chtt/XemQueBtn.png@f9941",
+    "value": {
+      "depends": [
+        "6a660aeb-380e-4429-9c00-5d8f028f6636@6c48a"
+      ]
+    },
+    "versionCode": 1
   }
 }
