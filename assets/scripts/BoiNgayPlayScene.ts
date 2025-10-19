@@ -1,8 +1,14 @@
-import { _decorator, Component, Node } from 'cc';
+import { _decorator, Component, Node, SpriteFrame } from 'cc';
 const { ccclass, property } = _decorator;
 
 @ccclass('BoiNgayPlayScene')
 export class BoiNgayPlayScene extends Component {
+
+    @property(Node)
+    canvasNode: Node = null
+
+    @property(SpriteFrame)
+    queSpriteFrame: SpriteFrame = null
 
     numberCardsDuoiFliped = 0;
 		flagNext = false;

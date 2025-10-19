@@ -1261,6 +1261,13 @@
     },
     "_enabled": true,
     "__prefab": null,
+    "canvasNode": {
+      "__id__": 2
+    },
+    "queSpriteFrame": {
+      "__uuid__": "b863550f-f007-4f7a-b6a1-b6c91d816170@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
     "_id": "f9vExHb51BiLnmunZHuqr3"
   },
   {
