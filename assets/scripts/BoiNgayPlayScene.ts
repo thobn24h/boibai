@@ -49,32 +49,33 @@ export class BoiNgayPlayScene extends Component {
       this.unschedule(this.update)
     }
 
-    // update(deltaTime: number) {
-    //   // [self unscheduleUpdate];
-    //   // int i = 0;
-    //   // for ( ; i < [arrSPCardsFlipTren count] ; i++) {
-    //   //   CCSprite *spCard = [arrSPCardsFlipTren objectAtIndex:i];
-    //   //   if ([self checkOK:spCard]) {
-    //   //     break;
-    //   //   }
-    //   // }
-    //   // if (i == [arrSPCardsFlipTren count]) {
-    //   //   [self schedule:@selector(effectFlipCard:) interval:1];
-    //   // }
-    //   console.log(`update: ${deltaTime}`)
-    //   this.unschedule(this.update)
-    //   let i = 0;
-    //   for (; i < this.arrSPCardsFlipTren.length; i++) {
-    //     const spCard = this.arrSPCardsFlipTren[i]
-    //     if (this.checkOK(spCard)) {
-    //       break;
-    //     }
-    //   }
+    update(deltaTime: number) {
+      // [self unscheduleUpdate];
+      // int i = 0;
+      // for ( ; i < [arrSPCardsFlipTren count] ; i++) {
+      //   CCSprite *spCard = [arrSPCardsFlipTren objectAtIndex:i];
+      //   if ([self checkOK:spCard]) {
+      //     break;
+      //   }
+      // }
+      // if (i == [arrSPCardsFlipTren count]) {
+      //   [self schedule:@selector(effectFlipCard:) interval:1];
+      // }
+      console.log(`update: ${deltaTime}`)
+      this.unschedule(this.update)
 
-    //   if (i == this.arrSPCardsFlipTren.length) {
-    //     this.schedule(this.effectFlipCard, 1)
-    //   }
-    // }
+      let i = 0;
+      for (; i < this.arrSPCardsFlipTren.length; i++) {
+        const spCard = this.arrSPCardsFlipTren[i]
+        if (this.checkOK(spCard)) {
+          break;
+        }
+      }
+
+      if (i == this.arrSPCardsFlipTren.length) {
+        this.schedule(this.effectFlipCard, 1)
+      }
+    }
 
     createNewCardNode(tag: number, cardPos: Vec3) {
       console.log(`createNewCardNode: ${tag}`)
@@ -294,8 +295,7 @@ export class BoiNgayPlayScene extends Component {
           }
         }
         
-        // TODO: check cac doi bai trung nhau
-        // [self showDoiBaiTrungNhau];
+        // check cac doi bai trung nhau
         this.showDoiBaiTrungNhau()
       }
 
@@ -305,6 +305,7 @@ export class BoiNgayPlayScene extends Component {
     startUpdate() {
       // self.isTouchEnabled = YES;
 	    // [self scheduleUpdate];
+      this.schedule(this.update, 0)
     }
 
     //hieu ung lat quan bai va chuyen doi vi tri cac quan bai trong phan duoi
