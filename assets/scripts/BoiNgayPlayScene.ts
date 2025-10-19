@@ -13,6 +13,8 @@ export class BoiNgayPlayScene extends Component {
     @property(Node)
     xapBaiNode: Node = null
 
+    xapBaiPos: Vec3 = Vec3.ZERO
+
     numberCardsDuoiFliped = 0;
 		flagNext = false;
 		idDoi1 = 0;
@@ -26,19 +28,24 @@ export class BoiNgayPlayScene extends Component {
 		demPTMang = 1000;
 
     demLat = 0;
+    demFind = 0;
+    demsodoidachon = 0;
+
+    demFindLai = 0;
 
     arrCards = []; //mang luu 52 so ngau nhien khac nhau tu 5-56
 		arrSPCardsTren = [];  // luu cac quan bai tren
 		arrVTCardTren = []; // luu vi tri cac quan bai tren
 		arrSPCardsFlipTren = [];// luu cac la bai da lat o tren
-		arrSPcardsDuoi = []; // luu cac quan bai duoi
-		arrSPCardsDuoiLai = []; //luu cac quan bai duoi de tim lai cac doi
+		arrSPcardsDuoi = Array<Node>(); // luu cac quan bai duoi
+		arrSPCardsDuoiLai = Array<Node>(); //luu cac quan bai duoi de tim lai cac doi
 
     start() {
       this.schedule(this.effectChiabai, 0.2)
     }
 
     protected onLoad(): void {
+      this.xapBaiPos = this.xapBaiNode.getPosition()
       this.unschedule(this.update)
     }
 
@@ -123,7 +130,7 @@ export class BoiNgayPlayScene extends Component {
     }
 
     effectChiabai() {
-      const startPos = this.xapBaiNode.getPosition()
+      const startPos = this.xapBaiPos
       const screenSize = view.getDesignResolutionSize()
       console.log(`screenSize: ${screenSize.width} ${screenSize.height}`)
 
@@ -187,7 +194,8 @@ export class BoiNgayPlayScene extends Component {
 
         // tao cac quan bai duoi
         for (let i = 1; i <= 24; i++) {
-          const cardPos = new Vec3(0, 132 * 2 - screenSize.height / 2, 0)
+          // const cardPos = new Vec3(0, 132 * 2 - screenSize.height / 2, 0)
+          const cardPos = this.xapBaiPos
           const newCardNode = this.createNewCardNode(this.arrCards[dem], cardPos)
           this.arrSPcardsDuoi.push(newCardNode)
           dem++;
@@ -213,13 +221,6 @@ export class BoiNgayPlayScene extends Component {
     effectLat7Quancuoi() {
       console.log(`effectLat7Quancuoi: ${this.demLat}`)
       if (this.demLat <= 27) {
-        // const newCardNode = this.createNewCardNodeFromResource()
-        
-        // CCSprite *spriteCard = [arrSPCardsTren objectAtIndex:demLat];
-        // CCTexture2D *texture2D = [[CCTexture2D alloc] initWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"%i.png",spriteCard.tag]]];
-        // [spriteCard setTexture: texture2D];
-        // [arrSPCardsFlipTren addObject:spriteCard];
-
         const spriteCardNode = this.arrSPCardsTren[this.demLat]
         // change texture
         // Load ảnh từ thư mục resources/images
@@ -232,10 +233,6 @@ export class BoiNgayPlayScene extends Component {
 
             // Gắn spriteFrame vào Sprite component
             spriteCardNode.getComponent(Sprite).spriteFrame = spriteFrame;
-
-            // Tùy chỉnh kích thước node theo kích thước ảnh
-            // const uiTransform = newNode.getComponent(UITransform);
-            // uiTransform.setContentSize(spriteFrame.width, spriteFrame.height);
         });
       
         this.arrSPCardsFlipTren.push(spriteCardNode)
@@ -265,15 +262,20 @@ export class BoiNgayPlayScene extends Component {
         // CCSequence* sequen = [CCSequence actions:move,callChangeImage,moveback,call, nil];
         // [spCard runAction:sequen];
 
+        const cardPos = this.xapBaiPos
+        const cardSize = this.xapBaiNode.getComponent(UITransform).contentSize
+
         const spCard = this.arrSPcardsDuoi[0]
         tween(spCard)
-          .to(1, new Vec3(0, 205 * 2 - screenSize.height / 2, 0))
+          // .by(1, new Vec3(0, 205 * 2 - screenSize.height / 2, 0))
+          .by(1, new Vec3(0, cardSize.height / 2, 0))
           .call(() => {
             this.changeImage()
           })
-          .to(1, new Vec3(0, 132 * 2 - screenSize.height / 2, 0))
+          // .to(1, new Vec3(0, 132 * 2 - screenSize.height / 2, 0))
+          .to(1, cardPos)
           .call(() => {
-            // TOD: start update
+            // start update
             this.startUpdate()
           }).start()
       }
@@ -294,6 +296,7 @@ export class BoiNgayPlayScene extends Component {
         
         // TODO: check cac doi bai trung nhau
         // [self showDoiBaiTrungNhau];
+        this.showDoiBaiTrungNhau()
       }
 
     }
@@ -327,17 +330,15 @@ export class BoiNgayPlayScene extends Component {
 
           // Gắn spriteFrame vào Sprite component
           spCard.getComponent(Sprite).spriteFrame = spriteFrame;
-          
-
-          // Tùy chỉnh kích thước node theo kích thước ảnh
-          // const uiTransform = newNode.getComponent(UITransform);
-          // uiTransform.setContentSize(spriteFrame.width, spriteFrame.height);
       });
 
       // Di chuyển lá đầu xuống cuối mảng
-      const fistSpCard = this.arrSPcardsDuoi[0];
+      const firstSpCard = this.arrSPcardsDuoi[0];
       this.arrSPcardsDuoi.splice(0, 1);         // Xóa phần tử đầu tiên
-      this.arrSPcardsDuoi.push(fistSpCard);     // Thêm nó xuống cuối mảng
+      this.arrSPcardsDuoi.push(firstSpCard);    // Thêm nó xuống cuối mảng
+
+      // move to first layer
+      firstSpCard.setSiblingIndex(1000)
 
     }
 
@@ -351,6 +352,525 @@ export class BoiNgayPlayScene extends Component {
       else {
         return false;
       }
+    }
+
+    showDoiBaiTrungNhau() {
+      this.demFind = 0;
+      this.schedule(this.findCardTrungNhau, 2.5)
+    }
+
+    findCardTrungNhau() {
+      if (this.arrSPcardsDuoi.length % 2 != 0) {
+        const spT = this.arrSPcardsDuoi[this.arrSPcardsDuoi.length / 2]
+        this.canvasNode.removeChild(spT)
+        this.arrSPcardsDuoi.splice(this.arrSPcardsDuoi.length / 2, 1)
+      }
+
+      if (this.demFind < this.arrSPcardsDuoi.length / 2) {
+			
+          const screenSize = view.getDesignResolutionSize()
+          const sp1 = this.arrSPcardsDuoi[this.demFind];
+          const sp2 = this.arrSPcardsDuoi[this.arrSPcardsDuoi.length - this.demFind - 1];
+          
+          const idsp1 = parseInt(sp1.name);
+          const idsp2 = parseInt(sp2.name);
+          if (((idsp1- 1)/4 == (idsp2-1)/4) && (idsp1 != idsp2)) {
+            this.demsodoidachon++;
+            switch (this.demsodoidachon) {
+              case 1:
+                this.idDoi1 = (idsp1 - 1)/4 + 1;
+                break;
+              case 2:
+                this.idDoi2 = (idsp1 - 1)/4 + 1;
+                break;
+              case 3:
+                this.idDoi3 = (idsp1 - 1)/4 + 1;
+                break;
+              default:
+                break;
+            }
+            if (this.demsodoidachon < 4) {
+              
+              // CCMoveTo *move1 = [CCMoveTo actionWithDuration:1 position:CGPointMake(screenSize.width/2, screenSize.height/2)];
+              // CCScaleTo *scale1 = [CCScaleTo actionWithDuration:1 scale:1];
+              // CCSpawn *actionZoomOut1 = [CCSpawn actions:move1, scale1, nil];
+              // CCDelayTime *delayTime1 = [CCDelayTime actionWithDuration:0.5f];
+              // CCMoveTo *moveback1 = [CCMoveTo actionWithDuration:1 position:CGPointMake(20 + 62*demsodoidachon, 350)];
+              // CCScaleTo *scaleback1 = [CCScaleTo actionWithDuration:1 scale:0.55];
+              // CCSpawn *actionZoomIn1 = [CCSpawn actions:moveback1, scaleback1, nil];
+              
+              // CCSequence *sequence1 = [CCSequence actions:actionZoomOut1,delayTime1, actionZoomIn1, nil];
+              // [sp1 runAction:sequence1];
+
+              tween(sp1)
+                .to(1, { 
+                  position: new Vec3(0, 0, 0),
+                  scale: new Vec3(1, 1, 1)
+                })
+                // Delay 0.5 giây
+                .delay(0.5)
+                // Di chuyển trở về vị trí ban đầu + scale nhỏ lại
+                .to(1, { 
+                    position: new Vec3((20 + 62 * this.demsodoidachon) * 2 - screenSize.width / 2, 350 * 2 - screenSize.height / 2, 0),
+                    scale: new Vec3(0.55, 0.55, 1)
+                })
+                .start()
+
+              
+              // CCMoveTo *move2 = [CCMoveTo actionWithDuration:1 position:CGPointMake(screenSize.width/2 + 20, screenSize.height/2)];
+              // CCScaleTo *scale2 = [CCScaleTo actionWithDuration:1 scale:1];
+              // CCSpawn *actionZoomOut2 = [CCSpawn actions:move2, scale2, nil];
+              // CCDelayTime *delayTime2 = [CCDelayTime actionWithDuration:0.5f];
+              // CCMoveTo *moveback2 = [CCMoveTo actionWithDuration:1 position:CGPointMake(30 + 62*demsodoidachon, 350)];
+              // CCScaleTo *scaleback2 = [CCScaleTo actionWithDuration:1 scale:0.55];
+              // CCSpawn *actionZoomIn2 = [CCSpawn actions:moveback2, scaleback2, nil];
+              
+              // CCSequence *sequence2 = [CCSequence actions:actionZoomOut2,delayTime2, actionZoomIn2, nil];
+              // [sp2 runAction:sequence2];
+
+              // Tween cho sp2
+              tween(sp2)
+                // Zoom out + di chuyển ra giữa màn hình (lệch 20px)
+                .to(1, { 
+                    position: new Vec3(20 * 2, 0, 1),
+                    scale: new Vec3(1, 1, 1)
+                })
+                // Dừng 0.5s
+                .delay(0.5)
+                // Zoom in + di chuyển về chỗ cũ
+                .to(1, { 
+                    position: new Vec3((30 + 62 * this.demsodoidachon) * 2 - screenSize.width / 2, 350 * 2 - screenSize.height / 2),
+                    scale: new Vec3(0.55, 0.55, 1)
+                })
+                .start();
+            }
+            else {
+              // CCMoveTo *move1 = [CCMoveTo actionWithDuration:1 position:CGPointMake(screenSize.width/2, screenSize.height/2)];
+              // CCScaleTo *scale1 = [CCScaleTo actionWithDuration:1 scale:1];
+              // CCSpawn *actionZoomOut1 = [CCSpawn actions:move1, scale1, nil];
+              // CCDelayTime *delayTime1 = [CCDelayTime actionWithDuration:0.5f];
+              // CCMoveTo *moveback1 = [CCMoveTo actionWithDuration:1 position:CGPointMake(20 + 62*(demsodoidachon - 3), 270)];
+              // CCScaleTo *scaleback1 = [CCScaleTo actionWithDuration:1 scale:0.55];
+              // CCSpawn *actionZoomIn1 = [CCSpawn actions:moveback1, scaleback1, nil];
+              
+              // CCSequence *sequence1 = [CCSequence actions:actionZoomOut1,delayTime1, actionZoomIn1, nil];
+              // [sp1 runAction:sequence1];
+
+              tween(sp1)
+                .to(1, { 
+                  position: new Vec3(0, 0, 0),
+                  scale: new Vec3(1, 1, 1)
+                })
+                // Delay 0.5 giây
+                .delay(0.5)
+                // Di chuyển trở về vị trí ban đầu + scale nhỏ lại
+                .to(1, { 
+                    position: new Vec3((20 + 62 * (this.demsodoidachon - 3)) * 2 - screenSize.width / 2, 270 * 2 - screenSize.height / 2, 0),
+                    scale: new Vec3(0.55, 0.55, 1)
+                })
+                .start()
+
+              // CCMoveTo *move2 = [CCMoveTo actionWithDuration:1 position:CGPointMake(screenSize.width/2 + 20, screenSize.height/2)];
+              // CCScaleTo *scale2 = [CCScaleTo actionWithDuration:1 scale:1];
+              // CCSpawn *actionZoomOut2 = [CCSpawn actions:move2, scale2, nil];
+              // CCDelayTime *delayTime2 = [CCDelayTime actionWithDuration:0.5f];
+              // CCMoveTo *moveback2 = [CCMoveTo actionWithDuration:1 position:CGPointMake(30 + 62*(demsodoidachon - 3), 270)];
+              // CCScaleTo *scaleback2 = [CCScaleTo actionWithDuration:1 scale:0.55];
+              // CCSpawn *actionZoomIn2 = [CCSpawn actions:moveback2, scaleback2, nil];
+              
+              // CCSequence *sequence2 = [CCSequence actions:actionZoomOut2,delayTime2, actionZoomIn2, nil];
+              // [sp2 runAction:sequence2];
+
+              // Tween cho sp2
+              tween(sp2)
+                // Zoom out + di chuyển ra giữa màn hình (lệch 20px)
+                .to(1, { 
+                    position: new Vec3(20 * 2, 0, 1),
+                    scale: new Vec3(1, 1, 1)
+                })
+                // Dừng 0.5s
+                .delay(0.5)
+                // Zoom in + di chuyển về chỗ cũ
+                .to(1, { 
+                    position: new Vec3((30 + 62 * (this.demsodoidachon - 3)) * 2 - screenSize.width / 2, 270 * 2 - screenSize.height / 2),
+                    scale: new Vec3(0.55, 0.55, 1)
+                })
+                .start();
+
+            }
+          }
+          else {
+            
+            if (idsp1 != idsp2) {
+              // CCMoveTo *move1 = [CCMoveTo actionWithDuration:1 position:CGPointMake(screenSize.width/2, screenSize.height/2)];
+              // CCScaleTo *scale1 = [CCScaleTo actionWithDuration:1 scale:1];
+              // CCSpawn *actionZoomOut1 = [CCSpawn actions:move1, scale1, nil];
+              // CCDelayTime *delayTime1 = [CCDelayTime actionWithDuration:0.5f];
+              // CCCallFuncND* call1 = [CCCallFuncND actionWithTarget:self 
+              //                       selector:@selector(removeChildCard1:data:) 
+              //                         data:(void *)sp1];
+              // CCSequence *sequence1 = [CCSequence actions:actionZoomOut1,delayTime1, call1, nil];
+              // [sp1 runAction:sequence1];
+
+              tween(sp1)
+                .to(1, { 
+                  position: new Vec3(0, 0, 0),
+                  scale: new Vec3(1, 1, 1)
+                })
+                // Delay 0.5 giây
+                .delay(0.5)
+                // Di chuyển trở về vị trí ban đầu + scale nhỏ lại
+                .call(function() {
+                  this.removeChildCard1(sp1);
+                })
+                .start()
+              
+              
+              // CCMoveTo *move2 = [CCMoveTo actionWithDuration:1 position:CGPointMake(screenSize.width/2 + 20, screenSize.height/2)];
+              // CCScaleTo *scale2 = [CCScaleTo actionWithDuration:1 scale:1];
+              // CCSpawn *actionZoomOut2 = [CCSpawn actions:move2, scale2, nil];
+              // CCDelayTime *delayTime2 = [CCDelayTime actionWithDuration:0.5f];
+              // CCCallFuncND* call2 = [CCCallFuncND actionWithTarget:self 
+              //                       selector:@selector(removeChildCard2:data:) 
+              //                         data:(void *)sp2];
+              // CCSequence *sequence2 = [CCSequence actions:actionZoomOut2,delayTime2, call2, nil];
+              // [sp2 runAction:sequence2];
+
+              tween(sp2)
+                .to(1, { 
+                  position: new Vec3(20 * 2, 0, 0),
+                  scale: new Vec3(1, 1, 1)
+                })
+                // Delay 0.5 giây
+                .delay(0.5)
+                // Di chuyển trở về vị trí ban đầu + scale nhỏ lại
+                .call(function() {
+                  this.removeChildCard2(sp2);
+                })
+                .start()
+
+              // [arrSPCardsDuoiLai addObject:sp1];
+              // [arrSPCardsDuoiLai addObject:sp2];
+
+              this.arrSPCardsDuoiLai.push(sp1)
+              this.arrSPCardsDuoiLai.push(sp2)
+
+            }
+            else {
+              // CCMoveTo *move1 = [CCMoveTo actionWithDuration:1 position:CGPointMake(screenSize.width/2, screenSize.height/2)];
+              // CCScaleTo *scale1 = [CCScaleTo actionWithDuration:1 scale:1];
+              // CCSpawn *actionZoomOut1 = [CCSpawn actions:move1, scale1, nil];
+              // CCCallFuncND* call1 = [CCCallFuncND actionWithTarget:self 
+              //                       selector:@selector(removeChildCard1:data:) 
+              //                         data:(void *)sp1];
+              // CCSequence *sequence1 = [CCSequence actions:actionZoomOut1, call1, nil];
+              // [sp1 runAction:sequence1];
+              // [arrSPCardsDuoiLai addObject:sp1];
+              
+              tween(sp1)
+                .to(1, { 
+                  position: new Vec3(0, 0, 0),
+                  scale: new Vec3(1, 1, 1)
+                })
+                // Delay 0.5 giây
+                .delay(0.5)
+                // Di chuyển trở về vị trí ban đầu + scale nhỏ lại
+                .call(function() {
+                  this.removeChildCard1(sp1);
+                })
+                .start()
+            }
+          }
+          this.demFind++;
+      }
+      else {
+        this.unschedule(this.findCardTrungNhau)
+        // [self removeChildByTag:104 cleanup:YES];
+        const xapBaiNode = this.canvasNode.getChildByName('104');
+        if (xapBaiNode != null) {
+          this.canvasNode.removeChild(xapBaiNode)
+        }
+
+        if (this.demsodoidachon < 2) { // neu nho hon 3 doi thi tim lai
+          this.TimLaiDoiBaiTrungNhau()
+        }
+        else {
+          // CCLabelTTF *lblThongbao = [CCLabelTTF labelWithString:@"Xin mời bạn xem quẻ bói." 
+          //                       dimensions:CGSizeMake(300, 200) 
+          //                       alignment:CCTextAlignmentCenter  
+          //                       fontName:@"Marker Felt" 
+          //                       fontSize:22];
+          // lblThongbao.color = ccORANGE;
+          // lblThongbao.position = CGPointMake(160, 150);
+          // [self addChild:lblThongbao z:5];
+          // flagNext = TRUE;
+        }
+      }
+      
+    }
+
+    TimLaiDoiBaiTrungNhau() {
+      //add lai cai bg
+      // CGSize screenSize = [[CCDirector sharedDirector] winSize];
+      const screenSize = view.getDesignResolutionSize()
+      
+      // TODO: thay thế bằng active = true / false, không tạo mới
+      // CCSprite *cardBG = [CCSprite spriteWithFile:@"xapbaibosung.png"];
+      // cardBG.position =  ccp(screenSize.width/2 + 2, 129);
+      // cardBG.tag = 104;
+      // cardBG.scale = 0.55;
+      // [self addChild:cardBG];
+      this.xapBaiNode.active = true;
+      
+      this.demFindLai = 0;
+      for (let i = 0; i < this.arrSPCardsDuoiLai.length; i++) {
+        const spCard = this.arrSPCardsDuoiLai[i];
+        const tagCard = spCard.name;
+        // spCard.scale = 0.55;
+        spCard.setScale(new Vec3(0.55, 0.55, 0.55))
+
+        // position = ccp(screenSize.width/2, 132);
+        spCard.setPosition(this.xapBaiPos)
+        
+        // [self addChild:spCard z:1 tag:tagCard];
+        this.canvasNode.addChild(spCard)
+      }
+      // [self schedule:@selector(findLaiCardTrungNhau:) interval:2.5];
+      this.schedule(this.findLaiCardTrungNhau, 2.5)
+    }
+
+    findLaiCardTrungNhau() {
+      if (this.demFindLai < this.arrSPCardsDuoiLai.length / 2) {
+		
+        const screenSize = view.getDesignResolutionSize();
+        const sp1 = this.arrSPCardsDuoiLai[this.demFindLai];
+        const sp2 = this.arrSPCardsDuoiLai[this.arrSPCardsDuoiLai.length - this.demFindLai - 1];
+        
+        const idsp1 = parseInt(sp1.name);
+        const idsp2 = parseInt(sp2.name);
+        if ((idsp1- 1)/4 == (idsp2-1)/4  && (idsp1 != idsp2)) {
+          this.demsodoidachon++;
+          switch (this.demsodoidachon) {
+            case 1:
+              this.idDoi1 = (idsp1 - 1)/4 + 1;
+              break;
+            case 2:
+              this.idDoi2 = (idsp1 - 1)/4 + 1;
+              break;
+            case 3:
+              this.idDoi3 = (idsp1 - 1)/4 + 1;
+              break;
+            default:
+              break;
+          }
+          if (this.demsodoidachon < 4) {
+            // CCMoveTo *move1 = [CCMoveTo actionWithDuration:1 position:CGPointMake(screenSize.width/2, screenSize.height/2)];
+            // CCScaleTo *scale1 = [CCScaleTo actionWithDuration:1 scale:1];
+            // CCSpawn *actionZoomOut1 = [CCSpawn actions:move1, scale1, nil];
+            // CCDelayTime *delayTime1 = [CCDelayTime actionWithDuration:0.5f];
+            // CCMoveTo *moveback1 = [CCMoveTo actionWithDuration:1 position:CGPointMake(20 + 62*demsodoidachon, 350)];
+            // CCScaleTo *scaleback1 = [CCScaleTo actionWithDuration:1 scale:0.55];
+            // CCSpawn *actionZoomIn1 = [CCSpawn actions:moveback1, scaleback1, nil];
+            
+            // CCSequence *sequence1 = [CCSequence actions:actionZoomOut1,delayTime1, actionZoomIn1, nil];
+            // [sp1 runAction:sequence1];
+
+            tween(sp1)
+                .to(1, { 
+                  position: new Vec3(0, 0, 0),
+                  scale: new Vec3(1, 1, 1)
+                })
+                // Delay 0.5 giây
+                .delay(0.5)
+                // Di chuyển trở về vị trí ban đầu + scale nhỏ lại
+                .to(1, { 
+                    position: new Vec3((20 + 62 * this.demsodoidachon) * 2 - screenSize.width / 2, 350 * 2 - screenSize.height / 2, 0),
+                    scale: new Vec3(0.55, 0.55, 1)
+                })
+                .start()
+            
+            
+            // CCMoveTo *move2 = [CCMoveTo actionWithDuration:1 position:CGPointMake(screenSize.width/2 + 20, screenSize.height/2)];
+            // CCScaleTo *scale2 = [CCScaleTo actionWithDuration:1 scale:1];
+            // CCSpawn *actionZoomOut2 = [CCSpawn actions:move2, scale2, nil];
+            // CCDelayTime *delayTime2 = [CCDelayTime actionWithDuration:0.5f];
+            // CCMoveTo *moveback2 = [CCMoveTo actionWithDuration:1 position:CGPointMake(30 + 62*demsodoidachon, 350)];
+            // CCScaleTo *scaleback2 = [CCScaleTo actionWithDuration:1 scale:0.55];
+            // CCSpawn *actionZoomIn2 = [CCSpawn actions:moveback2, scaleback2, nil];
+            
+            // CCSequence *sequence2 = [CCSequence actions:actionZoomOut2,delayTime2, actionZoomIn2, nil];
+            // [sp2 runAction:sequence2];
+
+            // Tween cho sp2
+            tween(sp2)
+            // Zoom out + di chuyển ra giữa màn hình (lệch 20px)
+            .to(1, { 
+                position: new Vec3(20 * 2, 0, 1),
+                scale: new Vec3(1, 1, 1)
+            })
+            // Dừng 0.5s
+            .delay(0.5)
+            // Zoom in + di chuyển về chỗ cũ
+            .to(1, { 
+                position: new Vec3((30 + 62 * this.demsodoidachon) * 2 - screenSize.width / 2, 350 * 2 - screenSize.height / 2),
+                scale: new Vec3(0.55, 0.55, 1)
+            })
+            .start();
+
+          }
+          else {
+            // CCMoveTo *move1 = [CCMoveTo actionWithDuration:1 position:CGPointMake(screenSize.width/2, screenSize.height/2)];
+            // CCScaleTo *scale1 = [CCScaleTo actionWithDuration:1 scale:1];
+            // CCSpawn *actionZoomOut1 = [CCSpawn actions:move1, scale1, nil];
+            // CCDelayTime *delayTime1 = [CCDelayTime actionWithDuration:0.5f];
+            // CCMoveTo *moveback1 = [CCMoveTo actionWithDuration:1 position:CGPointMake(20 + 62*(demsodoidachon - 3), 270)];
+            // CCScaleTo *scaleback1 = [CCScaleTo actionWithDuration:1 scale:0.55];
+            // CCSpawn *actionZoomIn1 = [CCSpawn actions:moveback1, scaleback1, nil];
+            
+            // CCSequence *sequence1 = [CCSequence actions:actionZoomOut1,delayTime1, actionZoomIn1, nil];
+            // [sp1 runAction:sequence1];
+            tween(sp1)
+                .to(1, { 
+                  position: new Vec3(0, 0, 0),
+                  scale: new Vec3(1, 1, 1)
+                })
+                // Delay 0.5 giây
+                .delay(0.5)
+                // Di chuyển trở về vị trí ban đầu + scale nhỏ lại
+                .to(1, { 
+                    position: new Vec3((20 + 62 * (this.demsodoidachon - 3)) * 2 - screenSize.width / 2, 270 * 2 - screenSize.height / 2, 0),
+                    scale: new Vec3(0.55, 0.55, 1)
+                })
+                .start()
+            
+            // CCMoveTo *move2 = [CCMoveTo actionWithDuration:1 position:CGPointMake(screenSize.width/2 + 20, screenSize.height/2)];
+            // CCScaleTo *scale2 = [CCScaleTo actionWithDuration:1 scale:1];
+            // CCSpawn *actionZoomOut2 = [CCSpawn actions:move2, scale2, nil];
+            // CCDelayTime *delayTime2 = [CCDelayTime actionWithDuration:0.5f];
+            // CCMoveTo *moveback2 = [CCMoveTo actionWithDuration:1 position:CGPointMake(30 + 62*(demsodoidachon -3), 270)];
+            // CCScaleTo *scaleback2 = [CCScaleTo actionWithDuration:1 scale:0.55];
+            // CCSpawn *actionZoomIn2 = [CCSpawn actions:moveback2, scaleback2, nil];
+            
+            // CCSequence *sequence2 = [CCSequence actions:actionZoomOut2,delayTime2, actionZoomIn2, nil];
+            // [sp2 runAction:sequence2];
+
+            // Tween cho sp2
+            tween(sp2)
+              // Zoom out + di chuyển ra giữa màn hình (lệch 20px)
+              .to(1, { 
+                  position: new Vec3(20 * 2, 0, 1),
+                  scale: new Vec3(1, 1, 1)
+              })
+              // Dừng 0.5s
+              .delay(0.5)
+              // Zoom in + di chuyển về chỗ cũ
+              .to(1, { 
+                  position: new Vec3((30 + 62 * (this.demsodoidachon - 3)) * 2 - screenSize.width / 2, 270 * 2 - screenSize.height / 2),
+                  scale: new Vec3(0.55, 0.55, 1)
+              })
+              .start();
+
+          }
+    
+        }
+        else {
+          // CCMoveTo *move1 = [CCMoveTo actionWithDuration:1 position:CGPointMake(screenSize.width/2, screenSize.height/2)];
+          // CCScaleTo *scale1 = [CCScaleTo actionWithDuration:1 scale:1];
+          // CCSpawn *actionZoomOut1 = [CCSpawn actions:move1, scale1, nil];
+          // CCDelayTime *delayTime1 = [CCDelayTime actionWithDuration:0.5f];
+          // CCCallFuncND* call1 = [CCCallFuncND actionWithTarget:self 
+          //                       selector:@selector(removeChildCard1:data:) 
+          //                         data:(void *)sp1];
+          // CCSequence *sequence1 = [CCSequence actions:actionZoomOut1,delayTime1, call1, nil];
+          // [sp1 runAction:sequence1];
+
+          tween(sp1)
+                .to(1, { 
+                  position: new Vec3(0, 0, 0),
+                  scale: new Vec3(1, 1, 1)
+                })
+                // Delay 0.5 giây
+                .delay(0.5)
+                // Di chuyển trở về vị trí ban đầu + scale nhỏ lại
+                .call(function() {
+                  this.removeChildCard1(sp1);
+                })
+                .start()
+          
+          // CCMoveTo *move2 = [CCMoveTo actionWithDuration:1 position:CGPointMake(screenSize.width/2 + 20, screenSize.height/2)];
+          // CCScaleTo *scale2 = [CCScaleTo actionWithDuration:1 scale:1];
+          // CCSpawn *actionZoomOut2 = [CCSpawn actions:move2, scale2, nil];
+          // CCDelayTime *delayTime2 = [CCDelayTime actionWithDuration:0.5f];
+          // CCCallFuncND* call2 = [CCCallFuncND actionWithTarget:self 
+          //                       selector:@selector(removeChildCard2:data:) 
+          //                         data:(void *)sp2];
+          // CCSequence *sequence2 = [CCSequence actions:actionZoomOut2,delayTime2, call2, nil];
+          // [sp2 runAction:sequence2];
+
+          tween(sp2)
+            .to(1, { 
+              position: new Vec3(20 * 2, 0, 0),
+              scale: new Vec3(1, 1, 1)
+            })
+            // Delay 0.5 giây
+            .delay(0.5)
+            // Di chuyển trở về vị trí ban đầu + scale nhỏ lại
+            .call(function() {
+              this.removeChildCard2(sp2);
+            })
+            .start()
+          
+        }
+        this.demFindLai++;
+        if (this.demFindLai >= this.arrSPCardsDuoiLai.length / 2) {
+          // [self removeChildByTag:104 cleanup:YES];
+          this.xapBaiNode.active = false;
+        }
+      }
+      else {
+        this.unschedule(this.findLaiCardTrungNhau)
+        if (this.demsodoidachon == 0) {
+          // CCLabelTTF *lblThongbao = [CCLabelTTF labelWithString:@"Bạn chưa thật sự thành tâm nên thần bài chưa bật mí, xin vui lòng thử lại!" 
+          //                     dimensions:CGSizeMake(300, 200) 
+          //                   alignment:CCTextAlignmentCenter  
+          //                     fontName:@"Marker Felt" 
+          //                     fontSize:22];
+          // lblThongbao.color = ccORANGE;
+          // lblThongbao.position = CGPointMake(160, 150);
+          // [self addChild:lblThongbao z:5];
+        }
+        else {
+          // CCLabelTTF *lblThongbao = [CCLabelTTF labelWithString:@"Xin mời bạn xem quẻ bói." 
+          //                           dimensions:CGSizeMake(300, 200) 
+          //                         alignment:CCTextAlignmentCenter  
+          //                           fontName:@"Marker Felt" 
+          //                           fontSize:22];
+          // lblThongbao.color = ccORANGE;
+          // lblThongbao.position = CGPointMake(160, 150);
+          // [self addChild:lblThongbao z:5];
+          // flagNext = TRUE;
+        }
+        
+      }
+    }
+
+    // - (void) removeChildCard1:(id) sender data : (void*) data {
+    //   CCSprite *spCard1 = (CCSprite *) data;
+    //   [self removeChild:spCard1 cleanup:NO];
+    // }
+    // - (void) removeChildCard2:(id) sender data : (void*) data {
+    //   CCSprite *spCard2 = (CCSprite *) data;
+    //   [self removeChild:spCard2 cleanup:NO];
+    // }
+
+    removeChildCard1(cardNode: Node) {
+      console.log(`removeChildCard1: ${cardNode.name}`)
+      this.canvasNode.removeChild(cardNode)
+    }
+
+    removeChildCard2(cardNode: Node) {
+      console.log(`removeChildCard2: ${cardNode.name}`)
+      this.canvasNode.removeChild(cardNode)
     }
 
 }
