@@ -328,7 +328,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "spriteFrame",
+    "_name": "xapBai",
     "_objFlags": 0,
     "__editorExtras__": {},
     "_parent": {
@@ -1267,6 +1267,9 @@
     "queSpriteFrame": {
       "__uuid__": "b863550f-f007-4f7a-b6a1-b6c91d816170@f9941",
       "__expectedType__": "cc.SpriteFrame"
+    },
+    "xapBaiNode": {
+      "__id__": 8
     },
     "_id": "f9vExHb51BiLnmunZHuqr3"
   },
