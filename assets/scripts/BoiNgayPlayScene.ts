@@ -15,6 +15,9 @@ export class BoiNgayPlayScene extends Component {
 
     xapBaiPos: Vec3 = Vec3.ZERO
 
+    isUpdateEnable: boolean = false;
+    isTouchEnabled: boolean = false;
+
     numberCardsDuoiFliped = 0;
 		flagNext = false;
 		idDoi1 = 0;
@@ -33,9 +36,9 @@ export class BoiNgayPlayScene extends Component {
 
     demFindLai = 0;
 
-    arrCards = []; //mang luu 52 so ngau nhien khac nhau tu 5-56
-		arrSPCardsTren = [];  // luu cac quan bai tren
-		arrVTCardTren = []; // luu vi tri cac quan bai tren
+    arrCards = Array<number>(); //mang luu 52 so ngau nhien khac nhau tu 5-56
+		arrSPCardsTren = Array<Node>();  // luu cac quan bai tren ( mảng các quân bài trên )
+		arrVTCardTren = Array<number>(); // luu vi tri cac quan bai tren ( vị trí từ 0 -> n của các quân bài trên )
 		arrSPCardsFlipTren = [];// luu cac la bai da lat o tren
 		arrSPcardsDuoi = Array<Node>(); // luu cac quan bai duoi
 		arrSPCardsDuoiLai = Array<Node>(); //luu cac quan bai duoi de tim lai cac doi
@@ -50,6 +53,10 @@ export class BoiNgayPlayScene extends Component {
     }
 
     update(deltaTime: number) {
+      if (!this.isUpdateEnable) {
+        return
+      }
+
       // [self unscheduleUpdate];
       // int i = 0;
       // for ( ; i < [arrSPCardsFlipTren count] ; i++) {
@@ -62,7 +69,10 @@ export class BoiNgayPlayScene extends Component {
       //   [self schedule:@selector(effectFlipCard:) interval:1];
       // }
       console.log(`update: ${deltaTime}`)
-      this.unschedule(this.update)
+      // this.unschedule(this.update)
+      if (this.isUpdateEnable) {
+        this.isUpdateEnable = false;
+      }
 
       let i = 0;
       for (; i < this.arrSPCardsFlipTren.length; i++) {
@@ -263,6 +273,8 @@ export class BoiNgayPlayScene extends Component {
         // CCSequence* sequen = [CCSequence actions:move,callChangeImage,moveback,call, nil];
         // [spCard runAction:sequen];
 
+        this.isTouchEnabled = false;
+
         const cardPos = this.xapBaiPos
         const cardSize = this.xapBaiNode.getComponent(UITransform).contentSize
 
@@ -305,7 +317,10 @@ export class BoiNgayPlayScene extends Component {
     startUpdate() {
       // self.isTouchEnabled = YES;
 	    // [self scheduleUpdate];
-      this.schedule(this.update, 0)
+      // this.schedule(this.update, 0)
+      
+      this.isTouchEnabled = true;
+      this.isUpdateEnable = true;
     }
 
     //hieu ung lat quan bai va chuyen doi vi tri cac quan bai trong phan duoi
@@ -347,11 +362,16 @@ export class BoiNgayPlayScene extends Component {
       const spCardD =  this.arrSPcardsDuoi[this.arrSPcardsDuoi.length - 1];
       const idCardD = parseInt(spCardD.name);
       const idCardT = parseInt(spCard.name);
-      if (Math.abs((idCardD - 1)/4 - (idCardT-1)/4) == 1 || Math.abs((idCardD - 1)/4 - (idCardT-1)/4) == 12) {
-        return true;
-      }
-      else {
-        return false;
+      // tính bậc (0-12)
+      const rankD = Math.floor((idCardD - 1) / 4);
+      const rankT = Math.floor((idCardT - 1) / 4);
+
+      const diff = Math.abs(rankD - rankT);
+
+      if (diff === 1 || diff === 12) {
+          return true;
+      } else {
+          return false;
       }
     }
 
