@@ -149,7 +149,7 @@ export class BoiNgayPlayScene extends Component {
       // [arrSPCardsFlipTren removeObject:spCard];
       // [arrSPcardsDuoi addObject:spCard];
 
-      this.arrSPCardsFlipTren = this.arrSPCardsFlipTren.filter((card) => card.name == spCard.name)
+      this.arrSPCardsFlipTren = this.arrSPCardsFlipTren.filter((card) => card.name != spCard.name)
       this.arrSPcardsDuoi.push(spCard)
 
       this.isTouchEnabled = true;
@@ -662,11 +662,14 @@ export class BoiNgayPlayScene extends Component {
       const spCardD =  this.arrSPcardsDuoi[this.arrSPcardsDuoi.length - 1];
       const idCardD = parseInt(spCardD.name);
       const idCardT = parseInt(spCard.name);
+      
       // tính bậc (0-12)
       const rankD = Math.floor((idCardD - 1) / 4);
       const rankT = Math.floor((idCardT - 1) / 4);
 
       const diff = Math.abs(rankD - rankT);
+
+      console.log(`idCardD: ${idCardD} - idCardT: ${idCardT} - RankD: ${rankD} - RankT: ${rankT} - diff: ${diff} - ${(diff === 1 || diff === 12) ? 'TRUE' : 'FASE'}`)
 
       if (diff === 1 || diff === 12) {
           return true;
