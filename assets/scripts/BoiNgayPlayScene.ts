@@ -114,12 +114,12 @@ export class BoiNgayPlayScene extends Component {
             tween(spcard)
               .call(() => { this.addCardR(spcard); })
               .to(1, { position: new Vec3(0, 0, 0), scale: new Vec3(1, 1, 1) })
-              .to(1, { position: new Vec3(0, 132 * 2 - screenSize.height / 2, 0), scale: new Vec3(0.55, 0.55, 0.55)})
+              .to(1, { position: this.xapBaiPos, scale: new Vec3(0.55, 0.55, 0.55)})  // new Vec3(0, 132 * 2 - screenSize.height / 2, 0)
               .call(() => { this.effectMoveDone(spcard); })
               .start()
-            
+          
+            break;
           }
-          break;
         }
       }
 
