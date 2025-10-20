@@ -1,4 +1,8 @@
-import { _decorator, Component, Layers, Node, Sprite, SpriteFrame, tween, UITransform, Vec3, screen, view, resources } from 'cc';
+import { 
+  _decorator, Component, Layers, Node, Sprite, SpriteFrame, tween, UITransform, Vec3, screen, view, resources, 
+  input, Input, EventTouch 
+} from 'cc';
+
 const { ccclass, property } = _decorator;
 
 @ccclass('BoiNgayPlayScene')
@@ -50,7 +54,303 @@ export class BoiNgayPlayScene extends Component {
     protected onLoad(): void {
       this.xapBaiPos = this.xapBaiNode.getPosition()
       this.unschedule(this.update)
+
+      // Touch event
+      input.on(Input.EventType.TOUCH_START, this.onTouchStart, this);
+      // input.on(Input.EventType.TOUCH_MOVE, this.onTouchMove, this);
+      // input.on(Input.EventType.TOUCH_END, this.onTouchEnd, this);
+      // input.on(Input.EventType.TOUCH_CANCEL, this.onTouchCancel, this);
+
     }
+
+    onDestroy() {
+      input.off(Input.EventType.TOUCH_START, this.onTouchStart, this);
+      // input.off(Input.EventType.TOUCH_MOVE, this.onTouchMove, this);
+      // input.off(Input.EventType.TOUCH_END, this.onTouchEnd, this);
+      // input.off(Input.EventType.TOUCH_CANCEL, this.onTouchCancel, this);
+    }
+
+    onTouchStart(event: EventTouch) {
+
+      if (!this.isTouchEnabled) {
+        return;
+      }
+
+      // Get start point
+      const screenPos = event.getLocation()
+
+      for (let i = this.arrSPCardsFlipTren.length - 1 ; i > -1 ; i--) {
+        const spcard = this.arrSPCardsFlipTren[i];
+        const transform = spcard.getComponent(UITransform)
+        const ischeck = transform.hitTest(screenPos)
+        if (ischeck) {
+          //NSLog(@"tag bai click %i",spcard.tag);
+          if (this.checkOK(spcard)) {
+            this.isTouchEnabled = false;
+            const screenSize = view.getDesignResolutionSize()
+            
+            // NSLog(@" la bai % i thoa man", spcard.tag);
+            
+            // CCCallFuncND *addCard = [CCCallFuncND actionWithTarget:self 
+            //                         selector:@selector(addCardR:data:) 
+            //                           data:(void *)spcard];
+            
+            // CCMoveTo *move1 = [CCMoveTo actionWithDuration:1 position:CGPointMake(screenSize.width/2, screenSize.height/2)];
+            // CCScaleTo *scale1 = [CCScaleTo actionWithDuration:1 scale:1];
+            // CCSpawn *actionZoomOut = [CCSpawn actions:move1, scale1, nil];
+        
+            
+            // CCMoveTo *move2 = [CCMoveTo actionWithDuration:1 position:CGPointMake(screenSize.width/2, 132)];
+            // CCScaleTo *scale2 = [CCScaleTo actionWithDuration:1 scale:0.55];
+            // CCSpawn *actionZoomIn = [CCSpawn actions:move2, scale2, nil];
+            
+            // CCCallFuncND* call = [CCCallFuncND actionWithTarget:self 
+            //                        selector:@selector(effectMoveDone:data:) 
+            //                          data:(void *)spcard];
+            
+            // CCSequence *sequence = [CCSequence actions:addCard, actionZoomOut, actionZoomIn,call, nil];
+            // [spcard runAction:sequence];
+
+            tween(spcard)
+              .call(() => { this.addCardR(spcard); })
+              .to(1, { position: new Vec3(0, 0, 0), scale: new Vec3(1, 1, 1) })
+              .to(1, { position: new Vec3(0, 132 * 2 - screenSize.height / 2, 0), scale: new Vec3(0.55, 0.55, 0.55)})
+              .call(() => { this.effectMoveDone(spcard); })
+              .start()
+            
+          }
+          break;
+        }
+      }
+
+    }
+
+    // add lai de no hien thi len phia tren
+    addCardR(spCard: Node) {
+      // CCSprite *spCard = (CCSprite *) data;
+      // [self removeChild:spCard cleanup:NO];
+      // [self addChild:spCard];
+      spCard.setSiblingIndex(1000);
+    }
+
+    effectMoveDone(spCard: Node) {
+      let vtCard;
+      const idcard = parseInt(spCard.name)
+      for (let i = 0; i < this.arrSPCardsTren.length; i++) {
+        const spC = this.arrSPCardsTren[i];
+        if (idcard == parseInt(spC.name)) {
+          vtCard = i;
+          break;
+        }
+      }
+
+      //NSLog(@"VT card = %i", vtCard);
+      this.checkViewCard(vtCard);
+      // [arrSPCardsFlipTren removeObject:spCard];
+      // [arrSPcardsDuoi addObject:spCard];
+
+      this.arrSPCardsFlipTren = this.arrSPCardsFlipTren.filter((card) => card.name == spCard.name)
+      this.arrSPcardsDuoi.push(spCard)
+
+      this.isTouchEnabled = true;
+      this.isUpdateEnable = true;
+      // [self scheduleUpdate];
+    }
+
+    changeDisplayCardImage(spCard: Node, tag: string) {
+      const sprite = spCard.addComponent(Sprite)
+
+      // Load ảnh từ thư mục resources/images
+      resources.load(`${tag}/spriteFrame`, SpriteFrame, (err, spriteFrame) => {
+          if (err) {
+              console.error('Lỗi khi load ảnh:', err);
+              return;
+          }
+
+          // Gắn spriteFrame vào Sprite component
+          sprite.getComponent(Sprite).spriteFrame = spriteFrame;
+      });
+    }
+
+    checkViewCard(idCardPR: number) {
+      if (idCardPR > 20) {
+        let i = 0;
+        for (; i < this.arrVTCardTren.length; i++) {
+          if (idCardPR + 1 == this.arrVTCardTren[i]) {
+            break;
+          }
+        }
+        if (i == this.arrVTCardTren.length && idCardPR != 27) {
+          //NSLog(@"loai bo VT %i", idCardPR - 6);
+          const spCard = this.arrSPCardsTren[idCardPR - 6];
+          // change display image
+          this.changeDisplayCardImage(spCard, spCard.name)
+          // 
+          this.arrSPCardsFlipTren.push(spCard);
+        }
+        let j = 0;
+        for (; j < this.arrVTCardTren.length; j++) {
+          if (idCardPR - 1 == this.arrVTCardTren[j]) {
+            break;
+          }
+        }
+        if (j == this.arrVTCardTren.length && idCardPR != 21) {
+          //NSLog(@"loai bo VT %i", idCardPR - 7);
+          const spCard = this.arrSPCardsTren[idCardPR - 7];
+          this.changeDisplayCardImage(spCard, spCard.name)
+          this.arrSPCardsFlipTren.push(spCard);
+        }
+      }
+      else {
+        if (idCardPR > 14) {
+          let i = 0;
+          for (; i < this.arrVTCardTren.length; i++) {
+            if (idCardPR + 1 == this.arrVTCardTren[i]) {
+              break;
+            }
+          }
+          if (i == this.arrVTCardTren.length && idCardPR != 20) {
+            //NSLog(@"loai bo VT %i", idCardPR - 5);
+            const spCard = this.arrSPCardsTren[idCardPR - 5];
+            this.changeDisplayCardImage(spCard, spCard.name)
+            this.arrSPCardsFlipTren.push(spCard);
+            
+          }
+          let j = 0;
+          for (; j < this.arrVTCardTren.length; j++) {
+            if (idCardPR - 1 == this.arrVTCardTren[j]) {
+              break;
+            }
+          }
+
+          if (j == this.arrVTCardTren.length && idCardPR != 15) {
+            //NSLog(@"loai bo VT %i", idCardPR - 6);
+            const spCard = this.arrSPCardsTren[idCardPR - 6];
+            this.changeDisplayCardImage(spCard, spCard.name)
+            this.arrSPCardsFlipTren.push(spCard);
+          }
+        }
+        else {
+          if (idCardPR > 9) {
+            let i = 0;
+            for (; i < this.arrVTCardTren.length; i++) {
+              if (idCardPR + 1 == this.arrVTCardTren[i]) {
+                break;
+              }
+            }
+            if (i == this.arrVTCardTren.length && idCardPR != 14) {
+              //NSLog(@"loai bo VT %i", idCardPR - 4);
+              const spCard = this.arrSPCardsTren[idCardPR - 4];
+              this.changeDisplayCardImage(spCard, spCard.name)
+              this.arrSPCardsFlipTren.push(spCard);
+            }
+            let j = 0;
+            for (; j < this.arrVTCardTren.length; j++) {
+              if (idCardPR - 1 == this.arrVTCardTren[j]) {
+                break;
+              }
+            }
+            if (j == this.arrVTCardTren.length && idCardPR != 10) {
+              //NSLog(@"loai bo VT %i", idCardPR - 5);
+              const spCard = this.arrSPCardsTren[idCardPR - 5];
+              this.changeDisplayCardImage(spCard, spCard.name)
+              this.arrSPCardsFlipTren.push(spCard);
+            }
+          }
+          else {
+            
+            if (idCardPR > 5) {
+              let i = 0;
+              for (; i < this.arrVTCardTren.length; i++) {
+                if (idCardPR + 1 == this.arrVTCardTren[i]) {
+                  break;
+                }
+              }
+              if (i == this.arrVTCardTren.length && idCardPR != 9) {
+                //NSLog(@"loai bo VT %i", idCardPR - 3);
+                const spCard = this.arrSPCardsTren[idCardPR - 3];
+                this.changeDisplayCardImage(spCard, spCard.name)
+                this.arrSPCardsFlipTren.push(spCard);
+              }
+              let j = 0;
+              for (; j < this.arrVTCardTren.length; j++) {
+                if (idCardPR - 1 == this.arrVTCardTren[j]) {
+                  break;
+                }
+              }
+              if (j == this.arrVTCardTren.length && idCardPR != 6) {
+                //NSLog(@"loai bo VT %i", idCardPR - 4);
+                const spCard = this.arrSPCardsTren[idCardPR - 4];
+                this.changeDisplayCardImage(spCard, spCard.name)
+                this.arrSPCardsFlipTren.push(spCard);
+              }
+            }
+            else {
+              if (idCardPR > 2) {
+                let i = 0;
+                for (; i < this.arrVTCardTren.length; i++) {
+                  if (idCardPR + 1 == this.arrVTCardTren[i]) {
+                    break;
+                  }
+                }
+                if (i == this.arrVTCardTren.length && idCardPR != 5) {
+                  //NSLog(@"loai bo VT %i", idCardPR - 2);
+                  const spCard = this.arrSPCardsTren[idCardPR - 2];
+                  this.changeDisplayCardImage(spCard, spCard.name)
+                  this.arrSPCardsFlipTren.push(spCard);
+                }
+                let j = 0;
+                for (; j < this.arrVTCardTren.length; j++) {
+                  if (idCardPR - 1 == this.arrVTCardTren[j]) {
+                    break;
+                  }
+                }
+                if (j == this.arrVTCardTren.length && idCardPR != 3) {
+                  //NSLog(@"loai bo VT %i", idCardPR - 3);
+                  const spCard = this.arrSPCardsTren[idCardPR - 3];
+                  this.changeDisplayCardImage(spCard, spCard.name)
+                  this.arrSPCardsFlipTren.push(spCard);
+                }
+              }
+              else {
+                if (idCardPR > 0) {
+                  let i = 0;
+                  for (; i < this.arrVTCardTren.length; i++) {
+                    if (idCardPR + 1 == this.arrVTCardTren[i]) {
+                      break;
+                    }
+                  }
+                  if (i == this.arrVTCardTren.length && idCardPR != 2) {
+                    //NSLog(@"loai bo VT %i", idCardPR - 1);
+                    const spCard = this.arrSPCardsTren[idCardPR - 1];
+                    this.changeDisplayCardImage(spCard, spCard.name)
+                    this.arrSPCardsFlipTren.push(spCard);
+                  }
+                  let j = 0;
+                  for (; j < this.arrVTCardTren.length; j++) {
+                    if (idCardPR - 1 == this.arrVTCardTren[j]) {
+                      break;
+                    }
+                  }
+                  if (j == this.arrVTCardTren.length && idCardPR != 1) {
+                    //NSLog(@"loai bo VT %i", idCardPR - 2);
+                    const spCard = this.arrSPCardsTren[idCardPR - 2];
+                    this.changeDisplayCardImage(spCard, spCard.name)
+                    this.arrSPCardsFlipTren.push(spCard);
+                  }
+                }
+              }
+    
+            }
+    
+          }
+        }
+    
+      }
+      // [arrVTCardTren removeObject:[NSNumber numberWithInt:idCardPR]];
+      this.arrVTCardTren = this.arrVTCardTren.filter(item => item == idCardPR)
+    }
+
 
     update(deltaTime: number) {
       if (!this.isUpdateEnable) {
