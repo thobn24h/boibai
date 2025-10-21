@@ -1,0 +1,73 @@
+LOGIC:
+0. Khởi tạo:
+demox = 162;
+demoy = 350;
+
+demi = 1;
+demj = 1;
+demPTMang = 1000;
+
+1. effectChiabai -> 0.2s  
+
+demi <= 7 && demPTMang < 1028
+tạo 28 quân bài tạo thành hình tháp -> có name 1000 -> 1027
+       *
+      * *
+     * * *
+    * * * *
+   * * * * *
+  * * * * * *
+ * * * * * * *
+Ở dưới còn 24 quân bài
+
+arrCards -> mang luu 52 so ngau nhien khac nhau tu 5-56
+-> khởi tạo random 52 quân tạo
+
+arrSPCardsTren -> luu cac quan bai tren
+-> lưu lại card Node của các quân bài phía trên 
+
+arrVTCardTren -> luu vi tri cac quan bai tren
+-> lưu lại vị trí của các quân bài phía trên [0 -> 27]
+
+arrSPcardsDuoi -> luu cac quan bai duoi
+-> tạo 24 quân bài phía dưới với name là id random quân bài
+
+[* * * ... * * | * * * ... * * ]
+  28 quân trên | 24 quân dưới 
+
+-----------------------------------
+2. effectLat7Quancuoi: interval:0.5 -> lật 7 quân cuối cùng từ 
+demLat = 21 -> 27:
+arrSPCardsFlipTren -> add Node
+
+-----------------------------------
+3. Sau khi lật 7 quân bài cuối -> chơi hiệu ứng lật quân bài dưới từng quân 1 từ dưới lên trên 
+effectFlipCard: interval: 1
+
+numberCardsDuoiFliped++;
+if (numberCardsDuoiFliped < 25) {
+  self.isTouchEnabled = NO; -> disable trong khi lật bài
+  Lấy quân đầu tiên trong sấp bài [ arrSPcardsDuoi ] -> mở quân bài
+  -> startUpdate -> startUpdate() { self.isTouchEnabled = YES; [self scheduleUpdate]; }
+
+
+-----------------------------------
+Nếu so khớp danh sách các quân bài đang mở so khớp được -> dừng lại cho phép tương tác
+Còn nếu không thì lật tiếp
+- (void) update : (ccTime) delta {
+  [self unscheduleUpdate];
+  for ( ; i < [arrSPCardsFlipTren count] ; i++) {
+		CCSprite *spCard = [arrSPCardsFlipTren objectAtIndex:i];
+		if ([self checkOK:spCard]) {
+			break;
+		}
+	}
+
+-----------------------------------
+
+
+
+arrSPCardsDuoiLai -> luu cac quan bai duoi de tim lai cac doi
+arrSPCardsFlipTren -> luu cac la bai da lat o tren
+
+

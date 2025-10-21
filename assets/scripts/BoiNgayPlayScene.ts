@@ -47,6 +47,44 @@ export class BoiNgayPlayScene extends Component {
 		arrSPcardsDuoi = Array<Node>(); // luu cac quan bai duoi
 		arrSPCardsDuoiLai = Array<Node>(); //luu cac quan bai duoi de tim lai cac doi
 
+    getCardName(tag: number) {
+      const base = Math.floor(tag / 4) + 1
+      const type = tag % 4
+      
+      let cardName = `${base}`
+      if (base == 11) {
+        cardName = 'J'
+      } else if (base == 12) {
+        cardName = 'Q'
+      } else if (base == 13) {
+        cardName = 'K'
+      } else if (base == 14) {
+        cardName = 'A'
+      }
+
+      if (type == 1) {
+        return `${cardName}♦`
+      } else if (type == 2) {
+        return `${cardName}♥`
+      } else if (type == 3) {
+        return `${cardName}♣`
+      } else if (type == 0) {
+        return `${cardName}♠`
+      }
+
+    }
+
+    getCardListLog(cardNodes: Array<Node>) {
+      let strData = cardNodes.map((node) => { this.getCardName(parseInt(node.name)) }).join(', ')
+      return strData
+    }
+
+    logCardData(title: String ) {
+      console.log(`--------------- ${title} ---------------`)
+      console.log(`arrSPCardsFlipTren: ${this.getCardListLog(this.arrSPCardsFlipTren)}`)
+      console.log(`arrSPcardsDuoi: ${this.getCardListLog(this.arrSPcardsDuoi)}`)
+    }
+
     start() {
       this.schedule(this.effectChiabai, 0.2)
     }
@@ -155,6 +193,8 @@ export class BoiNgayPlayScene extends Component {
       this.isTouchEnabled = true;
       this.isUpdateEnable = true;
       // [self scheduleUpdate];
+
+      this.logCardData('effectMoveDone')
     }
 
     changeDisplayCardImage(spCard: Node, tag: string) {
@@ -368,7 +408,7 @@ export class BoiNgayPlayScene extends Component {
       // if (i == [arrSPCardsFlipTren count]) {
       //   [self schedule:@selector(effectFlipCard:) interval:1];
       // }
-      console.log(`update: ${deltaTime}`)
+      // console.log(`update: ${deltaTime}`)
       // this.unschedule(this.update)
       if (this.isUpdateEnable) {
         this.isUpdateEnable = false;
@@ -388,7 +428,7 @@ export class BoiNgayPlayScene extends Component {
     }
 
     createNewCardNode(tag: number, cardPos: Vec3) {
-      console.log(`createNewCardNode: ${tag}`)
+      // console.log(`createNewCardNode: ${tag}`)
       const newNode = new Node()
       newNode.layer = Layers.Enum.UI_2D
       newNode.name = `${tag}`
@@ -443,7 +483,7 @@ export class BoiNgayPlayScene extends Component {
     effectChiabai() {
       const startPos = this.xapBaiPos
       const screenSize = view.getDesignResolutionSize()
-      console.log(`screenSize: ${screenSize.width} ${screenSize.height}`)
+      // console.log(`screenSize: ${screenSize.width} ${screenSize.height}`)
 
       if (this.demi <= 7 && this.demPTMang < 1028) {
         if (this.demj <= this.demi) {
@@ -530,12 +570,12 @@ export class BoiNgayPlayScene extends Component {
     }
 
     effectLat7Quancuoi() {
-      console.log(`effectLat7Quancuoi: ${this.demLat}`)
+      // console.log(`effectLat7Quancuoi: ${this.demLat}`)
       if (this.demLat <= 27) {
         const spriteCardNode = this.arrSPCardsTren[this.demLat]
         // change texture
         // Load ảnh từ thư mục resources/images
-        console.log(`spriteCardNode.name: ${spriteCardNode.name}`)
+        // console.log(`spriteCardNode.name: ${spriteCardNode.name}`)
         resources.load(`${spriteCardNode.name}/spriteFrame`, SpriteFrame, (err, spriteFrame) => {
             if (err) {
                 console.error('Lỗi khi load ảnh:', err);
@@ -557,7 +597,7 @@ export class BoiNgayPlayScene extends Component {
 
     // lat quan bai duoi tu duoi len
     effectFlipCard() {
-      console.log(`effectFlipCard`)
+      // console.log(`effectFlipCard`)
       this.unschedule(this.effectFlipCard)
       this.numberCardsDuoiFliped++;
       const screenSize = view.getDesignResolutionSize()
@@ -637,7 +677,7 @@ export class BoiNgayPlayScene extends Component {
       const spCard = this.arrSPcardsDuoi[0];
       // change texture
       // Load ảnh từ thư mục resources/images
-      console.log(`spriteCardNode.name: ${spCard.name}`)
+      // console.log(`spriteCardNode.name: ${spCard.name}`)
       resources.load(`${spCard.name}/spriteFrame`, SpriteFrame, (err, spriteFrame) => {
           if (err) {
               console.error('Lỗi khi load ảnh:', err);
@@ -669,10 +709,9 @@ export class BoiNgayPlayScene extends Component {
 
       const diff = Math.abs(rankD - rankT);
 
-      console.log(`idCardD: ${idCardD} - idCardT: ${idCardT} - RankD: ${rankD} - RankT: ${rankT} - diff: ${diff} - ${(diff === 1 || diff === 12) ? 'TRUE' : 'FASE'}`)
-
       if (diff === 1 || diff === 12) {
-          return true;
+        console.log(`idCardD: ${this.getCardName(idCardD)} - idCardT: ${this.getCardName(idCardT)} - RankD: ${rankD} - RankT: ${rankT} - diff: ${diff} - ${(diff === 1 || diff === 12) ? 'TRUE' : 'FASE'}`)
+        return true;
       } else {
           return false;
       }
