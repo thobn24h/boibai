@@ -48,7 +48,7 @@ export class BoiNgayPlayScene extends Component {
 		arrSPCardsDuoiLai = Array<Node>(); //luu cac quan bai duoi de tim lai cac doi
 
     getCardName(tag: number) {
-      const base = Math.floor(tag / 4) + 1
+      const base = Math.floor((tag - 1) / 4) + 1
       const type = tag % 4
       
       let cardName = `${base}`
@@ -75,7 +75,7 @@ export class BoiNgayPlayScene extends Component {
     }
 
     getCardListLog(cardNodes: Array<Node>) {
-      let strData = cardNodes.map((node) => { this.getCardName(parseInt(node.name)) }).join(', ')
+      let strData = cardNodes.map((node) => this.getCardName(parseInt(node.name))).join(', ')
       return strData
     }
 
@@ -213,6 +213,8 @@ export class BoiNgayPlayScene extends Component {
     }
 
     checkViewCard(idCardPR: number) {
+      console.log(`checkViewCard:idCardPR${idCardPR}`)
+
       if (idCardPR > 20) {
         let i = 0;
         for (; i < this.arrVTCardTren.length; i++) {
@@ -388,7 +390,7 @@ export class BoiNgayPlayScene extends Component {
     
       }
       // [arrVTCardTren removeObject:[NSNumber numberWithInt:idCardPR]];
-      this.arrVTCardTren = this.arrVTCardTren.filter(item => item == idCardPR)
+      this.arrVTCardTren = this.arrVTCardTren.filter(item => item != idCardPR)
     }
 
 
@@ -883,7 +885,7 @@ export class BoiNgayPlayScene extends Component {
                 // Delay 0.5 giây
                 .delay(0.5)
                 // Di chuyển trở về vị trí ban đầu + scale nhỏ lại
-                .call(function() {
+                .call(() => {
                   this.removeChildCard1(sp1);
                 })
                 .start()
@@ -907,7 +909,7 @@ export class BoiNgayPlayScene extends Component {
                 // Delay 0.5 giây
                 .delay(0.5)
                 // Di chuyển trở về vị trí ban đầu + scale nhỏ lại
-                .call(function() {
+                .call(() => {
                   this.removeChildCard2(sp2);
                 })
                 .start()
@@ -938,7 +940,7 @@ export class BoiNgayPlayScene extends Component {
                 // Delay 0.5 giây
                 .delay(0.5)
                 // Di chuyển trở về vị trí ban đầu + scale nhỏ lại
-                .call(function() {
+                .call(() => {
                   this.removeChildCard1(sp1);
                 })
                 .start()
@@ -1155,7 +1157,7 @@ export class BoiNgayPlayScene extends Component {
                 // Delay 0.5 giây
                 .delay(0.5)
                 // Di chuyển trở về vị trí ban đầu + scale nhỏ lại
-                .call(function() {
+                .call(() => {
                   this.removeChildCard1(sp1);
                 })
                 .start()
@@ -1178,7 +1180,7 @@ export class BoiNgayPlayScene extends Component {
             // Delay 0.5 giây
             .delay(0.5)
             // Di chuyển trở về vị trí ban đầu + scale nhỏ lại
-            .call(function() {
+            .call(() => {
               this.removeChildCard2(sp2);
             })
             .start()
