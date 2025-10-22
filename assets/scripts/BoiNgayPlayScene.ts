@@ -1,6 +1,8 @@
 import { 
   _decorator, Component, Layers, Node, Sprite, SpriteFrame, tween, UITransform, Vec3, screen, view, resources, 
-  input, Input, EventTouch 
+  input, Input, EventTouch, 
+  Label,
+  Color
 } from 'cc';
 
 const { ccclass, property } = _decorator;
@@ -16,6 +18,9 @@ export class BoiNgayPlayScene extends Component {
 
     @property(Node)
     xapBaiNode: Node = null
+
+    @property(Label)
+    lblThongbao: Label = null
 
     xapBaiPos: Vec3 = Vec3.ZERO
 
@@ -727,6 +732,7 @@ export class BoiNgayPlayScene extends Component {
     findCardTrungNhau() {
       if (this.arrSPcardsDuoi.length % 2 != 0) {
         const spT = this.arrSPcardsDuoi[this.arrSPcardsDuoi.length / 2]
+        console.log(`findCardTrungNhau:lẻ:remove card ${spT.name} - ${this.getCardName(parseInt(spT.name))}`)
         this.canvasNode.removeChild(spT)
         this.arrSPcardsDuoi.splice(this.arrSPcardsDuoi.length / 2, 1)
       }
@@ -739,8 +745,10 @@ export class BoiNgayPlayScene extends Component {
           
           const idsp1 = parseInt(sp1.name);
           const idsp2 = parseInt(sp2.name);
+          console.log(`findCardTrungNhau:compare:card1 ${sp1.name} - ${this.getCardName(idsp1)} - card2 ${sp2.name} - ${this.getCardName(idsp2)}`)
           if (((idsp1- 1)/4 == (idsp2-1)/4) && (idsp1 != idsp2)) {
             this.demsodoidachon++;
+            console.log(`findCardTrungNhau:demsodoidachon:${this.demsodoidachon}`)
             switch (this.demsodoidachon) {
               case 1:
                 this.idDoi1 = (idsp1 - 1)/4 + 1;
@@ -951,10 +959,12 @@ export class BoiNgayPlayScene extends Component {
       else {
         this.unschedule(this.findCardTrungNhau)
         // [self removeChildByTag:104 cleanup:YES];
-        const xapBaiNode = this.canvasNode.getChildByName('104');
-        if (xapBaiNode != null) {
-          this.canvasNode.removeChild(xapBaiNode)
-        }
+        this.xapBaiNode.active = false;
+        // const xapBaiNode = this.canvasNode.getChildByName('104');
+        // if (xapBaiNode != null) {
+        //   this.canvasNode.removeChild(xapBaiNode)
+        // }
+        
 
         if (this.demsodoidachon < 2) { // neu nho hon 3 doi thi tim lai
           this.TimLaiDoiBaiTrungNhau()
@@ -969,6 +979,10 @@ export class BoiNgayPlayScene extends Component {
           // lblThongbao.position = CGPointMake(160, 150);
           // [self addChild:lblThongbao z:5];
           // flagNext = TRUE;
+          this.lblThongbao.string = "Xin mời bạn xem quẻ bói."
+          // this.lblThongbao.color = new Color();
+          this.lblThongbao.node.active = true;
+          this.flagNext = true;
         }
       }
       
@@ -1195,6 +1209,8 @@ export class BoiNgayPlayScene extends Component {
       else {
         this.unschedule(this.findLaiCardTrungNhau)
         if (this.demsodoidachon == 0) {
+          this.lblThongbao.string = "Bạn chưa thật sự thành tâm nên thần bài chưa bật mí, xin vui lòng thử lại!"
+          this.lblThongbao.node.active = true;
           // CCLabelTTF *lblThongbao = [CCLabelTTF labelWithString:@"Bạn chưa thật sự thành tâm nên thần bài chưa bật mí, xin vui lòng thử lại!" 
           //                     dimensions:CGSizeMake(300, 200) 
           //                   alignment:CCTextAlignmentCenter  
@@ -1205,6 +1221,9 @@ export class BoiNgayPlayScene extends Component {
           // [self addChild:lblThongbao z:5];
         }
         else {
+          this.lblThongbao.string = "Xin mời bạn xem quẻ bói."
+          this.lblThongbao.node.active = true;
+          this.flagNext = true;
           // CCLabelTTF *lblThongbao = [CCLabelTTF labelWithString:@"Xin mời bạn xem quẻ bói." 
           //                           dimensions:CGSizeMake(300, 200) 
           //                         alignment:CCTextAlignmentCenter  
