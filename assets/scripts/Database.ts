@@ -215,6 +215,78 @@ export class Database {
     }
 
     /**
+     * Lấy nội dung Bổn Mạng từ bảng CHTT_Bonmang theo idBonmang
+     * @param idBonmang - ID của Bổn Mạng cần lấy nội dung
+     * @returns Nội dung Bổn Mạng hoặc null nếu không tìm thấy
+     */
+    getBonMangById(idBonmang: number): string | null {
+        try {
+            const results = this.query(
+                'SELECT * FROM CHTT_Bonmang WHERE idBonmang = ?',
+                [idBonmang]
+            );
+
+            if (results.length > 0) {
+                // Lấy column thứ 1 (index 1) chứa content
+                return results[0][1] as string;
+            }
+
+            return null;
+        } catch (error) {
+            console.error('[Database] Lỗi lấy Bổn Mạng theo idBonmang:', error);
+            throw error;
+        }
+    }
+
+    /**
+     * Lấy nội dung Gia Đạo từ bảng CHTT_Giadao theo idGiadao
+     * @param idGiadao - ID của Gia Đạo cần lấy nội dung
+     * @returns Nội dung Gia Đạo hoặc null nếu không tìm thấy
+     */
+    getGiadaoById(idGiadao: number): string | null {
+        try {
+            const results = this.query(
+                'SELECT * FROM CHTT_Giadao WHERE idGiadao = ?',
+                [idGiadao]
+            );
+
+            if (results.length > 0) {
+                // Lấy column thứ 1 (index 1) chứa content
+                return results[0][1] as string;
+            }
+
+            return null;
+        } catch (error) {
+            console.error('[Database] Lỗi lấy Gia Đạo theo idGiadao:', error);
+            throw error;
+        }
+    }
+
+    /**
+     * Lấy nội dung Tài Lộc từ bảng CHTT_Tailoc theo idTailoc
+     * @param idTailoc - ID của Tài Lộc cần lấy nội dung
+     * @returns Nội dung Tài Lộc hoặc null nếu không tìm thấy
+     */
+    getTailocById(idTailoc: number): string | null {
+        try {
+            const results = this.query(
+                'SELECT * FROM CHTT_Tailoc WHERE idTailoc = ?',
+                [idTailoc]
+            );
+
+            if (results.length > 0) {
+                // Lấy column thứ 1 (index 1) chứa content
+                return results[0][1] as string;
+            }
+
+            return null;
+        } catch (error) {
+            console.error('[Database] Lỗi lấy Tài Lộc theo idTailoc:', error);
+            throw error;
+        }
+    }
+
+    /**
      * Lấy tất cả bảng trong database
      * @returns Mảng tên các bảng
      */
