@@ -1,5 +1,11 @@
-import initSqlJs, { Database as SqlJsDatabase } from 'sql.js';
-import { resources } from 'cc';
+import { resources, assetManager } from 'cc';
+
+// Declare global type for sql.js when loaded dynamically
+declare global {
+    interface Window {
+        initSqlJs: any;
+    }
+}
 
 /**
  * Database Service - Quản lý kết nối và truy vấn SQLite database
@@ -7,7 +13,7 @@ import { resources } from 'cc';
  */
 export class Database {
     private static _instance: Database;
-    private db: SqlJsDatabase | null = null;
+    private db: any = null;
     private initialized: boolean = false;
     private SQL: any = null;
 
@@ -25,7 +31,7 @@ export class Database {
 
     /**
      * Khởi tạo database
-     * Load WASM file và SQLite database file từ resources
+     * Load sql.js library, WASM file và SQLite database file từ resources
      */
     async init(): Promise<void> {
         if (this.initialized) {
@@ -36,10 +42,13 @@ export class Database {
         try {
             console.log('[Database] Bắt đầu khởi tạo...');
 
-            // Bước 1: Load WASM file
+            // Bước 1: Load sql.js JavaScript library
+            await this.loadSqlJsLibrary();
+
+            // Bước 2: Load WASM file
             await this.loadWasm();
 
-            // Bước 2: Load Database file
+            // Bước 3: Load Database file
             await this.loadDatabaseFile();
 
             this.initialized = true;
@@ -49,6 +58,73 @@ export class Database {
             console.error('[Database] ❌ Lỗi khởi tạo:', error);
             throw error;
         }
+    }
+
+    /**
+     * Load sql.js JavaScript library
+     */
+    private async loadSqlJsLibrary(): Promise<void> {
+        console.log('[Database] Đang load sql.js library...');
+
+        // Nếu initSqlJs đã tồn tại (đã được load trước đó), bỏ qua
+        if (typeof window.initSqlJs !== 'undefined') {
+            console.log('[Database] sql.js library đã được load rồi');
+            return Promise.resolve();
+        }
+
+        return new Promise((resolve, reject) => {
+            // Load JavaScript file content từ resources
+            resources.load('libs/sql-js-lib', (err: Error | null, asset: any) => {
+                if (err) {
+                    console.error('[Database] Lỗi load sql.js library từ local, thử CDN...', err);
+                    
+                    // Fallback: Load từ CDN
+                    const script = document.createElement('script');
+                    script.src = 'https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.13.0/sql-wasm.js';
+                    script.onload = () => {
+                        console.log('[Database] ✅ Load sql.js library từ CDN thành công');
+                        setTimeout(() => resolve(), 100);
+                    };
+                    script.onerror = (error) => {
+                        console.error('[Database] Lỗi load từ CDN:', error);
+                        reject(new Error('Không thể load sql.js'));
+                    };
+                    document.head.appendChild(script);
+                    return;
+                }
+
+                try {
+                    // Lấy nativeUrl của JavaScript file
+                    const jsUrl = asset.nativeUrl;
+                    console.log('[Database] sql.js URL:', jsUrl);
+
+                    // Load script dynamically
+                    const script = document.createElement('script');
+                    script.src = jsUrl;
+                    script.onload = () => {
+                        console.log('[Database] ✅ Load sql.js library từ local thành công');
+                        setTimeout(() => resolve(), 100);
+                    };
+                    script.onerror = (error) => {
+                        console.error('[Database] Lỗi load script sql.js:', error);
+                        
+                        // Fallback to CDN
+                        const cdnScript = document.createElement('script');
+                        cdnScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.13.0/sql-wasm.js';
+                        cdnScript.onload = () => {
+                            console.log('[Database] ✅ Load sql.js library từ CDN thành công');
+                            setTimeout(() => resolve(), 100);
+                        };
+                        cdnScript.onerror = () => reject(new Error('Không thể load sql.js'));
+                        document.head.appendChild(cdnScript);
+                    };
+                    document.head.appendChild(script);
+                } catch (error) {
+                    console.error('[Database] Lỗi xử lý sql.js library:', error);
+                    reject(error);
+                }
+            });
+        });
     }
 
     /**
@@ -70,8 +146,14 @@ export class Database {
                 const wasmUrl = asset.nativeUrl;
                 console.log('[Database] WASM URL:', wasmUrl);
 
+                // Kiểm tra xem initSqlJs đã được load chưa
+                if (typeof window.initSqlJs === 'undefined') {
+                    reject(new Error('initSqlJs chưa được load. Hãy load sql.js library trước.'));
+                    return;
+                }
+
                 // Khởi tạo sql.js với WASM file
-                initSqlJs({
+                window.initSqlJs({
                     locateFile: () => wasmUrl
                 })
                 .then((SQL) => {
