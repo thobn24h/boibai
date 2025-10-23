@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, resources, Sprite, SpriteFrame, WebView } from 'cc';
+import { _decorator, Component, director, Node, resources, Sprite, SpriteFrame, WebView } from 'cc';
 import GameManager from './GameManager';
 import Database from './Database';
 const { ccclass, property } = _decorator;
@@ -66,8 +66,67 @@ export class CHTTContentScene extends Component {
 
     }
 
+    /**
+     * Lấy số ngẫu nhiên trong khoảng [min, max]
+     */
+    private getRandomNumberBetween(min: number, max: number): number {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
     setContentHtml(): void {
+        const db = Database.instance;
         
+        // Lấy nội dung ngẫu nhiên từ database
+        const contentBM = db.getBonMangById(this.getRandomNumberBetween(1, 112));
+        const contentTL = db.getTailocById(this.getRandomNumberBetween(1, 108));
+        const contentGD = db.getGiadaoById(this.getRandomNumberBetween(1, 124));
+        
+        // Build HTML table
+        let tableContent = '';
+        tableContent += '<table style="font-size:16px;" width="100%" height="185">';
+        tableContent += `<tr><td valign="center" align="left" width="100%"><div style="font-size:16px; color: yellow;">Bổn mạng:</div> ${contentBM || ''}</td></tr>`;
+        tableContent += `<tr><td valign="center" align="left" width="100%"><div style="font-size:16px; color: yellow;">Tài lộc:</div> ${contentTL || ''}</td></tr>`;
+        tableContent += `<tr><td valign="center" align="left" width="100%"><div style="font-size:16px; color: yellow;">Gia đạo:</div> ${contentGD || ''}</td></tr>`;
+        tableContent += '</table>';
+        
+        // Build full HTML
+        const html = `
+            <html>
+            <head>
+                <style type="text/css">
+                    body {
+                        background-color: transparent;
+                        font-family: Marker Felt;
+                        font-size: 16px;
+                        color: white;
+                    }
+                </style>
+            </head>
+            <body width="100%" style="margin:0">
+                ${tableContent}
+            </body>
+            </html>
+        `;
+        
+        // Load HTML vào WebView
+        if (this.webView) {
+            this.webView.url = this.createDataUrl(html);
+            console.log('[CHTTContentScene] HTML loaded successfully');
+        } else {
+            console.error('[CHTTContentScene] WebView không tồn tại');
+        }
+    }
+
+    /**
+     * Tạo Data URL từ HTML string để load vào WebView
+     */
+    private createDataUrl(html: string): string {
+        const encodedHtml = encodeURIComponent(html);
+        return `data:text/html;charset=utf-8,${encodedHtml}`;
+    }
+
+    backClick(): void {
+        director.loadScene('SelectGenderCHTTScene');
     }
 }
 
