@@ -2,8 +2,10 @@ import {
   _decorator, Component, Layers, Node, Sprite, SpriteFrame, tween, UITransform, Vec3, screen, view, resources, 
   input, Input, EventTouch, 
   Label,
-  Color
+  Color,
+  director
 } from 'cc';
+import GameManager from './GameManager';
 
 const { ccclass, property } = _decorator;
 
@@ -1279,6 +1281,24 @@ export class BoiNgayPlayScene extends Component {
     removeChildCard2(cardNode: Node) {
       console.log(`removeChildCard2: ${cardNode.name}`)
       this.canvasNode.removeChild(cardNode)
+    }
+
+    clickBack() {
+      director.loadScene('BoiNgayScene');
+    }
+
+    clickNext() {
+      if (this.flagNext) {
+        GameManager.instance.setCardByIndex(1, this.idDoi1);
+        GameManager.instance.setCardByIndex(2, this.idDoi2);
+        GameManager.instance.setCardByIndex(3, this.idDoi3);
+
+        director.loadScene('BoiNgayContentScene');
+      }
+    }
+
+    clickHelp() {
+      director.loadScene('BoiNgayHelpScene');
     }
 
 }

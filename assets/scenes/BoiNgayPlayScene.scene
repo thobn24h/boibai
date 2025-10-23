@@ -711,15 +711,17 @@
   },
   {
     "__type__": "cc.ClickEvent",
-    "target": null,
+    "target": {
+      "__id__": 2
+    },
     "component": "",
-    "_componentId": "",
-    "handler": "",
+    "_componentId": "e4124k1FGhGsqyIYEl9sDKB",
+    "handler": "clickBack",
     "customEventData": ""
   },
   {
     "__type__": "cc.Node",
-    "_name": "ButtonPlay",
+    "_name": "ButtonNext",
     "_objFlags": 0,
     "__editorExtras__": {},
     "_parent": {
@@ -899,10 +901,12 @@
   },
   {
     "__type__": "cc.ClickEvent",
-    "target": null,
+    "target": {
+      "__id__": 2
+    },
     "component": "",
-    "_componentId": "",
-    "handler": "",
+    "_componentId": "e4124k1FGhGsqyIYEl9sDKB",
+    "handler": "clickNext",
     "customEventData": ""
   },
   {
