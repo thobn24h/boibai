@@ -10,6 +10,8 @@ export class GameManager {
     private _idCard2: number | null = null;
     private _idCard3: number | null = null;
 
+    private checkMale: boolean = true;
+
     /**
      * Singleton instance
      */
@@ -175,6 +177,14 @@ export class GameManager {
             GameManager._instance.resetCards();
             GameManager._instance = null as any;
         }
+    }
+
+    setCheckMale(value: boolean): void {
+        this.checkMale = value;
+    }
+
+    getCheckMale(): boolean {
+        return this.checkMale;
     }
 }
 
