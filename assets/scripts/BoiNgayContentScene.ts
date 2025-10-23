@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, WebView } from 'cc';
+import { _decorator, Component, director, Node, WebView } from 'cc';
 import { Database } from './Database';
 import { GameManager } from './GameManager';
 const { ccclass, property } = _decorator;
@@ -168,6 +168,10 @@ export class BoiNgayContentScene extends Component {
 
     update(deltaTime: number) {
         
+    }
+
+    clickBack() {
+      director.loadScene('menuScene');
     }
 }
 

@@ -3,7 +3,8 @@ import {
   input, Input, EventTouch, 
   Label,
   Color,
-  director
+  director,
+  Tween
 } from 'cc';
 import GameManager from './GameManager';
 
@@ -23,6 +24,9 @@ export class BoiNgayPlayScene extends Component {
 
     @property(Label)
     lblThongbao: Label = null
+
+    @property(Node)
+    helpNode: Node = null
 
     isAutoPlay = true;
 
@@ -1298,7 +1302,62 @@ export class BoiNgayPlayScene extends Component {
     }
 
     clickHelp() {
-      director.loadScene('BoiNgayHelpScene');
+      // Hiển thị help screen
+      this.helpNode.active = true;
+      this.helpNode.setSiblingIndex(1000);
+      
+      // Pause các actions và updates
+      this.pauseGame();
+    }
+
+    clickHelpBack() {
+      // Ẩn help screen
+      this.helpNode.active = false;
+      
+      // Resume các actions và updates
+      this.resumeGame();
+    }
+
+    /**
+     * Tạm dừng game logic khi mở help screen
+     * Tắt update và touch để "đóng băng" trạng thái hiện tại
+     */
+    private pauseGame() {
+      // Tắt update và touch events
+      this.isUpdateEnable = false;
+      this.isTouchEnabled = false;
+      
+      // Disable touch trên canvas để ngăn interaction với cards
+      // if (this.canvasNode) {
+      //   this.canvasNode.pauseSystemEvents(true);
+      // }
+
+      // Tween.pauseAllByTarget(this.canvasNode);
+
+      director.pause();
+      
+      console.log('[BoiNgayPlayScene] Game paused');
+    }
+
+    /**
+     * Resume game logic khi đóng help screen
+     * Bật lại update và touch để tiếp tục chơi
+     */
+    private resumeGame() {
+      // Bật lại update và touch events
+      this.isUpdateEnable = true;
+      this.isTouchEnabled = true;
+      
+      // Enable lại touch trên canvas
+      // if (this.canvasNode) {
+      //   this.canvasNode.resumeSystemEvents(true);
+      // }
+
+      //  Tween.resumeAllByTarget(this.canvasNode);
+
+      director.resume();
+      
+      console.log('[BoiNgayPlayScene] Game resumed');
     }
 
 }
