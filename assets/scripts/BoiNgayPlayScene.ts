@@ -22,6 +22,8 @@ export class BoiNgayPlayScene extends Component {
     @property(Label)
     lblThongbao: Label = null
 
+    isAutoPlay = true;
+
     xapBaiPos: Vec3 = Vec3.ZERO
 
     isUpdateEnable: boolean = false;
@@ -88,6 +90,19 @@ export class BoiNgayPlayScene extends Component {
       console.log(`--------------- ${title} ---------------`)
       console.log(`arrSPCardsFlipTren: ${this.getCardListLog(this.arrSPCardsFlipTren)}`)
       console.log(`arrSPcardsDuoi: ${this.getCardListLog(this.arrSPcardsDuoi)}`)
+    }
+
+    // debug function: auto play
+    autoPlayPickCard(spcard: Node) {
+      console.log(`autoPlayPickCard: ${spcard.name} ${this.getCardName(parseInt(spcard.name))}`)
+      this.isTouchEnabled = false;
+
+      tween(spcard)
+              .call(() => { this.addCardR(spcard); })
+              .to(1, { position: new Vec3(0, 0, 0), scale: new Vec3(1, 1, 1) })
+              .to(1, { position: this.xapBaiPos, scale: new Vec3(0.55, 0.55, 0.55)})  // new Vec3(0, 132 * 2 - screenSize.height / 2, 0)
+              .call(() => { this.effectMoveDone(spcard); })
+              .start()
     }
 
     start() {
@@ -424,7 +439,11 @@ export class BoiNgayPlayScene extends Component {
       let i = 0;
       for (; i < this.arrSPCardsFlipTren.length; i++) {
         const spCard = this.arrSPCardsFlipTren[i]
+        // Kiểm tra các quân bài bên trên có ghép được với quân bài hiện có không ?
         if (this.checkOK(spCard)) {
+          if (this.isAutoPlay) {
+            this.autoPlayPickCard(spCard)
+          }
           break;
         }
       }
@@ -731,7 +750,7 @@ export class BoiNgayPlayScene extends Component {
 
     findCardTrungNhau() {
       if (this.arrSPcardsDuoi.length % 2 != 0) {
-        const spT = this.arrSPcardsDuoi[this.arrSPcardsDuoi.length / 2]
+        const spT = this.arrSPcardsDuoi[Math.floor(this.arrSPcardsDuoi.length / 2)]
         console.log(`findCardTrungNhau:lẻ:remove card ${spT.name} - ${this.getCardName(parseInt(spT.name))}`)
         this.canvasNode.removeChild(spT)
         this.arrSPcardsDuoi.splice(this.arrSPcardsDuoi.length / 2, 1)
@@ -745,8 +764,8 @@ export class BoiNgayPlayScene extends Component {
           
           const idsp1 = parseInt(sp1.name);
           const idsp2 = parseInt(sp2.name);
-          console.log(`findCardTrungNhau:compare:card1 ${sp1.name} - ${this.getCardName(idsp1)} - card2 ${sp2.name} - ${this.getCardName(idsp2)}`)
-          if (((idsp1- 1)/4 == (idsp2-1)/4) && (idsp1 != idsp2)) {
+          console.log(`findCardTrungNhau:compare:card1 ${idsp1} - ${this.getCardName(idsp1)} - card2 ${idsp2} - ${this.getCardName(idsp2)}`)
+          if ((Math.floor((idsp1- 1) / 4) == Math.floor((idsp2-1)/4)) && (idsp1 != idsp2)) {
             this.demsodoidachon++;
             console.log(`findCardTrungNhau:demsodoidachon:${this.demsodoidachon}`)
             switch (this.demsodoidachon) {
@@ -1000,6 +1019,7 @@ export class BoiNgayPlayScene extends Component {
       // cardBG.scale = 0.55;
       // [self addChild:cardBG];
       this.xapBaiNode.active = true;
+      this.xapBaiNode.setSiblingIndex(1000);
       
       this.demFindLai = 0;
       for (let i = 0; i < this.arrSPCardsDuoiLai.length; i++) {
@@ -1012,7 +1032,8 @@ export class BoiNgayPlayScene extends Component {
         spCard.setPosition(this.xapBaiPos)
         
         // [self addChild:spCard z:1 tag:tagCard];
-        this.canvasNode.addChild(spCard)
+        // this.canvasNode.addChild(spCard)
+        spCard.setSiblingIndex(1001);
       }
       // [self schedule:@selector(findLaiCardTrungNhau:) interval:2.5];
       this.schedule(this.findLaiCardTrungNhau, 2.5)
@@ -1027,17 +1048,20 @@ export class BoiNgayPlayScene extends Component {
         
         const idsp1 = parseInt(sp1.name);
         const idsp2 = parseInt(sp2.name);
-        if ((idsp1- 1)/4 == (idsp2-1)/4  && (idsp1 != idsp2)) {
+        console.log(`findCardTrungNhau:compare:card1 ${idsp1} - ${this.getCardName(idsp1)} - card2 ${idsp2} - ${this.getCardName(idsp2)}`)
+
+        if ((Math.floor((idsp1- 1) / 4) == Math.floor((idsp2-1)/4)) && (idsp1 != idsp2)) {
           this.demsodoidachon++;
+          console.log(`findLaiCardTrungNhau:demsodoidachon:${this.demsodoidachon}`)
           switch (this.demsodoidachon) {
             case 1:
-              this.idDoi1 = (idsp1 - 1)/4 + 1;
+              this.idDoi1 = Math.floor((idsp1 - 1) / 4) + 1;
               break;
             case 2:
-              this.idDoi2 = (idsp1 - 1)/4 + 1;
+              this.idDoi2 = Math.floor((idsp1 - 1) / 4) + 1;
               break;
             case 3:
-              this.idDoi3 = (idsp1 - 1)/4 + 1;
+              this.idDoi3 = Math.floor((idsp1 - 1) / 4) + 1;
               break;
             default:
               break;
