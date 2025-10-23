@@ -26,7 +26,7 @@ arrCards -> mang luu 52 so ngau nhien khac nhau tu 5-56
 arrSPCardsTren -> luu cac quan bai tren
 -> lưu lại card Node của các quân bài phía trên 
 
-arrVTCardTren -> luu vi tri cac quan bai tren
+arrVTCardTren -> luu vi tri cac quan bai tren -> mảng có giá trị [ 0 -> 27 ] theo thứ tự tăng dần 
 -> lưu lại vị trí của các quân bài phía trên [0 -> 27]
 
 arrSPcardsDuoi -> luu cac quan bai duoi
@@ -64,7 +64,21 @@ Còn nếu không thì lật tiếp
 	}
 
 -----------------------------------
+onTouchStart
+Khi user chọn 1 quân bài thích hợp 
+effectMoveDone(spCard: Node)
+  -> tìm vị trí trong mảng của quân bài đó trong arrSPCardsTren -> vtCard
+  -> checkViewCard(vtCard)
 
+  // Cập nhật quân bài đã mở ở vị trí trên -> bỏ ra khỏi arrSPCardsFlipTren
+  // Thêm quân bài đó vào arrSPcardsDuoi
+  this.arrSPCardsFlipTren = this.arrSPCardsFlipTren.filter((card) => card.name != spCard.name)
+  this.arrSPcardsDuoi.push(spCard)
+
+
+
+checkViewCard(idCardPR: number) { -> vị trí của quân bài
+      if (idCardPR > 20) {
 
 
 arrSPCardsDuoiLai -> luu cac quan bai duoi de tim lai cac doi

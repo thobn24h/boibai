@@ -1,5 +1,5 @@
 import { _decorator, Component, director, Label, Node, Sprite, Tween, tween, UITransform, Vec3 } from 'cc';
-import dayjs from 'dayjs';
+import * as dayjs from 'dayjs';
 
 const { ccclass, property } = _decorator;
 
@@ -37,7 +37,7 @@ export class BoiNgayScene extends Component {
     temp = 0; // danh dau z cua la bai khi trao bai
 
     protected onLoad(): void {
-        const now = dayjs();
+        const now = dayjs.default();
 
         // Lấy ngày hiện tại trong tháng (1-31)
         this.ngay = now.date();
