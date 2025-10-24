@@ -16,7 +16,7 @@ export class MenuScene extends Component {
     }
 
     clickBtnBoiCHTT() {
-      director.loadScene("menuScene")
+      director.loadScene("IntroduceCHTTScene")
     }
 }
 
