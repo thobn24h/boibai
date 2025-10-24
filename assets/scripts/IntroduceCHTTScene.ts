@@ -16,7 +16,7 @@ export class IntroduceCHTTScene extends Component {
     }
 
     clickNext() {
-        director.loadScene('menuScene');
+        director.loadScene('SelectGenderCHTTScene');
     }
 }
 
