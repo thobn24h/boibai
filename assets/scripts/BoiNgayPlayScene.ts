@@ -759,7 +759,8 @@ export class BoiNgayPlayScene extends Component {
       if (this.arrSPcardsDuoi.length % 2 != 0) {
         const spT = this.arrSPcardsDuoi[Math.floor(this.arrSPcardsDuoi.length / 2)]
         console.log(`findCardTrungNhau:lẻ:remove card ${spT.name} - ${this.getCardName(parseInt(spT.name))}`)
-        this.gameNode.removeChild(spT)
+        // this.gameNode.removeChild(spT)
+        spT.active = false;
         this.arrSPcardsDuoi.splice(this.arrSPcardsDuoi.length / 2, 1)
       }
 
@@ -768,6 +769,9 @@ export class BoiNgayPlayScene extends Component {
           const screenSize = view.getDesignResolutionSize()
           const sp1 = this.arrSPcardsDuoi[this.demFind];
           const sp2 = this.arrSPcardsDuoi[this.arrSPcardsDuoi.length - this.demFind - 1];
+
+          sp1.active = true;
+          sp2.active = true;
           
           const idsp1 = parseInt(sp1.name);
           const idsp2 = parseInt(sp2.name);
@@ -1037,6 +1041,7 @@ export class BoiNgayPlayScene extends Component {
 
         // position = ccp(screenSize.width/2, 132);
         spCard.setPosition(this.xapBaiPos)
+        spCard.active = true;
         
         // [self addChild:spCard z:1 tag:tagCard];
         // this.canvasNode.addChild(spCard)
@@ -1052,7 +1057,10 @@ export class BoiNgayPlayScene extends Component {
         const screenSize = view.getDesignResolutionSize();
         const sp1 = this.arrSPCardsDuoiLai[this.demFindLai];
         const sp2 = this.arrSPCardsDuoiLai[this.arrSPCardsDuoiLai.length - this.demFindLai - 1];
-        
+
+        sp1.active = true;
+        sp2.active = true;
+
         const idsp1 = parseInt(sp1.name);
         const idsp2 = parseInt(sp2.name);
         console.log(`findCardTrungNhau:compare:card1 ${idsp1} - ${this.getCardName(idsp1)} - card2 ${idsp2} - ${this.getCardName(idsp2)}`)
@@ -1280,12 +1288,14 @@ export class BoiNgayPlayScene extends Component {
 
     removeChildCard1(cardNode: Node) {
       console.log(`removeChildCard1: ${cardNode.name}`)
-      this.gameNode.removeChild(cardNode)
+      // this.gameNode.removeChild(cardNode)
+      cardNode.active = false;
     }
 
     removeChildCard2(cardNode: Node) {
       console.log(`removeChildCard2: ${cardNode.name}`)
-      this.gameNode.removeChild(cardNode)
+      // this.gameNode.removeChild(cardNode)
+      cardNode.active = false;
     }
 
     clickBack() {
