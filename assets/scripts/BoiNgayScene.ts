@@ -77,7 +77,7 @@ export class BoiNgayScene extends Component {
       this.card2.setPosition(centerPos)
 
       // show label dem
-      this.lblDem.string = "0";
+      this.lblDem.string = "";
       this.lblDem.node.active = true;
 
       // play effect card 1
@@ -129,10 +129,10 @@ export class BoiNgayScene extends Component {
 
     clickNext() {
       if (this.flag) {
-        director.loadScene("menuScene")
+        director.loadScene("BoiNgayPlayScene")
       }
       else if (!this.flagDangtraobai) {
-        this.lblThongbaoTraobai.active = true;
+        // this.lblThongbaoTraobai.active = true;
       }
     }
 

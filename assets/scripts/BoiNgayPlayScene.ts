@@ -14,7 +14,7 @@ const { ccclass, property } = _decorator;
 export class BoiNgayPlayScene extends Component {
 
     @property(Node)
-    canvasNode: Node = null
+    gameNode: Node = null
 
     @property(SpriteFrame)
     queSpriteFrame: SpriteFrame = null
@@ -112,6 +112,7 @@ export class BoiNgayPlayScene extends Component {
     }
 
     start() {
+      this.helpNode.active = false;
       this.schedule(this.effectChiabai, 0.2)
     }
 
@@ -472,7 +473,7 @@ export class BoiNgayPlayScene extends Component {
       newNode.setPosition(cardPos)
 
       // add node to the container
-      this.canvasNode.addChild(newNode)
+      this.gameNode.addChild(newNode)
 
       return newNode;
     }
@@ -587,9 +588,9 @@ export class BoiNgayPlayScene extends Component {
 
         //remove cac bai tam
         for (let i = 1000; i < 1028; i++) {
-          const cardNode = this.canvasNode.getChildByName(`${i}`)
+          const cardNode = this.gameNode.getChildByName(`${i}`)
           if (cardNode) {
-            this.canvasNode.removeChild(cardNode)
+            this.gameNode.removeChild(cardNode)
           }
         }
         this.demLat = 21;
@@ -673,9 +674,9 @@ export class BoiNgayPlayScene extends Component {
         // }
         for (let i = 0; i < this.arrVTCardTren.length; i++) {
           const indextemp = this.arrVTCardTren[i]
-          const spCard = this.canvasNode.getChildByName(`${indextemp}`)
+          const spCard = this.gameNode.getChildByName(`${indextemp}`)
           if (spCard) {
-            this.canvasNode.removeChild(spCard)
+            this.gameNode.removeChild(spCard)
           }
         }
         
@@ -758,7 +759,7 @@ export class BoiNgayPlayScene extends Component {
       if (this.arrSPcardsDuoi.length % 2 != 0) {
         const spT = this.arrSPcardsDuoi[Math.floor(this.arrSPcardsDuoi.length / 2)]
         console.log(`findCardTrungNhau:lẻ:remove card ${spT.name} - ${this.getCardName(parseInt(spT.name))}`)
-        this.canvasNode.removeChild(spT)
+        this.gameNode.removeChild(spT)
         this.arrSPcardsDuoi.splice(this.arrSPcardsDuoi.length / 2, 1)
       }
 
@@ -776,13 +777,13 @@ export class BoiNgayPlayScene extends Component {
             console.log(`findCardTrungNhau:demsodoidachon:${this.demsodoidachon}`)
             switch (this.demsodoidachon) {
               case 1:
-                this.idDoi1 = (idsp1 - 1)/4 + 1;
+                this.idDoi1 = Math.floor((idsp1 - 1)/4) + 1;
                 break;
               case 2:
-                this.idDoi2 = (idsp1 - 1)/4 + 1;
+                this.idDoi2 = Math.floor((idsp1 - 1)/4) + 1;
                 break;
               case 3:
-                this.idDoi3 = (idsp1 - 1)/4 + 1;
+                this.idDoi3 = Math.floor((idsp1 - 1)/4) + 1;
                 break;
               default:
                 break;
@@ -1279,12 +1280,12 @@ export class BoiNgayPlayScene extends Component {
 
     removeChildCard1(cardNode: Node) {
       console.log(`removeChildCard1: ${cardNode.name}`)
-      this.canvasNode.removeChild(cardNode)
+      this.gameNode.removeChild(cardNode)
     }
 
     removeChildCard2(cardNode: Node) {
       console.log(`removeChildCard2: ${cardNode.name}`)
-      this.canvasNode.removeChild(cardNode)
+      this.gameNode.removeChild(cardNode)
     }
 
     clickBack() {
