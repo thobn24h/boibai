@@ -1,4 +1,4 @@
-import { _decorator, Component, director, Node, resources, Sprite, SpriteFrame, WebView } from 'cc';
+import { _decorator, Component, director, Node, resources, Sprite, SpriteFrame, WebView, sys, RichText } from 'cc';
 import GameManager from './GameManager';
 import Database from './Database';
 const { ccclass, property } = _decorator;
@@ -17,6 +17,9 @@ export class CHTTContentScene extends Component {
 
     @property(Sprite)
     imvCard3: Sprite = null;
+
+    @property(RichText)
+    contentRichText: RichText = null;
 
     idCard1 = 0;
     idCard2 = 0;
@@ -48,6 +51,25 @@ export class CHTTContentScene extends Component {
         this.changeDisplayCardImage(this.imvCard2.node, `${this.idCard2}`);
         this.changeDisplayCardImage(this.imvCard3.node, `${this.idCard3}`);
         
+        // Đặt WebView trong suốt trên iOS
+        this.setupTransparentWebView();
+    }
+    
+    /**
+     * Cấu hình WebView để có background trong suốt trên iOS
+     */
+    private setupTransparentWebView(): void {
+        if (this.webView && sys.platform === sys.Platform.IOS) {
+            // Set webview background to be transparent
+            this.webView.node.on('loaded', () => {
+                // Execute JavaScript to make webview transparent
+                const script = `
+                    document.body.style.backgroundColor = 'transparent';
+                    document.documentElement.style.backgroundColor = 'transparent';
+                `;
+                this.webView.evaluateJS(script);
+            }, this);
+        }
     }
 
     async start() {
@@ -93,16 +115,24 @@ export class CHTTContentScene extends Component {
         const html = `
             <html>
             <head>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <style type="text/css">
+                    html {
+                        background-color: transparent !important;
+                        background: transparent !important;
+                    }
                     body {
-                        background-color: transparent;
+                        background-color: transparent !important;
+                        background: transparent !important;
                         font-family: Marker Felt;
                         font-size: 16px;
                         color: white;
+                        margin: 0;
+                        padding: 0;
                     }
                 </style>
             </head>
-            <body width="100%" style="margin:0">
+            <body width="100%">
                 ${tableContent}
             </body>
             </html>
