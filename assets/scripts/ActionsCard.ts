@@ -27,7 +27,7 @@ export class ActionsCard extends Component {
     numberCards = 0;
     zCards = 0;
     tagCards = 0;
-    angleCards = -95;
+    angleCards = -45;
     numberCardsSelected = 0;
     
     idCard1 = 0;
@@ -87,7 +87,7 @@ export class ActionsCard extends Component {
     }
 
     changeDisplayCardImage(spCard: Node, tag: string) {
-      const sprite = spCard.addComponent(Sprite)
+      const sprite = spCard.getComponent(Sprite)
 
       // Load ảnh từ thư mục resources/images
       resources.load(`${tag}/spriteFrame`, SpriteFrame, (err, spriteFrame) => {
@@ -231,19 +231,13 @@ export class ActionsCard extends Component {
             sprite.spriteFrame = this.queSpriteFrame
 
             quebai.setPosition(new Vec3(0, -95 * 2, 0))
-            quebai.setRotationFromEuler(new Vec3(0, 0, this.angleCards))
             quebai.getComponent(UITransform).setAnchorPoint(new Vec2(0, 0))
+            quebai.angle = this.angleCards
 
             // add node to the container
             this.canvasNode.addChild(quebai)
 
             this.listPlayingCards.push(quebai);
-
-            // CCSprite *quebai = [CCSprite spriteWithFile:@"Que.png"];
-            // [quebai setPosition:CGPointMake(screenSize.width/2, screenSize.height/2 - 95)];
-            // quebai.anchorPoint = CGPointMake(0, 0);
-            // quebai.rotation = angleCards;
-            // [self addChild:quebai z: 0 tag:tagCards];
         }
         else {
             this.unschedule(this.effectsCards);
@@ -273,12 +267,13 @@ export class ActionsCard extends Component {
     }
 
     clickNext() {
+        console.log('clickNext', this.numberCardsSelected);
         if (this.numberCardsSelected > 2) {
             GameManager.instance.setCardByIndex(1, this.idCard1);
             GameManager.instance.setCardByIndex(2, this.idCard2);
             GameManager.instance.setCardByIndex(3, this.idCard3);
 
-            director.loadScene('CHTTContentView');
+            director.loadScene('CHTTContentScene');
         }
         else {
             console.log("Can chon them la bai");

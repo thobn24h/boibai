@@ -225,7 +225,7 @@ export class BoiNgayPlayScene extends Component {
     }
 
     changeDisplayCardImage(spCard: Node, tag: string) {
-      const sprite = spCard.addComponent(Sprite)
+      const sprite = spCard.getComponent(Sprite)
 
       // Load ảnh từ thư mục resources/images
       resources.load(`${tag}/spriteFrame`, SpriteFrame, (err, spriteFrame) => {

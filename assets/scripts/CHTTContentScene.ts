@@ -23,7 +23,7 @@ export class CHTTContentScene extends Component {
     idCard3 = 0;
 
     changeDisplayCardImage(spCard: Node, tag: string) {
-      const sprite = spCard.addComponent(Sprite)
+      const sprite = spCard.getComponent(Sprite)
 
       // Load ảnh từ thư mục resources/images
       resources.load(`${tag}/spriteFrame`, SpriteFrame, (err, spriteFrame) => {
