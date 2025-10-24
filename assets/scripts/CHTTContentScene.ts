@@ -1,13 +1,21 @@
-import { _decorator, Component, director, Node, resources, Sprite, SpriteFrame, WebView, sys, RichText } from 'cc';
+import { _decorator, Component, director, Node, resources, Sprite, SpriteFrame, WebView, sys, RichText, Prefab, instantiate } from 'cc';
 import GameManager from './GameManager';
 import Database from './Database';
+import { LabelTitle } from './LabelTitle';
+import { LabelContent } from './LabelContent';
 const { ccclass, property } = _decorator;
 
 @ccclass('CHTTContentScene')
 export class CHTTContentScene extends Component {
 
-    @property(WebView)
-    webView: WebView = null;
+  @property(Node)
+  contentNode: Node = null
+
+  @property(Prefab)
+  labelTitlePrefab: Prefab = null
+
+  @property(Prefab)
+  labelContentPrefab: Prefab = null
 
     @property(Sprite)
     imvCard1: Sprite = null;
@@ -17,9 +25,6 @@ export class CHTTContentScene extends Component {
 
     @property(Sprite)
     imvCard3: Sprite = null;
-
-    @property(RichText)
-    contentRichText: RichText = null;
 
     idCard1 = 0;
     idCard2 = 0;
@@ -51,25 +56,6 @@ export class CHTTContentScene extends Component {
         this.changeDisplayCardImage(this.imvCard2.node, `${this.idCard2}`);
         this.changeDisplayCardImage(this.imvCard3.node, `${this.idCard3}`);
         
-        // Đặt WebView trong suốt trên iOS
-        this.setupTransparentWebView();
-    }
-    
-    /**
-     * Cấu hình WebView để có background trong suốt trên iOS
-     */
-    private setupTransparentWebView(): void {
-        if (this.webView && sys.platform === sys.Platform.IOS) {
-            // Set webview background to be transparent
-            this.webView.node.on('loaded', () => {
-                // Execute JavaScript to make webview transparent
-                const script = `
-                    document.body.style.backgroundColor = 'transparent';
-                    document.documentElement.style.backgroundColor = 'transparent';
-                `;
-                this.webView.evaluateJS(script);
-            }, this);
-        }
     }
 
     async start() {
@@ -102,57 +88,31 @@ export class CHTTContentScene extends Component {
         const contentBM = db.getBonMangById(this.getRandomNumberBetween(1, 112));
         const contentTL = db.getTailocById(this.getRandomNumberBetween(1, 108));
         const contentGD = db.getGiadaoById(this.getRandomNumberBetween(1, 124));
-        
-        // Build HTML table
-        let tableContent = '';
-        tableContent += '<table style="font-size:16px;" width="100%" >';
-        tableContent += `<tr><td valign="center" align="left" width="100%"><div style="font-size:32px; color: yellow;">Bổn mạng:</div><div style="font-size:24px;">${contentBM || ''}</div></td></tr>`;
-        tableContent += `<tr><td valign="center" align="left" width="100%"><div style="font-size:32px; color: yellow;">Tài lộc:</div><div style="font-size:24px;">${contentTL || ''}</div></td></tr>`;
-        tableContent += `<tr><td valign="center" align="left" width="100%"><div style="font-size:32px; color: yellow;">Gia đạo:</div><div style="font-size:24px;">${contentGD || ''}</div></td></tr>`;
-        tableContent += '</table>';
-        
-        // Build full HTML
-        const html = `
-            <html>
-            <head>
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <style type="text/css">
-                    html {
-                        background-color: transparent !important;
-                        background: transparent !important;
-                    }
-                    body {
-                        background-color: transparent !important;
-                        background: transparent !important;
-                        font-family: Marker Felt;
-                        font-size: 16px;
-                        color: white;
-                        margin: 0;
-                        padding: 0;
-                    }
-                </style>
-            </head>
-            <body width="100%">
-                ${tableContent}
-            </body>
-            </html>
-        `;
-        
-        // Load HTML vào WebView
-        if (this.webView) {
-            this.webView.url = this.createDataUrl(html);
-            console.log('[CHTTContentScene] HTML loaded successfully');
-        } else {
-            console.error('[CHTTContentScene] WebView không tồn tại');
-        }
-    }
 
-    /**
-     * Tạo Data URL từ HTML string để load vào WebView
-     */
-    private createDataUrl(html: string): string {
-        const encodedHtml = encodeURIComponent(html);
-        return `data:text/html;charset=utf-8,${encodedHtml}`;
+        const labelTitle1 = instantiate(this.labelTitlePrefab);
+        labelTitle1.getComponent(LabelTitle).setContent('Bổn mạng:');
+        this.contentNode.addChild(labelTitle1);
+
+        const labelContent1 = instantiate(this.labelContentPrefab);
+        labelContent1.getComponent(LabelContent).setContent(contentBM);
+        this.contentNode.addChild(labelContent1);
+        
+        const labelTitle2 = instantiate(this.labelTitlePrefab);
+        labelTitle2.getComponent(LabelTitle).setContent('Tài lộc:');
+        this.contentNode.addChild(labelTitle2);
+
+        const labelContent2 = instantiate(this.labelContentPrefab);
+        labelContent2.getComponent(LabelContent).setContent(contentTL);
+        this.contentNode.addChild(labelContent2);
+        
+        const labelTitle3 = instantiate(this.labelTitlePrefab);
+        labelTitle3.getComponent(LabelTitle).setContent('Gia đạo:');
+        this.contentNode.addChild(labelTitle3);
+
+        const labelContent3 = instantiate(this.labelContentPrefab);
+        labelContent3.getComponent(LabelContent).setContent(contentGD);
+        this.contentNode.addChild(labelContent3);
+        
     }
 
     backClick(): void {
