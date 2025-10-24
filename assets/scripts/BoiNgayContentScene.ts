@@ -100,8 +100,8 @@ export class BoiNgayContentScene extends Component {
      */
     private generateHtml1Card(content1: string): string {
         let tableContent = '';
-        tableContent += '<table style="font-size:32px;" width="100%" height="290">';
-        tableContent += `<tr><td valign="top" align="left" width="100%"><div style="font-size:32px; color: yellow;">Ngày hôm nay:</div> ${content1}</td></tr>`;
+        tableContent += '<table style="font-size:32px;" width="100%">';
+        tableContent += `<tr><td valign="top" align="left" width="100%"><div style="font-size:32px; color: yellow;">Ngày hôm nay:</div><div style="font-size:24px;">${content1}</div></td></tr>`;
         tableContent += '</table>';
 
         return this.wrapHtmlTemplate(tableContent);
@@ -112,9 +112,9 @@ export class BoiNgayContentScene extends Component {
      */
     private generateHtml2Cards(content1: string, content2: string): string {
         let tableContent = '';
-        tableContent += '<table style="font-size:16px;" width="100%" height="290">';
-        tableContent += `<tr><td valign="top" align="left" width="100%"><div style="font-size:32px; color: yellow;">Ngày hôm nay:</div> ${content1}</td></tr>`;
-        tableContent += `<tr><td valign="top" align="left" width="100%"><div style="font-size:32px; color: yellow;">Tuy nhiên quẻ bài cũng cho thấy:</div> ${content2}</td></tr>`;
+        tableContent += '<table style="font-size:16px;" width="100%">';
+        tableContent += `<tr><td valign="top" align="left" width="100%"><div style="font-size:32px; color: yellow;">Ngày hôm nay:</div><div style="font-size:24px;">${content1}</div></td></tr>`;
+        tableContent += `<tr><td valign="top" align="left" width="100%"><div style="font-size:32px; color: yellow;">Tuy nhiên quẻ bài cũng cho thấy:</div><div style="font-size:24px;">${content2}</div></td></tr>`;
         tableContent += '</table>';
 
         return this.wrapHtmlTemplate(tableContent);
@@ -125,10 +125,10 @@ export class BoiNgayContentScene extends Component {
      */
     private generateHtml3Cards(content1: string, content2: string, content3: string): string {
         let tableContent = '';
-        tableContent += '<table style="font-size:32px;" width="100%" height="290">';
-        tableContent += `<tr><td valign="top" align="left" width="100%"><div style="font-size:32px; color: yellow;">Ngày hôm nay:</div> ${content1}</td></tr>`;
-        tableContent += `<tr><td valign="top" align="left" width="100%"><div style="font-size:32px; color: yellow;">Quẻ bài cũng cho thấy:</div> ${content2}</td></tr>`;
-        tableContent += `<tr><td valign="top" align="left" width="100%"><div style="font-size:32px; color: yellow;">Từ quẻ bài cũng nói lên:</div> ${content3}</td></tr>`;
+        tableContent += '<table style="font-size:32px;" width="100%">';
+        tableContent += `<tr><td valign="top" align="left" width="100%"><div style="font-size:32px; color: yellow;">Ngày hôm nay:</div><div style="font-size:24px;">${content1}</div></td></tr>`;
+        tableContent += `<tr><td valign="top" align="left" width="100%"><div style="font-size:32px; color: yellow;">Quẻ bài cũng cho thấy:</div><div style="font-size:24px;">${content2}</div></td></tr>`;
+        tableContent += `<tr><td valign="top" align="left" width="100%"><div style="font-size:32px; color: yellow;">Từ quẻ bài cũng nói lên:</div><div style="font-size:24px;">${content3}</div></td></tr>`;
         tableContent += '</table>';
 
         return this.wrapHtmlTemplate(tableContent);

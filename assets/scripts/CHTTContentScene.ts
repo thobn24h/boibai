@@ -83,10 +83,10 @@ export class CHTTContentScene extends Component {
         
         // Build HTML table
         let tableContent = '';
-        tableContent += '<table style="font-size:16px;" width="100%" height="185">';
-        tableContent += `<tr><td valign="center" align="left" width="100%"><div style="font-size:16px; color: yellow;">Bổn mạng:</div> ${contentBM || ''}</td></tr>`;
-        tableContent += `<tr><td valign="center" align="left" width="100%"><div style="font-size:16px; color: yellow;">Tài lộc:</div> ${contentTL || ''}</td></tr>`;
-        tableContent += `<tr><td valign="center" align="left" width="100%"><div style="font-size:16px; color: yellow;">Gia đạo:</div> ${contentGD || ''}</td></tr>`;
+        tableContent += '<table style="font-size:16px;" width="100%" >';
+        tableContent += `<tr><td valign="center" align="left" width="100%"><div style="font-size:32px; color: yellow;">Bổn mạng:</div><div style="font-size:24px;">${contentBM || ''}</div></td></tr>`;
+        tableContent += `<tr><td valign="center" align="left" width="100%"><div style="font-size:32px; color: yellow;">Tài lộc:</div><div style="font-size:24px;">${contentTL || ''}</div></td></tr>`;
+        tableContent += `<tr><td valign="center" align="left" width="100%"><div style="font-size:32px; color: yellow;">Gia đạo:</div><div style="font-size:24px;">${contentGD || ''}</div></td></tr>`;
         tableContent += '</table>';
         
         // Build full HTML
