@@ -34,9 +34,9 @@ export class BoiNgayContentScene extends Component {
      */
     private setContentHtml(): void {
         // Demo data
-        // GameManager.instance.setCardByIndex(1, 1);
-        // GameManager.instance.setCardByIndex(2, 2);
-        // GameManager.instance.setCardByIndex(3, 3);
+        GameManager.instance.setCardByIndex(1, 1);
+        GameManager.instance.setCardByIndex(2, 2);
+        GameManager.instance.setCardByIndex(3, 3);
 
         // Lấy các ID cards từ GameManager
         let idCard1 = GameManager.instance.idCard1 || 0;
