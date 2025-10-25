@@ -677,14 +677,20 @@ export class BoiNgayPlayScene extends Component {
         //   CCSprite *spCard = [arrSPCardsTren objectAtIndex:indextemp];
         //   [self removeChild:spCard cleanup:NO];
         // }
-        for (let i = 0; i < this.arrVTCardTren.length; i++) {
-          const indextemp = this.arrVTCardTren[i]
-          const spCard = this.gameNode.getChildByName(`${indextemp}`)
-          if (spCard) {
-            this.gameNode.removeChild(spCard)
-          }
-        }
         
+        // for (let i = 0; i < this.arrVTCardTren.length; i++) {
+        //   const indextemp = this.arrVTCardTren[i]
+        //   const spCard = this.gameNode.getChildByName(`${indextemp}`)
+        //   if (spCard) {
+        //     this.gameNode.removeChild(spCard)
+        //   }
+        // }
+
+        for (let i = 0; i < this.arrSPCardsTren.length; i++) {
+          const spCard = this.arrSPCardsTren[i]
+          spCard.active = false;
+        }
+
         // check cac doi bai trung nhau
         this.showDoiBaiTrungNhau()
       }

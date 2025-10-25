@@ -62,6 +62,11 @@ export class BoiNgayScene extends Component {
     beginEffectTraobai() {
       console.log(`beginEffectTraobai`)
 
+      if (this.flag) {
+        director.loadScene("BoiNgayPlayScene")
+        return;
+      }
+
       // hide message
       this.lblThongbaoTraobai.active = false;
       // hide menu back / next 
