@@ -9,6 +9,9 @@ export class ActionsCard extends Component {
     canvasNode: Node = null;
 
     @property(Node)
+    gameNode: Node = null
+
+    @property(Node)
     card1: Node = null;
 
     @property(Node)
@@ -55,13 +58,21 @@ export class ActionsCard extends Component {
             return;
         }
 
+        console.log('isTouchEnabled TRUE');
+
         // Get start point
+        // Print the acquired position of the screen touch point
         const screenPos = event.getLocation()
+        console.log('screenPos: ', screenPos);
+
+        const locationUI = event.getUILocation();
+        console.log(`UI touch pos: ${locationUI}`);
 
         for (let i = this.listPlayingCards.length - 1 ; i > -1 ; i--) {
             const spcard = this.listPlayingCards[i];
             const transform = spcard.getComponent(UITransform)
-            const ischeck = transform.hitTest(screenPos)
+            // const ischeck = transform.hitTest(screenPos)
+            const ischeck = transform.isHit(locationUI)
             if (ischeck && this.numberCardsSelected < 3) {
                 this.isTouchEnabled = false;
                 this.numberCardsSelected++;
@@ -235,7 +246,7 @@ export class ActionsCard extends Component {
             quebai.angle = this.angleCards
 
             // add node to the container
-            this.canvasNode.addChild(quebai)
+            this.gameNode.addChild(quebai)
 
             this.listPlayingCards.push(quebai);
         }

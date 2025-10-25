@@ -28,7 +28,7 @@ export class BoiNgayPlayScene extends Component {
     @property(Node)
     helpNode: Node = null
 
-    isAutoPlay = true;
+    isAutoPlay = false;
 
     xapBaiPos: Vec3 = Vec3.ZERO
 
@@ -143,11 +143,16 @@ export class BoiNgayPlayScene extends Component {
 
       // Get start point
       const screenPos = event.getLocation()
+      console.log('screenPos: ', screenPos);
+      
+      const locationUI = event.getUILocation();
+      console.log(`UI touch pos: ${locationUI}`);
 
       for (let i = this.arrSPCardsFlipTren.length - 1 ; i > -1 ; i--) {
         const spcard = this.arrSPCardsFlipTren[i];
         const transform = spcard.getComponent(UITransform)
-        const ischeck = transform.hitTest(screenPos)
+        // const ischeck = transform.hitTest(screenPos)
+        const ischeck = transform.isHit(locationUI)
         if (ischeck) {
           //NSLog(@"tag bai click %i",spcard.tag);
           if (this.checkOK(spcard)) {
